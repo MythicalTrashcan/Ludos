@@ -9,6 +9,10 @@ div {
     text-align: center;
 }
 
+h1 a {
+    color: red;
+}
+
 h1 {
     text-align: center;
     font-size: 80px;
@@ -41,14 +45,15 @@ button {
     cursor: pointer;
     transition: all;
     box-shadow: inset;
-    box-shadow: 12px 8px 12px 4px #1c551e;
+    box-shadow: 12px 8px 4px 4px #1c551e;
 }
 
 button[disabled] {
     background: grey;
     border-color: rgb(80, 80, 80);
-    box-shadow: 12px 8px 12px 4px rgb(68, 68, 68);
+    box-shadow: 12px 8px 4px 4px rgb(68, 68, 68);
     color: #3f3f3f;
+    cursor: default;
 }
 
 button:hover[disabled] {
@@ -84,6 +89,39 @@ li {
 li a {
     display: block;
     padding: 16px;
+    background-color: #1387e6;
+    border-style: solid;
+    border-color: #0960a7;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #06477c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: x-large;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li:active {
+    transform: scale(0.95);
+}
+
+li a:hover {
+    background-color: #bd1515;
+    box-shadow: 6px 4px 4px 2px #7c0606;
+    border-color: #a70909;
+} 
+
+/* Older Nav Link Code
+
+li a {
+    display: block;
+    padding: 16px;
     background-color: #1a1a1a;
     border-style: solid;
     border-color: #0f0f0f;
@@ -96,9 +134,9 @@ li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: x-large;
-}
+} 
 
-li c {
+li a {
     display: block;
     padding: 16px;
     background-color: #ff0000;
@@ -113,7 +151,7 @@ li c {
     color: rgb(255, 255, 255);
     text-decoration: bold;
     font-size: x-large;
-}
+} 
 
 li:last-child {
     border-right: none;
@@ -127,6 +165,8 @@ li a:hover {
     background-color: #131313;
 }
 
-li c:hover {
+li a:hover {
     background-color: #b90000;
-}
+} 
+
+*/
