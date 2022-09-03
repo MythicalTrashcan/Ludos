@@ -1,9 +1,17 @@
-const button = document.createElement('button')
+function myFunction() {
+    alert("Projects will be added soon!")
+    const button = document.querySelector('button')
+    button.disabled = true
+}
 
-button.innerText = 'Button Test'
-button.id = 'mainButton'
+// let timeout;
 
-button.addEventListener('click', () => {
-alert('Button worked lol')
-})
-document.body.appendChild(button)
+// function myFunction() {
+//    alert("Projects will be added soon!")
+//    timeout = setTimeout(alertFunc, 5000);
+// }
+
+// function alertFunc() {
+//    const button = document.querySelector('button')
+// button.disabled = true
+// }
