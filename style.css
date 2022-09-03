@@ -84,7 +84,7 @@ li {
 li a {
     display: block;
     padding: 16px;
-    background-color: #24292f;
+    background-color: #1a1a1a;
     border-style: solid;
     border-color: #0f0f0f;
     box-shadow: inset;
@@ -124,5 +124,9 @@ li:active {
 }
 
 li a:hover {
-    background-color: #968916;
+    background-color: #131313;
+}
+
+li c:hover {
+    background-color: #b90000;
 }
