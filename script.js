@@ -1,6 +1,6 @@
 function myFunction() {
 /*    alert("Projects will be added soon!") */
-    windows.open("https://mythicaltrashcan.github.io/stard-projects/")
+    window.open("https://mythicaltrashcan.github.io/stard-projects/")
     const button = document.querySelector('button')
     button.disabled = true
 }
