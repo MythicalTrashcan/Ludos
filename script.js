@@ -1,5 +1,6 @@
 function myFunction() {
-    alert("Projects will be added soon!")
+/*    alert("Projects will be added soon!") */
+    
     const button = document.querySelector('button')
     button.disabled = true
 }
