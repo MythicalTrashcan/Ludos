@@ -20,6 +20,134 @@ h3 {
     font-size: 80px;
 }
 
+/* Games List */
+
+.games-list {
+    position: relative;
+    bottom: 100px;
+}
+
+.center {
+    position: absolute;
+    left: 20%;
+}
+
+.retro-bowl:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+}
+
+.retro-bowl:active {
+    transform: scale(0.97);
+}
+
+.new-cc:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+}
+
+.new-cc:active {
+    transform: scale(0.97);
+}
+
+.old-cc:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+}
+
+.old-cc:active {
+    transform: scale(0.97);
+}
+
+.number-game-lol:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+}
+
+.old-cc:active {
+    transform: scale(0.97);
+}
+
+.retro-bowl {
+    top: 100px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #13e62f;
+    border-style: solid;
+    border-color: #09a731;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+.new-cc {
+    top: 200px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #13e62f;
+    border-style: solid;
+    border-color: #09a731;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+.old-cc {
+    top: 300px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #13e62f;
+    border-style: solid;
+    border-color: #09a731;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+.number-game-lol {
+    top: 400px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #13e62f;
+    border-style: solid;
+    border-color: #09a731;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
 /* Navigation Bar */
 
 ul {
@@ -29,14 +157,14 @@ ul {
     width: 100%;
 }
 
+
 li {
     float: left;
     border-right: 16px solid transparent;
 }
 
-li a {
+.social-links {
     display: block;
-    padding: 16px;
     position: relative;
     top: -35px;
     background-color: #1387e6;
