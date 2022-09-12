@@ -25,11 +25,9 @@ h3 {
 .games-list {
     position: relative;
     bottom: 100px;
-}
-
-.center {
-    position: absolute;
-    left: 20%;
+    display: flex;
+    justify-content: center;
+    right: 575px;
 }
 
 .retro-bowl:hover {
