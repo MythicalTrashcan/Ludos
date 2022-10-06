@@ -86,16 +86,36 @@ li {
     border-right: 16px solid transparent;
 }
 
-li a {
+.github {
     display: block;
     position: relative;
     top: -35px;
     padding: 16px;
-    background-color: #1387e6;
+    background-color: #222324;
     border-style: solid;
-    border-color: #0960a7;
+    border-color: #0c0c0c;
     box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #06477c;
+    box-shadow: 6px 4px 4px 2px #000000;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: x-large;
+    border-radius: 15px;
+}
+
+.youtube {
+    display: block;
+    position: relative;
+    top: -35px;
+    padding: 16px;
+    background-color: #ff0000;
+    border-style: solid;
+    border-color: #940000;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #660101;
     cursor: pointer;
     transition: all;
     padding: 15px 60px;
@@ -114,10 +134,12 @@ li:active {
     transform: scale(0.95);
 }
 
-li a:hover {
-    background-color: #bd1515;
-    box-shadow: 6px 4px 4px 2px #7c0606;
-    border-color: #a70909;
+.github:hover {
+    background-color: #131313;
+} 
+
+.youtube:hover {
+    background-color: #c00000;
 } 
 
 /* Copyright Footer */
