@@ -5,6 +5,10 @@
     color: rgb(255, 255, 255);
 }
 
+.entry {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
     font-size: 80px;
