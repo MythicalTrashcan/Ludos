@@ -14,5 +14,5 @@ function alertFunc() {
     const button = document.querySelector('button');
     button.textContent = "View Projects";
     button.disabled = false;
-    window.open("https://mythicaltrashcan.github.io/Facilitatify/Facilitatify-Projects/");
+    window.open("https://mythicaltrashcan.github.io/Ludos/Ludos-Projects/");
 }
