@@ -1,3 +1,0 @@
-name  rank
-stard 1
-Caleb 1
