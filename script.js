@@ -5,7 +5,8 @@ function viewProjects() {
     const button = document.querySelector('button');
     button.disabled = true;
     button.textContent = "Loading Tab...";
-    timeout = setTimeout(alertFunc, 3000);
+    timeout = setTimeout(alertFunc, 1000);
+    timeout = setTimeout(error404, 2000);
 }
 
 function alertFunc() {
@@ -16,12 +17,5 @@ function alertFunc() {
 }
 
 function error404() {
-    window.open("https://mythicaltrashcan.github.io/Ludos/noload.html");
-}
-
-function pageLoadFail() {
-    const button = document.querySelector('button');
-    button.disabled = true;
-    button.textContent = "Loading Tab...";
-    timeout = setTimeout(error404, 4000);
+    window.location.href = 'https://mythicaltrashcan.github.io/Ludos/No-Load/index.html/';
 }
