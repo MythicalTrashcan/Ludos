@@ -17,5 +17,5 @@ function alertFunc() {
 }
 
 function error404() {
-    window.location.href = 'https://mythicaltrashcan.github.io/Ludos/No-Load/index.html/';
+    window.location.href = 'https://mythicaltrashcan.github.io/Ludos/No-Load/index.html';
 }
