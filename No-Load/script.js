@@ -3,5 +3,5 @@ const { text } = require("express");
 let timeout;
 
 function returnMain() {
-    window.open("https://mythicaltrashcan.github.io/Ludos/");
+    window.location.href = 'https://mythicaltrashcan.github.io/Ludos/';
 }
