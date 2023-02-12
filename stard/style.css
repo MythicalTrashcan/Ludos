@@ -18,17 +18,16 @@ h1 {
     font-size: 80px;
 }
 
-h2 {
-    text-align: center;
-    font-size: 50px;
-}
-
-h3 {
-    text-align: center;
-}
-
 p {
     text-align: center;
+    font-size: 30px;
+    color: #315315;
+}
+
+.note {
+    text-align: center;
+    font-size: 45px;
+    color: #494520;
 }
 
 button {
@@ -71,10 +70,9 @@ button:active {
 }
 
 button:hover {
-    background-color: #467228;
+    background-color: #726d28;
     transform: scale(0.95);
-    box-shadow: 12px 8px 4px 4px #284217;
-    border-color: #37551c;
+    border-color: #54551c;
 }
 
 
@@ -97,7 +95,7 @@ li {
     position: relative;
     top: -35px;
     padding: 16px;
-    background-color: #332323;
+    background-color: #222324;
     border-style: solid;
     border-color: #0c0c0c;
     box-shadow: inset;

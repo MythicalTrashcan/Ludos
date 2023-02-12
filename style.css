@@ -38,20 +38,19 @@ button {
     border-radius: 50px;
     text-align: center;
     color: #ffffff;
-    padding: 20px 64px;
+    padding: 30px 64px;
     text-decoration: none;
     display: inline-block;
-    font-size: 32px;
+    font-size: 75px;
     cursor: pointer;
-    box-shadow: inset;
-    box-shadow: 12px 8px 4px 4px #1c551e;
+    box-shadow: 10px 5px 4px 2px #1c541e;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 button[disabled] {
-    background: grey;
-    border-color: rgb(80, 80, 80);
-    box-shadow: 12px 8px 4px 4px rgb(68, 68, 68);
+    background: #808080;
+    border-color: #505050;
+    box-shadow: 12px 8px 4px 4px #444444;
     color: #3f3f3f;
     cursor: default;
 }
@@ -70,7 +69,7 @@ button:active {
 
 button:hover {
     background-color: #28722b;
-    transform: scale(0.90);
+    transform: scaleX(.95) scaleY(.95) rotate(-5deg);
 }
 
 

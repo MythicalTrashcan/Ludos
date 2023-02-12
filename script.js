@@ -31,3 +31,19 @@ function openGithub() {
     const Github = document.querySelector('github');
     window.open("https://github.com/MythicalTrashcan/");
 }
+
+/* Work on later
+
+/*
+var styles = [{ transform: 'scaleX(.95) scaleY(.95) rotate(3deg)' }, { transform: 'scaleX(.95) scaleY(.95) rotate(-3deg)' }];
+
+function changeStyle() {
+    var randomIndex = Math.floor(Math.random() * styles.length);
+    var selectedStyle = styles[randomIndex];
+
+    var button = document.getElementById('button');
+    for (var property in selectedStyle) {
+        button.style[property] = selectedStyle[property];
+    }
+}
+*/
