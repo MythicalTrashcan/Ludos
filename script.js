@@ -19,3 +19,15 @@ function alertFunc() {
 function error404() {
     window.location = 'https://mythicaltrashcan.github.io/Ludos/No-Load/index.html';
 }
+
+// Social Links
+
+function openYoutube() {
+    const YouTube = document.querySelector('youtube');
+    window.open("https://www.youtube.com/channel/UCoXIebdrZPGGMrMYVKQpRLg");
+}
+
+function openGithub() {
+    const Github = document.querySelector('github');
+    window.open("https://github.com/MythicalTrashcan/");
+}
