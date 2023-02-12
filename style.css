@@ -46,6 +46,7 @@ button {
     transition: all;
     box-shadow: inset;
     box-shadow: 12px 8px 4px 4px #1c551e;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 button[disabled] {
@@ -70,6 +71,7 @@ button:active {
 
 button:hover {
     background-color: #28722b;
+    transform: scale(0.90);
 }
 
 
