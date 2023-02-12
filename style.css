@@ -43,7 +43,6 @@ button {
     display: inline-block;
     font-size: 32px;
     cursor: pointer;
-    transition: all;
     box-shadow: inset;
     box-shadow: 12px 8px 4px 4px #1c551e;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
