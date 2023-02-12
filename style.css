@@ -107,6 +107,7 @@ li {
     text-decoration: none;
     font-size: x-large;
     border-radius: 15px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 .youtube {
@@ -127,6 +128,7 @@ li {
     text-decoration: none;
     font-size: x-large;
     border-radius: 15px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 li:last-child {
@@ -139,10 +141,12 @@ li:active {
 
 .github:hover {
     background-color: #131313;
+    transform: scale(0.95);
 }
 
 .youtube:hover {
     background-color: #c00000;
+    transform: scale(0.95);
 }
 
 
