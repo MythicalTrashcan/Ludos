@@ -43,12 +43,14 @@ h3 {
     text-decoration: none;
     font-size: xx-large;
     border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 .button:hover {
     background-color: #dbb718;
     box-shadow: 6px 4px 4px 2px #7c5706;
     border-color: #a78209;
+    transform: scale(0.95);
 }
 
 .button:active {
@@ -76,6 +78,7 @@ h3 {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
+    transform: scale(0.95);
 }
 
 .retro-bowl:active {
@@ -86,6 +89,7 @@ h3 {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
+    transform: scale(0.95);
 }
 
 .new-cc:active {
@@ -96,6 +100,7 @@ h3 {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
+    transform: scale(0.95);
 }
 
 .old-cc:active {
@@ -106,6 +111,7 @@ h3 {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
+    transform: scale(0.95);
 }
 
 .number-game-lol:active {
@@ -130,6 +136,7 @@ h3 {
     text-decoration: none;
     font-size: xx-large;
     border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 .new-cc {
@@ -150,6 +157,7 @@ h3 {
     text-decoration: none;
     font-size: xx-large;
     border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 .old-cc {
@@ -170,6 +178,7 @@ h3 {
     text-decoration: none;
     font-size: xx-large;
     border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 .number-game-lol {
@@ -190,6 +199,7 @@ h3 {
     text-decoration: none;
     font-size: xx-large;
     border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 
