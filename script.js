@@ -13,11 +13,11 @@ function alertFunc() {
     const button = document.querySelector('button');
     button.textContent = "View Projects";
     button.disabled = false;
-    window.location.href = 'https://mythicaltrashcan.github.io/Ludos/Ludos-Projects/';
+    window.location.href = 'https://theludos.com/projects/';
 }
 
 function error404() {
-    window.location = 'https://mythicaltrashcan.github.io/Ludos/No-Load/index.html';
+    window.location = 'https://theludos.com/no-load/';
 }
 
 // Social Links
