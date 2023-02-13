@@ -71,7 +71,7 @@ h3 {
     display: flex;
     justify-content: center;
     right: 575px;
-    padding-bottom: 500px;
+    padding-bottom: 600px;
 }
 
 .retro-bowl:hover {
@@ -85,25 +85,25 @@ h3 {
     transform: scale(0.97);
 }
 
-.new-cc:hover {
+.baldis-basics:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
     transform: scale(0.95);
 }
 
-.new-cc:active {
+.baldis-basics:active {
     transform: scale(0.97);
 }
 
-.old-cc:hover {
+.cookie-clicker:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
     transform: scale(0.95);
 }
 
-.old-cc:active {
+.cookie-clicker:active {
     transform: scale(0.97);
 }
 
@@ -115,6 +115,17 @@ h3 {
 }
 
 .number-game-lol:active {
+    transform: scale(0.97);
+}
+
+.number-game-multi:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.number-game-multi:active {
     transform: scale(0.97);
 }
 
@@ -139,7 +150,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.new-cc {
+.baldis-basics {
     top: 400px;
     display: block;
     width: 1000px;
@@ -160,7 +171,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.old-cc {
+.cookie-clicker {
     top: 500px;
     display: block;
     width: 1000px;
@@ -183,6 +194,27 @@ h3 {
 
 .number-game-lol {
     top: 600px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.number-game-multi {
+    top: 700px;
     display: block;
     width: 1000px;
     position: absolute;
