@@ -85,14 +85,14 @@ h3 {
     transform: scale(0.97);
 }
 
-.baldis-basics:hover {
+.krunker:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
     transform: scale(0.95);
 }
 
-.baldis-basics:active {
+.krunker:active {
     transform: scale(0.97);
 }
 
@@ -150,7 +150,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.baldis-basics {
+.krunker {
     top: 400px;
     display: block;
     width: 1000px;
