@@ -71,7 +71,7 @@ h3 {
     display: flex;
     justify-content: center;
     right: 575px;
-    padding-bottom: 600px;
+    padding-bottom: 800px;
 }
 
 .retro-bowl:hover {
@@ -85,14 +85,14 @@ h3 {
     transform: scale(0.97);
 }
 
-.krunker:hover {
+.n-gon:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
     transform: scale(0.95);
 }
 
-.krunker:active {
+.n-gon:active {
     transform: scale(0.97);
 }
 
@@ -129,6 +129,17 @@ h3 {
     transform: scale(0.97);
 }
 
+.number-game-big:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.number-game-big:active {
+    transform: scale(0.97);
+}
+
 .retro-bowl {
     top: 300px;
     display: block;
@@ -150,7 +161,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.krunker {
+.n-gon {
     top: 400px;
     display: block;
     width: 1000px;
@@ -215,6 +226,27 @@ h3 {
 
 .number-game-multi {
     top: 700px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.number-game-big {
+    top: 800px;
     display: block;
     width: 1000px;
     position: absolute;
