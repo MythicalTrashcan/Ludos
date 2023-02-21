@@ -1,8 +1,8 @@
 :root {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-shadow: 5px 5px 4px#242300;
-    background-color: #3b3500;
-    color: #494520;
+    text-shadow: 5px 5px 4px #522607;
+    background-color: #572902;
+    color: #612f17;
 }
 
 div {
@@ -32,9 +32,9 @@ p {
 }
 
 button {
-    background-color: #afa84c;
+    background-color: #80582a;
     border-style: solid;
-    border-color: #554f1c;
+    border-color: #5c3d1b;
     border-radius: 50px;
     text-align: center;
     color: #ffffff;
@@ -45,7 +45,7 @@ button {
     cursor: pointer;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
     box-shadow: inset;
-    box-shadow: 12px 8px 4px 4px #55541c;
+    box-shadow: 12px 8px 4px 4px #553f1c;
     padding: 50px;
     width: 500px
 }
@@ -71,9 +71,9 @@ button:active {
 }
 
 button:hover {
-    background-color: #467228;
+    background-color: #63491f;
     transform: scale(0.95);
-    box-shadow: 12px 8px 4px 4px #284217;
+    box-shadow: 12px 8px 4px 4px ##553f1c;
     border-color: #37551c;
 }
 
@@ -160,7 +160,7 @@ li:active {
     right: 0px;
     width: 100%;
     height: 40px;
-    background-color: #2b2a00;
+    background-color: #4d2004;
     color: white;
     text-align: center;
     font-size: 25px;
