@@ -74,6 +74,17 @@ h3 {
     padding-bottom: 800px;
 }
 
+.ultiversal:hover {
+    background-color: #3c18db;
+    box-shadow: 6px 4px 4px 2px #25067c;
+    border-color: #2b09a7;
+    transform: scale(0.95);
+}
+
+.ultiversal:active {
+    transform: scale(0.97);
+}
+
 .retro-bowl:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
@@ -140,28 +151,29 @@ h3 {
     transform: scale(0.97);
 }
 
-.retro-bowl {
-    top: 300px;
+.ultiversal {
+    top: 290px;
     display: block;
-    width: 1000px;
+    width: 1100px;
     position: absolute;
-    background-color: #10c729;
+    margin-left: -50px;
+    background-color: #109cc7;
     border-style: solid;
-    border-color: #068a27;
+    border-color: #067b8a;
     box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
+    box-shadow: 6px 4px 4px 2px #06607c;
     cursor: pointer;
     transition: all;
     padding: 15px 60px;
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 40px;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.n-gon {
+.retro-bowl {
     top: 400px;
     display: block;
     width: 1000px;
@@ -182,7 +194,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.cookie-clicker {
+.n-gon {
     top: 500px;
     display: block;
     width: 1000px;
@@ -203,7 +215,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-lol {
+.cookie-clicker {
     top: 600px;
     display: block;
     width: 1000px;
@@ -224,7 +236,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-multi {
+.number-game-lol {
     top: 700px;
     display: block;
     width: 1000px;
@@ -245,8 +257,29 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-big {
+.number-game-multi {
     top: 800px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.number-game-big {
+    top: 900px;
     display: block;
     width: 1000px;
     position: absolute;

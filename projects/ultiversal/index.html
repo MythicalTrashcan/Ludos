@@ -18,6 +18,7 @@
 		<script type="text/javascript">
 			"use strict";
 			window.addEventListener("load", () => {
+				alert("If the server in multiplayer isn't showing as active, make sure to change the website url to be using http instead of https. Go to the url bar and click it and then go to the start of the url and change https:// to http://. If you would like to see if it is working properly, the url bar should say (⚠ Not secure | http://theludos.com/projects/ultiversal/index.html)");
 				if(document.location.href.startsWith("file:")) {
 					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
 				}else {
