@@ -130,6 +130,27 @@ li {
     border-radius: 15px;
 }
 
+.about {
+    display: block;
+    position: relative;
+    top: -35px;
+    padding: 16px;
+    background-color: #ff9900;
+    border-style: solid;
+    border-color: #944f00;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #662901;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: x-large;
+    border-radius: 15px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
 li:last-child {
     border-right: none;
 }
@@ -145,6 +166,11 @@ li:active {
 
 .youtube:hover {
     background-color: #c00000;
+    transform: scale(0.95);
+}
+
+.about:hover {
+    background-color: #c07300;
     transform: scale(0.95);
 }
 

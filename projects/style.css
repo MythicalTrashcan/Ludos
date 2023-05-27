@@ -25,7 +25,7 @@ h3 {
 }
 
 .button {
-    top: 175px;
+    top: 160px;
     margin-left: 60px;
     display: block;
     width: 1000px;
@@ -35,6 +35,28 @@ h3 {
     border-color: #a71d1d;
     box-shadow: inset;
     box-shadow: 6px 4px 4px 2px #941414;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.about {
+    top: 70px;
+    margin-left: 135px;
+    display: block;
+    width: 850px;
+    position: absolute;
+    background-color: #ff9900;
+    border-style: solid;
+    border-color: #944f00;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #662901;
     cursor: pointer;
     transition: all;
     padding: 15px 60px;
@@ -57,9 +79,21 @@ h3 {
     transform: scale(0.97);
 }
 
+.about:hover {
+    background-color: #db7018;
+    box-shadow: 6px 4px 4px 2px #5f2b00;
+    border-color: #a75509;
+    transform: scale(0.95);
+}
+
+.about:active {
+    transform: scale(0.97);
+}
+
 .size-warning {
     font-size: 20px;
     text-decoration: none;
+    margin-bottom: 50px;
 }
 
 
@@ -297,88 +331,4 @@ h3 {
     font-size: xx-large;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Navigation Bar */
-
-ul {
-    list-style-type: none;
-    position: relative;
-    bottom: -820px;
-    width: 90%;
-}
-
-li {
-    float: left;
-    border-right: 16px solid transparent;
-}
-
-.github {
-    display: block;
-    position: relative;
-    top: 150px;
-    padding: 16px;
-    background-color: #222324;
-    border-style: solid;
-    border-color: #0c0c0c;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #000000;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-}
-
-.youtube {
-    display: block;
-    position: relative;
-    top: 150px;
-    padding: 16px;
-    background-color: #ff0000;
-    border-style: solid;
-    border-color: #940000;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #660101;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-}
-
-li:last-child {
-    border-right: none;
-}
-
-li:active {
-    transform: scale(0.95);
-}
-
-.github:hover {
-    background-color: #131313;
-}
-
-.youtube:hover {
-    background-color: #c00000;
-}
-
-.footer {
-    position: absolute;
-    left: 0px;
-    bottom: -200px;
-    right: 0px;
-    width: 100%;
-    height: 40px;
-    background-color: #3f3f3f;
-    color: white;
-    text-align: center;
-    font-size: 25px;
 }
