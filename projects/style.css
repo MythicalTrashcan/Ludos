@@ -12,39 +12,20 @@
 h1 {
     text-align: center;
     font-size: 80px;
-    margin-bottom: -50px;
 }
 
 h2 {
     text-align: center;
     font-size: 50px;
-    margin-bottom: -5px;
 }
 
-.about {
-    top: 100px;
-    margin-left: 135px;
-    display: block;
-    width: 850px;
-    position: absolute;
-    background-color: #ff9900;
-    border-style: solid;
-    border-color: #944f00;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #662901;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: xx-large;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+h3 {
+    text-align: center;
+    font-size: 80px;
 }
 
 .button {
-    top: 185px;
+    top: 160px;
     margin-left: 60px;
     display: block;
     width: 1000px;
@@ -65,22 +46,22 @@ h2 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.revolt {
-    top: 270px;
-    margin-left: -65px;
+.about {
+    top: 70px;
+    margin-left: 135px;
     display: block;
-    width: 1250px;
+    width: 850px;
     position: absolute;
-    background-color: #222324;
+    background-color: #ff9900;
     border-style: solid;
-    border-color: #0c0c0c;
+    border-color: #944f00;
     box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #000000;
+    box-shadow: 6px 4px 4px 2px #662901;
     cursor: pointer;
     transition: all;
     padding: 15px 60px;
     text-shadow: none;
-    color: #ff002b;
+    color: #ffffff;
     text-decoration: none;
     font-size: xx-large;
     border-radius: 25px;
@@ -115,20 +96,12 @@ h2 {
     margin-bottom: 50px;
 }
 
-.links {
-    position: relative;
-    bottom: 100px;
-    display: flex;
-    justify-content: center;
-    right: 575px;
-}
-
 
 /* Games List */
 
 .games-list {
     position: relative;
-    bottom: -60px;
+    bottom: 100px;
     display: flex;
     justify-content: center;
     right: 575px;
