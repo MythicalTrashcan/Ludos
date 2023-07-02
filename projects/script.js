@@ -8,3 +8,8 @@ function openAbout() {
     const About = document.querySelector('about');
     window.location.href = 'https://theludos.com/about-me/index.html';
 }
+
+function openRevolt() {
+    const About = document.querySelector('revolt');
+    window.location.href = 'https://app.revolt.chat/invite/qRRSQT80';
+}

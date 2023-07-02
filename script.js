@@ -22,6 +22,11 @@ function error404() {
 
 // Social Links
 
+function openRevolt() {
+    const About = document.querySelector('revolt');
+    window.location.href = 'https://app.revolt.chat/invite/qRRSQT80';
+}
+
 function openGithub() {
     const Github = document.querySelector('github');
     window.open("https://github.com/MythicalTrashcan/");
