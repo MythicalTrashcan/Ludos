@@ -12,7 +12,6 @@
 		<meta property="og:description" content="Play minecraft 1.8 in your browser" />
 		<meta property="og:image" content="favicon.png" />
 		<link type="image/png" rel="shortcut icon" href="favicon.png" />
-		<script type="text/javascript" src="eaglercraft_opts.js"></script>
 		<script type="text/javascript" src="classes.js"></script>
 		<script type="text/javascript" src="fix-webm-duration.js"></script>
 		<script type="text/javascript">
@@ -22,25 +21,29 @@
 				if(document.location.href.startsWith("file:")) {
 					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
 				}else {
-					var opts = window.eaglercraftXOpts;
 					
-					if(typeof opts === "function") window.eaglercraftXOpts = opts = opts();
-					if(typeof opts === "undefined") window.eaglercraftXOpts = opts = {};
+					// %%%%%%%%% launch options %%%%%%%%%%%%
 					
-					if(!opts.container) opts.container = "game_frame";
-					if(!opts.assetsURI) opts.assetsURI = "assets.epk";
-					if(!opts.localesURI) opts.localesURI = "lang/";
+					window.eaglercraftXOpts = ({
+						container: "game_frame",
+						assetsURI: "assets.epk",
+						localesURI: "lang/",
+						servers: [
+						{ addr: "ws://blood-nitrogen.craft.ply.gg:23448/", name: "Ultiversal", hideAddr: true }
+	]
+});
 					
-					if(!opts.joinServer)  {
-						var q = window.location.search;
-						if(typeof q === "string" && q.startsWith("?")) {
-							q = new URLSearchParams(q);
-							var s = q.get("server");
-							if(s) opts.joinServer = s;
-						}
+					// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+					
+					var q = window.location.search;
+					if(typeof q === "string" && q.startsWith("?")) {
+						q = new URLSearchParams(q);
+						var s = q.get("server");
+						if(s) window.eaglercraftXOpts.joinServer = s;
 					}
 					
 					main();
+					
 				}
 			});
 		</script>
