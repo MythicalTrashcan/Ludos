@@ -35,7 +35,7 @@ function playerOnGroundCheck(event) {
                 //sets a hard land where player stays in a crouch for a bit and can't jump
                 //crouch is forced in groundControl below
                 const momentum = player.velocity.y * player.mass //player mass is 5 so this triggers at 26 down velocity, unless the player is holding something
-                if (momentum > 130) {
+                if (momentum > tech.hardLanding) {
                     m.doCrouch();
                     m.yOff = m.yOffWhen.jump;
                     m.hardLandCD = m.cycle + Math.min(momentum / 6.5 - 6, 40)
@@ -107,9 +107,9 @@ function collisionChecks(event) {
                         !mob[k].isSlowed && !mob[k].isStunned
                     ) {
                         let dmg = Math.min(Math.max(0.025 * Math.sqrt(mob[k].mass), 0.05), 0.3) * simulation.dmgScale; //player damage is capped at 0.3*dmgScale of 1.0
-                        if (m.isCloak) dmg *= 0.75
+                        // if (m.isCloak) dmg *= 0.5
                         mob[k].foundPlayer();
-                        if (tech.isRewindAvoidDeath && m.energy > 0.66 && dmg > 0.01) { //CPT reversal runs in m.damage, but it stops the rest of the collision code here too
+                        if (tech.isRewindAvoidDeath && (m.energy + 0.05) > Math.min(0.95, m.maxEnergy) && dmg > 0.01) { //CPT reversal runs in m.damage, but it stops the rest of the collision code here too
                             m.damage(dmg);
                             return
                         }
@@ -119,25 +119,11 @@ function collisionChecks(event) {
                                 if (document.getElementById("tech-flip-flop")) document.getElementById("tech-flip-flop").innerHTML = ` = <strong>OFF</strong>`
                                 m.eyeFillColor = 'transparent'
                                 m.damage(dmg);
-                                if (tech.isFlipFlopCoupling) {
-                                    m.couplingChange(-5)
-                                    for (let i = 0; i < mob.length; i++) {
-                                        if (mob[i].isDecoupling) mob[i].alive = false //remove WIMP
-                                    }
-                                    spawn.WIMP()
-                                    mob[mob.length - 1].isDecoupling = true //so you can find it to remove
-                                }
                             } else {
                                 tech.isFlipFlopOn = true //immune to damage this hit, lose immunity for next hit
                                 if (document.getElementById("tech-flip-flop")) document.getElementById("tech-flip-flop").innerHTML = ` = <strong>ON</strong>`
                                 m.eyeFillColor = m.fieldMeterColor //'#0cf'
                                 if (!tech.isFlipFlopHarm) m.damage(dmg);
-                                if (tech.isFlipFlopCoupling) {
-                                    m.couplingChange(5)
-                                    for (let i = 0; i < mob.length; i++) {
-                                        if (mob[i].isDecoupling) mob[i].alive = false //remove WIMP
-                                    }
-                                }
                             }
                             if (tech.isFlipFlopHealth) {
                                 m.setMaxHealth();
@@ -161,7 +147,7 @@ function collisionChecks(event) {
                         }
                         if (tech.isPiezo) m.energy += 20.48;
                         if (tech.isCouplingNoHit && m.coupling > 0) {
-                            m.couplingChange(-0.5)
+                            m.couplingChange(-5)
 
                             const unit = Vector.rotate({ x: 1, y: 0 }, 6.28 * Math.random())
                             let where = Vector.add(m.pos, Vector.mult(unit, 17))
@@ -282,7 +268,7 @@ function collisionChecks(event) {
                                 if (tech.blockDmg) { //electricity
                                     Matter.Body.setVelocity(mob[k], { x: 0.5 * mob[k].velocity.x, y: 0.5 * mob[k].velocity.y });
                                     if (tech.isBlockRadiation && !mob[k].isShielded && !mob[k].isMobBullet) {
-                                        mobs.statusDoT(mob[k], tech.blockDmg * m.dmgScale * 4 / 12, 360) //200% increase -> x (1+2) //over 7s -> 360/30 = 12 half seconds -> 3/12
+                                        mobs.statusDoT(mob[k], tech.blockDmg * 0.42, 180) //200% increase -> x (1+2) //over 7s -> 360/30 = 12 half seconds -> 3/12
                                     } else {
                                         mob[k].damage(tech.blockDmg * m.dmgScale)
                                         simulation.drawList.push({
@@ -295,18 +281,14 @@ function collisionChecks(event) {
                                     }
                                 }
 
-                                let dmg = tech.blockDamage * m.dmgScale * v * obj.mass * (tech.isMobBlockFling ? 2.5 : 1) * (tech.isBlockRestitution ? 2.5 : 1) * ((m.fieldMode === 0 || m.fieldMode === 8) ? 1 + 0.4 * m.coupling : 1);
+                                let dmg = tech.blockDamage * m.dmgScale * v * obj.mass * (tech.isMobBlockFling ? 2.5 : 1) * (tech.isBlockRestitution ? 2.5 : 1) * ((m.fieldMode === 0 || m.fieldMode === 8) ? 1 + 0.04 * m.coupling : 1);
                                 if (mob[k].isShielded) dmg *= 0.7
 
                                 mob[k].damage(dmg, true);
                                 if (tech.isBlockPowerUps && !mob[k].alive && mob[k].isDropPowerUp && m.throwCycle > m.cycle) {
-                                    let type = tech.isEnergyNoAmmo ? "heal" : "ammo"
-                                    if (Math.random() < 0.4) {
-                                        type = "heal"
-                                    } else if (Math.random() < 0.4 && !tech.isSuperDeterminism) {
-                                        type = "research"
-                                    }
-                                    powerUps.spawn(mob[k].position.x, mob[k].position.y, type);
+                                    options = ["coupling", "boost", "heal", "research"]
+                                    if (!tech.isEnergyNoAmmo) options.push("ammo")
+                                    powerUps.spawn(mob[k].position.x, mob[k].position.y, options[Math.floor(Math.random() * options.length)]);
                                 }
 
                                 const stunTime = dmg / Math.sqrt(obj.mass)
@@ -336,15 +318,15 @@ function collisionChecks(event) {
 }
 
 //determine if player is on the ground
-Events.on(engine, "collisionStart", function(event) {
+Events.on(engine, "collisionStart", function (event) {
     playerOnGroundCheck(event);
     // playerHeadCheck(event);
     collisionChecks(event);
 });
-Events.on(engine, "collisionActive", function(event) {
+Events.on(engine, "collisionActive", function (event) {
     playerOnGroundCheck(event);
     // playerHeadCheck(event);
 });
-Events.on(engine, "collisionEnd", function(event) {
+Events.on(engine, "collisionEnd", function (event) {
     playerOffGroundCheck(event);
 });

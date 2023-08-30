@@ -141,6 +141,17 @@ h3 {
     transform: scale(0.97);
 }
 
+.n-gon-old:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.n-gon-old:active {
+    transform: scale(0.97);
+}
+
 .cookie-clicker:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
@@ -249,7 +260,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.cookie-clicker {
+.n-gon-old {
     top: 600px;
     display: block;
     width: 1000px;
@@ -270,7 +281,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-lol {
+.cookie-clicker {
     top: 700px;
     display: block;
     width: 1000px;
@@ -291,7 +302,7 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-multi {
+.number-game-lol {
     top: 800px;
     display: block;
     width: 1000px;
@@ -312,8 +323,29 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-big {
+.number-game-multi {
     top: 900px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.number-game-big {
+    top: 1000px;
     display: block;
     width: 1000px;
     position: absolute;
