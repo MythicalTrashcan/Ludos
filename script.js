@@ -24,12 +24,12 @@ function error404() {
 
 function openRevolt() {
     const Revolt = document.querySelector('revolt');
-    window.location.href = 'https://app.revolt.chat/invite/qRRSQT80/';
+    window.open("https://app.revolt.chat/invite/qRRSQT80/");
 }
 
 function downloadLudos() {
     const Ludos = document.querySelector('ludos');
-    window.location.href = 'https://gitlab.com/MythicalTrashcan/ludos-offline-edition-download/-/archive/main/ludos-offline-edition-download-main.zip';
+    window.location.replace = 'https://gitlab.com/MythicalTrashcan/ludos-offline-edition-download/-/archive/main/ludos-offline-edition-download-main.zip';
 }
 
 function openGithub() {
@@ -46,6 +46,7 @@ function openAbout() {
     const About = document.querySelector('about');
     window.location.href = 'https://theludos.com/about-me/index.html';
 }
+
 /* Work on later
 
 /*

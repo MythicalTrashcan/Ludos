@@ -3,8 +3,13 @@ function returnMain() {
 }
 
 function openRevolt() {
-    const About = document.querySelector('revolt');
-    window.location.href = 'https://app.revolt.chat/invite/qRRSQT80';
+    const Revolt = document.querySelector('revolt');
+    window.open("https://app.revolt.chat/invite/qRRSQT80/");
+}
+
+function downloadLudos() {
+    const Ludos = document.querySelector('ludos');
+    window.location.replace = 'https://gitlab.com/MythicalTrashcan/ludos-offline-edition-download/-/archive/main/ludos-offline-edition-download-main.zip';
 }
 
 function openGithub() {
@@ -14,5 +19,5 @@ function openGithub() {
 
 function openYoutube() {
     const YouTube = document.querySelector('youtube');
-    window.open("https://www.youtube.com/channel/UCoXIebdrZPGGMrMYVKQpRLg");
+    window.open("https://www.youtube.com/channel/UCoXIebdrZPGGMrMYVKQpRLg/");
 }

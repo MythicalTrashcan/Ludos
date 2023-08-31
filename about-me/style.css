@@ -3,6 +3,37 @@
     text-shadow: 5px 5px 4px #522607;
     background-color: #572902;
     color: #612f17;
+    background-image: linear-gradient(to top, #572902, #723809, #8e490f, #ab5a16, #c96b1c);
+}
+
+.mythLogo {
+    margin-top: -50px;
+    margin-bottom: -100px;
+    margin-left: -25;
+}
+
+.aboutMe {
+    margin-bottom: 80px;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #4d2004;
+    color: white;
+    text-align: center;
+    font-size: 25px;
 }
 
 div {
@@ -38,28 +69,24 @@ p {
 }
 
 button {
-    background-color: #80582a;
+    background-color: #af814c;
     border-style: solid;
-    border-color: #5c3d1b;
+    border-color: #553a1c;
     border-radius: 50px;
     text-align: center;
     color: #ffffff;
-    padding: 20px 64px;
-    margin-top: 25px;
+    padding: 30px 64px;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
+    font-size: 75px;
     cursor: pointer;
+    box-shadow: 10px 5px 4px 2px #543a1c;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
-    box-shadow: inset;
-    box-shadow: 12px 8px 4px 4px #553f1c;
-    padding: 25px;
-    width: 400px
 }
 
 button[disabled] {
-    background: grey;
-    border-color: rgb(80, 80, 80);
+    background: #808080;
+    border-color: #505050;
     box-shadow: 12px 8px 4px 4px #444444;
     color: #3f3f3f;
     cursor: default;
@@ -78,31 +105,16 @@ button:active {
 }
 
 button:hover {
-    background-color: #63491f;
-    transform: scale(0.95);
-    box-shadow: 12px 8px 4px 4px #553f1c;
-    border-color: #553a1c;
-}
-
-
-/* Navigation Bar */
-
-ul {
-    list-style-type: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-li {
-    float: left;
-    border-right: 16px solid transparent;
+    background-color: #815e3d;
+    transform: scaleX(.95) scaleY(.95) rotate(-5deg);
 }
 
 .revolt {
+    width: 1000px;
     display: block;
     position: relative;
     top: -35px;
+    margin-bottom: 35px;
     padding: 16px;
     background-color: #222324;
     border-style: solid;
@@ -120,10 +132,35 @@ li {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.github {
+.ludos {
+    width: 1000px;
     display: block;
     position: relative;
     top: -35px;
+    margin-bottom: 35px;
+    padding: 16px;
+    background-color: #3e3f3f;
+    border-style: solid;
+    border-color: #272727;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #161616;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ff7b00;
+    text-decoration: none;
+    font-size: x-large;
+    border-radius: 15px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.github {
+    width: 1000px;
+    display: block;
+    position: relative;
+    top: -35px;
+    margin-bottom: 35px;
     padding: 16px;
     background-color: #222324;
     border-style: solid;
@@ -141,9 +178,11 @@ li {
 }
 
 .youtube {
+    width: 1000px;
     display: block;
     position: relative;
     top: -35px;
+    margin-bottom: 35px;
     padding: 16px;
     background-color: #ff0000;
     border-style: solid;
@@ -160,16 +199,13 @@ li {
     border-radius: 15px;
 }
 
-li:last-child {
-    border-right: none;
-}
-
-li:active {
+.revolt:hover {
+    background-color: #131313;
     transform: scale(0.95);
 }
 
-.revolt:hover {
-    background-color: #131313;
+.ludos:hover {
+    background-color: #575656;
     transform: scale(0.95);
 }
 
@@ -182,74 +218,3 @@ li:active {
     background-color: #c00000;
     transform: scale(0.95);
 }
-
-
-/* Copyright Footer */
-
-.footer {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    height: 40px;
-    background-color: #4d2004;
-    color: white;
-    text-align: center;
-    font-size: 25px;
-}
-
-
-/* Older Nav Link Code
-
-li a {
-    display: block;
-    padding: 16px;
-    background-color: #1a1a1a;
-    border-style: solid;
-    border-color: #0f0f0f;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #0c0c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: x-large;
-} 
-
-li a {
-    display: block;
-    padding: 16px;
-    background-color: #ff0000;
-    border-style: solid;
-    border-color: #920000;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #640c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: rgb(255, 255, 255);
-    text-decoration: bold;
-    font-size: x-large;
-} 
-
-li:last-child {
-    border-right: none;
-}
-
-li:active {
-    transform: scale(0.95);
-}
-
-li a:hover {
-    background-color: #131313;
-}
-
-li a:hover {
-    background-color: #b90000;
-} 
-
-*/
