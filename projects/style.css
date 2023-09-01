@@ -4,7 +4,7 @@
     background-color: #4d4d4d;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
-    height: 2200px;
+    height: 2300px;
 }
 
 .ludosLogo {
@@ -210,6 +210,20 @@ h3 {
 }
 
 .n-gon-old:active {
+    transform: scale(0.97);
+}
+
+
+/* Planetesimals */
+
+.planet:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.planet:active {
     transform: scale(0.97);
 }
 
@@ -462,10 +476,34 @@ h3 {
 }
 
 
+/* Planetesimals */
+
+.planet {
+    top: 800px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
 /* Cookie Clicker */
 
 .cookie-clicker {
-    top: 800px;
+    top: 900px;
     display: block;
     width: 1000px;
     position: absolute;
@@ -489,7 +527,7 @@ h3 {
 /* 1v1.lol */
 
 .vlol {
-    top: 900px;
+    top: 1000px;
     display: block;
     width: 1000px;
     position: absolute;
@@ -513,7 +551,7 @@ h3 {
 /* A Dance Fire & Ice */
 
 .dance-fire-ice {
-    top: 1000px;
+    top: 1100px;
     display: block;
     width: 1000px;
     position: absolute;
@@ -537,7 +575,7 @@ h3 {
 /* Ten Minutes Until Dawn */
 
 .ten-mins {
-    top: 1100px;
+    top: 1200px;
     display: block;
     width: 1000px;
     position: absolute;
@@ -561,7 +599,7 @@ h3 {
 /* 2048 */
 
 .number-game-lol {
-    top: 1200px;
+    top: 1300px;
     display: block;
     width: 1000px;
     position: absolute;
@@ -585,7 +623,7 @@ h3 {
 /* 2048 Multitask */
 
 .number-game-multi {
-    top: 1300px;
+    top: 1400px;
     display: block;
     width: 1000px;
     position: absolute;
@@ -609,30 +647,6 @@ h3 {
 /* 2048 Big */
 
 .number-game-big {
-    top: 1400px;
-    display: block;
-    width: 1000px;
-    position: absolute;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: xx-large;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* 1 */
-
-.number-game-small {
     top: 1500px;
     display: block;
     width: 1000px;
@@ -656,8 +670,32 @@ h3 {
 
 /* 1 */
 
-.aqua-slides {
+.number-game-small {
     top: 1600px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* 1 */
+
+.aqua-slides {
+    top: 1700px;
     display: block;
     width: 1000px;
     position: absolute;
