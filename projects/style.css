@@ -4,7 +4,7 @@
     background-color: #4d4d4d;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
-    height: 1600px;
+    height: 2200px;
 }
 
 .ludosLogo {
@@ -143,16 +143,36 @@ h3 {
     margin-bottom: 800px;
 }
 
-.ultiversal:hover {
+
+/* Eaglercraftx */
+
+.eaglercraftx:hover {
     background-color: #3c18db;
     box-shadow: 6px 4px 4px 2px #25067c;
     border-color: #2b09a7;
     transform: scale(0.95);
 }
 
-.ultiversal:active {
+.eaglercraftx:active {
     transform: scale(0.97);
 }
+
+
+/* Eaglercraft */
+
+.eaglercraft:hover {
+    background-color: #3c18db;
+    box-shadow: 6px 4px 4px 2px #25067c;
+    border-color: #2b09a7;
+    transform: scale(0.95);
+}
+
+.eaglercraft:active {
+    transform: scale(0.97);
+}
+
+
+/* Retro Bowl */
 
 .retro-bowl:hover {
     background-color: #dbd818;
@@ -165,6 +185,9 @@ h3 {
     transform: scale(0.97);
 }
 
+
+/* N-Gon */
+
 .n-gon:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
@@ -175,6 +198,9 @@ h3 {
 .n-gon:active {
     transform: scale(0.97);
 }
+
+
+/* N-Gon Old */
 
 .n-gon-old:hover {
     background-color: #dbd818;
@@ -187,6 +213,9 @@ h3 {
     transform: scale(0.97);
 }
 
+
+/* Cookie Clicker */
+
 .cookie-clicker:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
@@ -197,6 +226,51 @@ h3 {
 .cookie-clicker:active {
     transform: scale(0.97);
 }
+
+
+/* 1v1.lol */
+
+.vlol:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.vlol:active {
+    transform: scale(0.97);
+}
+
+
+/* A Dance Of Fire & Ice */
+
+.dance-fire-ice:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.dance-fire-ice:active {
+    transform: scale(0.97);
+}
+
+
+/* Ten Minutes Until Dawn */
+
+.ten-mins:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.ten-mins:active {
+    transform: scale(0.97);
+}
+
+
+/* 2048 */
 
 .number-game-lol:hover {
     background-color: #dbd818;
@@ -209,6 +283,9 @@ h3 {
     transform: scale(0.97);
 }
 
+
+/* 2048 Multitask */
+
 .number-game-multi:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
@@ -219,6 +296,9 @@ h3 {
 .number-game-multi:active {
     transform: scale(0.97);
 }
+
+
+/* 2048 Big */
 
 .number-game-big:hover {
     background-color: #dbd818;
@@ -231,7 +311,38 @@ h3 {
     transform: scale(0.97);
 }
 
-.ultiversal {
+
+/* 1 */
+
+.number-game-small:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.number-game-small:active {
+    transform: scale(0.97);
+}
+
+
+/* Aquapark Slides */
+
+.aqua-slides:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.aqua-slides:hover:active {
+    transform: scale(0.97);
+}
+
+
+/* Eaglercraft X 1.8.8 */
+
+.eaglercraftx {
     top: 290px;
     display: block;
     width: 1100px;
@@ -253,28 +364,35 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.retro-bowl {
-    top: 400px;
+
+/* Eaglercraft 1.5.2 */
+
+.eaglercraft {
+    top: 390px;
     display: block;
-    width: 1000px;
+    width: 1100px;
     position: absolute;
-    background-color: #10c729;
+    margin-left: -50px;
+    background-color: #109cc7;
     border-style: solid;
-    border-color: #068a27;
+    border-color: #067b8a;
     box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
+    box-shadow: 6px 4px 4px 2px #06607c;
     cursor: pointer;
     transition: all;
     padding: 15px 60px;
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 40px;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.n-gon {
+
+/* Retro Bowl */
+
+.retro-bowl {
     top: 500px;
     display: block;
     width: 1000px;
@@ -295,7 +413,10 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.n-gon-old {
+
+/* N-Gon */
+
+.n-gon {
     top: 600px;
     display: block;
     width: 1000px;
@@ -316,7 +437,10 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.cookie-clicker {
+
+/* N-Gon Old */
+
+.n-gon-old {
     top: 700px;
     display: block;
     width: 1000px;
@@ -337,7 +461,10 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-lol {
+
+/* Cookie Clicker */
+
+.cookie-clicker {
     top: 800px;
     display: block;
     width: 1000px;
@@ -358,7 +485,10 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-multi {
+
+/* 1v1.lol */
+
+.vlol {
     top: 900px;
     display: block;
     width: 1000px;
@@ -379,8 +509,155 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.number-game-big {
+
+/* A Dance Fire & Ice */
+
+.dance-fire-ice {
     top: 1000px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* Ten Minutes Until Dawn */
+
+.ten-mins {
+    top: 1100px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* 2048 */
+
+.number-game-lol {
+    top: 1200px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* 2048 Multitask */
+
+.number-game-multi {
+    top: 1300px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* 2048 Big */
+
+.number-game-big {
+    top: 1400px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* 1 */
+
+.number-game-small {
+    top: 1500px;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* 1 */
+
+.aqua-slides {
+    top: 1600px;
     display: block;
     width: 1000px;
     position: absolute;
