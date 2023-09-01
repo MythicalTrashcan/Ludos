@@ -4,7 +4,7 @@
     background-color: #4d4d4d;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
-    height: 1500px;
+    height: 1600px;
 }
 
 .ludosLogo {
@@ -19,6 +19,16 @@
 
 .entry {
     text-align: center;
+}
+
+.scroll1 {
+    margin-left: 1400px;
+    margin-top: -50px;
+}
+
+.scroll2 {
+    margin-left: -1400px;
+    margin-top: -110px;
 }
 
 .footer {
@@ -130,7 +140,7 @@ h3 {
     display: flex;
     justify-content: center;
     right: 575px;
-    padding-bottom: 800px;
+    margin-bottom: 800px;
 }
 
 .ultiversal:hover {
