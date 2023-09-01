@@ -29,7 +29,7 @@ function openRevolt() {
 
 function downloadLudos() {
     const Ludos = document.querySelector('ludos');
-    window.location.replace = 'https://gitlab.com/MythicalTrashcan/ludos-offline-edition-download/-/archive/main/ludos-offline-edition-download-main.zip';
+    window.open("https://gitlab.com/MythicalTrashcan/ludos-offline-edition-download/-/archive/main/ludos-offline-edition-download-main.zip");
 }
 
 function openGithub() {
