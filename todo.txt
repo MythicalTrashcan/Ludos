@@ -1,0 +1,5 @@
+Create an issue if you would like to request an upcoming change.
+
+Switch from Github Pages to Vercel. - Complete
+Add contrasting colors - Not Complete
+Fix Button Shadows - Not Complete
