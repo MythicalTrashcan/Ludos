@@ -21,16 +21,6 @@
     text-align: center;
 }
 
-.scroll1 {
-    margin-left: 1400px;
-    margin-top: -50px;
-}
-
-.scroll2 {
-    margin-left: -1400px;
-    margin-top: -110px;
-}
-
 .footer {
     position: fixed;
     left: 0px;
