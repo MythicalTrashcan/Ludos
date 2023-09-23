@@ -4,7 +4,7 @@
     background-color: #4d4d4d;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
-    height: 2225px;
+    height: 2425px;
 }
 
 .ludosLogo {
@@ -32,6 +32,17 @@
     color: white;
     text-align: center;
     font-size: 25px;
+}
+
+#embed {
+    margin: auto;
+}
+
+.mc-server {
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    color: rgb(163, 255, 163);
 }
 
 h1 {
