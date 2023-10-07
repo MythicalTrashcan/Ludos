@@ -1,6 +1,10 @@
 Create an issue if you would like to request an upcoming change.
 
-Switch from Github Pages to Vercel. - Complete
+Switch from Github Pages to Vercel - Complete
+Delay load timeout - Complete
+
 Add contrasting colors - Not Complete
 Fix button shadows - Not Complete
 Add more games - Not Complete
+Improve loading times - Not Complete
+Possible remove load failure - No Complete
