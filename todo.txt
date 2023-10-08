@@ -3,12 +3,12 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| WORK ON THESE |==========----------
 
-1. Add 3 more games - Not Complete
-2. Add icons next to the games buttons - Not Complete
-3. Add a future update voting system - Not Complete
-4. Add contrasting colors - Not Complete
+1. Add 3 more games
+2. Add icons next to the games buttons
+3. Add a future update voting system
+4. Add contrasting colors
 
 ----------==========| ALREADY COMPLETED |==========----------
 
-1. Switch from Github Pages to Vercel - Complete
-2. Delay load timeout - Complete
+1. Switch from Github Pages to Vercel
+2. Delay load timeout
