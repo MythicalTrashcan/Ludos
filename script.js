@@ -6,7 +6,7 @@ function viewProjects() {
     button.disabled = true;
     button.textContent = "Loading Tab...";
     timeout = setTimeout(alertFunc, 1000);
-    timeout = setTimeout(error404, 2000);
+    timeout = setTimeout(error404, 5000);
 }
 
 function alertFunc() {
