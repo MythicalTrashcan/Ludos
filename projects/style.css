@@ -4,7 +4,7 @@
     background-color: #4d4d4d;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
-    height: 2525px;
+    height: 1525px;
 }
 
 .ludosLogo {
@@ -214,20 +214,6 @@ h3 {
 }
 
 
-/* N-Gon Old */
-
-.n-gon-old:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.n-gon-old:active {
-    transform: scale(0.97);
-}
-
-
 /* Planetesimals */
 
 .planet:hover {
@@ -387,9 +373,9 @@ h3 {
 .eaglercraftx {
     top: 290px;
     display: block;
-    width: 1100px;
+    width: 250px;
     position: absolute;
-    margin-left: -50px;
+    margin-left: -25px;
     background-color: #109cc7;
     border-style: solid;
     border-color: #067b8a;
@@ -401,7 +387,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 30px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -410,11 +397,11 @@ h3 {
 /* Eaglercraft 1.5.2 */
 
 .eaglercraft {
-    top: 390px;
+    top: 290px;
     display: block;
-    width: 1100px;
+    width: 250px;
     position: absolute;
-    margin-left: -50px;
+    margin-left: 375px;
     background-color: #109cc7;
     border-style: solid;
     border-color: #067b8a;
@@ -426,7 +413,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 30px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -434,11 +422,11 @@ h3 {
 /* Eaglercraft Beta 1.3 */
 
 .eaglercraftb {
-    top: 490px;
+    top: 290px;
     display: block;
-    width: 1100px;
+    width: 250px;
     position: absolute;
-    margin-left: -50px;
+    margin-left: 775px;
     background-color: #109cc7;
     border-style: solid;
     border-color: #067b8a;
@@ -450,7 +438,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 30px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -459,10 +448,12 @@ h3 {
 /* Retro Bowl */
 
 .retro-bowl {
-    top: 600px;
+    top: 490px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: -50px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -474,7 +465,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -483,10 +475,12 @@ h3 {
 /* N-Gon */
 
 .n-gon {
-    top: 700px;
+    top: 490px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 259.375px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -498,31 +492,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* N-Gon Old */
-
-.n-gon-old {
-    top: 800px;
-    display: block;
-    width: 1000px;
-    position: absolute;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -531,10 +502,12 @@ h3 {
 /* Planetesimals */
 
 .planet {
-    top: 900px;
+    top: 490px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 565.625px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -546,7 +519,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -555,10 +529,12 @@ h3 {
 /* Cookie Clicker */
 
 .cookie-clicker {
-    top: 1000px;
+    top: 490px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 875px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -570,7 +546,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -579,10 +556,12 @@ h3 {
 /* Baldi's Basics */
 
 .baldis-basics {
-    top: 1100px;
+    top: 660px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: -50px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -594,7 +573,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -603,10 +583,12 @@ h3 {
 /* 1v1.lol */
 
 .vlol {
-    top: 1200px;
+    top: 660px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 259.375px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -618,7 +600,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -627,10 +610,12 @@ h3 {
 /* A Dance Fire & Ice */
 
 .dance-fire-ice {
-    top: 1300px;
+    top: 660px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 565.625px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -642,7 +627,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 20px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -651,10 +637,12 @@ h3 {
 /* Ten Minutes Until Dawn */
 
 .ten-mins {
-    top: 1400px;
+    top: 660px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 875px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -666,7 +654,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 20px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -675,10 +664,12 @@ h3 {
 /* 2048 */
 
 .number-game-lol {
-    top: 1500px;
+    top: 830px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: -50px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -690,7 +681,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -699,10 +691,12 @@ h3 {
 /* 2048 Multitask */
 
 .number-game-multi {
-    top: 1600px;
+    top: 830px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 259.375px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -714,7 +708,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -723,10 +718,12 @@ h3 {
 /* 2048 Big */
 
 .number-game-big {
-    top: 1700px;
+    top: 830px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 565.625px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -738,7 +735,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 20px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
@@ -747,10 +745,12 @@ h3 {
 /* 1 */
 
 .number-game-small {
-    top: 1800px;
+    top: 830px;
     display: block;
-    width: 1000px;
+    width: 175px;
+    height: 125px;
     position: absolute;
+    margin-left: 875px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -762,31 +762,8 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: xx-large;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* 1 */
-
-.aqua-slides {
-    top: 1900px;
-    display: block;
-    width: 1000px;
-    position: absolute;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: xx-large;
+    font-size: 25px;
+    text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }

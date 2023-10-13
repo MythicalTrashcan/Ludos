@@ -3,12 +3,12 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| WORK ON THESE |==========----------
 
-1. Add 3 more games
-2. Add icons next to the games buttons
+1. Revamp the about me
+2. Add 3 more games
 3. Add a future update voting system
 4. Add contrasting colors
 
-----------==========| ALREADY COMPLETED |==========----------
 
-1. Switch from Github Pages to Vercel
-2. Delay load timeout
+ ----------==========| LAST CHANGE |==========----------
+
+Revamp the entire game list

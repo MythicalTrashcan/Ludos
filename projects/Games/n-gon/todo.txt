@@ -1,12 +1,13 @@
 ******************************************************** NEXT PATCH **************************************************
 
-community map crimsonTowers by Richard0820
+new mob type: hopMother - hoppers that drop eggs that explode on contact and after several seconds they hatch into baby hoppers
+  regular hopper mobs have more life and more damage
 
-new MACHO animation
-
-tech: dark star - MACHO is bigger and damages mobs
+a few bug fixes
 
 *********************************************************** TODO *****************************************************
+
+a mob/boss? that drops the mines from reactor and final boss
 
 more (all) bosses need to be made of parts
   good examples: spiderBoss, dragonFlyBoss, beetleBoss
