@@ -11,3 +11,4 @@ The priority of the update is from top to bottom. (the top is the most important
 
 Revamp the entire game list
 Revamp the about me
+Remove /index.html from games when launched
