@@ -13,11 +13,11 @@ function alertFunc() {
     const button = document.querySelector('button');
     button.textContent = "View Projects";
     button.disabled = false;
-    window.location.href = 'https://theludos.com/projects/';
+    window.location.href = './projects/';
 }
 
 function error404() {
-    window.location = 'https://theludos.com/no-load/';
+    window.location = './no-load/';
 }
 
 // Social Links
@@ -44,7 +44,7 @@ function openYoutube() {
 
 function openAbout() {
     const About = document.querySelector('about');
-    window.location.href = 'https://theludos.com/about-me/index.html';
+    window.location.href = './about-me/';
 }
 
 /* Work on later

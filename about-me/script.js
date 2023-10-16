@@ -1,5 +1,5 @@
 function returnMain() {
-    window.location.href = 'https://theludos.com/';
+    window.location.href = '../';
 }
 
 function openRevolt() {

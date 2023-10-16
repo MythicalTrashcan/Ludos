@@ -1,7 +1,7 @@
 let timeout;
 
 function returnMain() {
-    window.location.href = 'https://theludos.com/';
+    window.location.href = '../';
 }
 
 function openRevolt() {
@@ -26,5 +26,5 @@ function openYoutube() {
 
 function openAbout() {
     const About = document.querySelector('about');
-    window.location.href = 'https://theludos.com/about-me/index.html';
+    window.location.href = './about-me/';
 }
