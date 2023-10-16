@@ -6,7 +6,7 @@ function returnHome() {
 
 function openAbout() {
     const About = document.querySelector('about');
-    window.location.href = './about-me/';
+    window.location.href = '../about-me/';
 }
 
 window.addEventListener("load", () => {
