@@ -4,7 +4,7 @@ function returnMain() {
 
 function openRevolt() {
     const Revolt = document.querySelector('revolt');
-    window.open("https://app.revolt.chat/invite/qRRSQT80/");
+    window.open("https://app.revolt.chat/invite/YPnCttyS/");
 }
 
 function downloadLudos() {
