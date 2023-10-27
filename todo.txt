@@ -9,6 +9,6 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| LAST 3 CHANGES |==========----------
 
+Add sand game
 Change all links to go to the folder directly rather than the full address (allows for other sites rehosting my site to not have to modify anything to send the buttons to their link)
 Remove /index.html from games when launched
-Revamp the about me
