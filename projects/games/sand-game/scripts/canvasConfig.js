@@ -1,1 +1,1 @@
-const __max_width=560,__max_height=480,width=Math.min(560,Math.max(screen.width-6,1)),height=Math.min(480,Math.max(screen.height-200,100)),MAX_FPS=120,DEFAULT_FPS=60,MAX_NUM_PARTICLES=1e3;
+const __max_width=8192,__max_height=8192,width=Math.min(8192,Math.max(screen.width-6,1)),height=Math.min(8192,Math.max(screen.height-200,100)),MAX_FPS=512,DEFAULT_FPS=60,MAX_NUM_PARTICLES=1e3;
