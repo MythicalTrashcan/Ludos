@@ -9,6 +9,6 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| LAST 3 CHANGES |==========----------
 
+Add metadata to all webpages
 Possibly unblock retrobowl
 Update eagler 1.5 to latest version
-Add sand game
