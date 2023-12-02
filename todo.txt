@@ -6,9 +6,11 @@ The priority of the update is from top to bottom. (the top is the most important
 1. Add 4 more games
 2. Add a future update voting system
 3. Add contrasting colors
+4. Update links to fit more like the games list
 
- ----------==========| LAST 3 CHANGES |==========----------
+ ----------==========| LAST CHANGES |==========----------
 
-Add metadata to all webpages
-Possibly unblock retrobowl
-Update eagler 1.5 to latest version
+Added EaglerProxy and EaglerRelay
+Added metadata to all webpages
+Possibly unblocked RetroBowl
+Updated eagler 1.5 to latest version

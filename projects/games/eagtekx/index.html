@@ -28,10 +28,17 @@
 						assetsURI: "assets.epk",
 						localesURI: "lang/",
 						servers: [
-							{ addr: "wss://mc.theludos.com/", name: "Myth's EagMP" }
+							{
+								addr: "wss://mc.theludos.com/",
+								name: "Myth's EagMP"
+							},
+							{
+								addr: "wss://proxy.theludos.com/",
+								name: "Myth's EaglerProxy"
+							}
 						]
 					};
-					
+
 					// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 					
 					var q = window.location.search;
