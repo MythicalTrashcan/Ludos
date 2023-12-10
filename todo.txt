@@ -10,6 +10,7 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| LAST CHANGES |==========----------
 
+Update eagler beta 1.3 to latest version
 Added EaglerProxy and EaglerRelay
 Added metadata to all webpages
 Possibly unblocked RetroBowl
