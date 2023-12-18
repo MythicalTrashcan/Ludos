@@ -305,17 +305,14 @@ const build = {
         // console.log(localSettings.isHideImages, from)
     },
     hideHUD() {
-
         if (simulation.isTraining) {
             localSettings.isHideHUD = false
         } else {
             localSettings.isHideHUD = !localSettings.isHideHUD
         }
-
         if (localSettings.isAllowed) localStorage.setItem("localSettings", JSON.stringify(localSettings)); //update local storage
         document.getElementById("hide-hud").checked = localSettings.isHideHUD
         document.getElementById("hide-hud").classList.toggle("ticked")
-
         simulation.removeEphemera("dmgDefBars")
         if (!localSettings.isHideHUD) {
             simulation.ephemera.push({
@@ -524,12 +521,10 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
             if (!aHasKeyword && bHasKeyword) return 1;
             return 0;
         }
-
         if (find === 'guntech') {
             tech.tech.sort((a, b) => {
                 if (a.isGunTech && b.isGunTech) {
-                    if (a.allowed() > b.allowed()) return -1; //sort to the top
-                    if (!a.allowed() < b.allowed()) return 1; //sort to the bottom
+                    return (a.allowed() === b.allowed()) ? 0 : a.allowed() ? -1 : 1;
                 }
                 if (a.isGunTech && !b.isGunTech) return -1; //sort to the top
                 if (!a.isGunTech && b.isGunTech) return 1; //sort to the bottom
@@ -538,30 +533,30 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
         } else if (find === 'fieldtech') {
             tech.tech.sort((a, b) => {
                 if (a.isFieldTech && b.isFieldTech) {
-                    if (a.allowed() > b.allowed()) return -1; //sort to the top
-                    if (!a.allowed() < b.allowed()) return 1; //sort to the bottom
+                    return (a.allowed() === b.allowed()) ? 0 : a.allowed() ? -1 : 1;
                 }
                 if (a.isFieldTech && !b.isFieldTech) return -1; //sort to the top
                 if (!a.isFieldTech && b.isFieldTech) return 1; //sort to the bottom
                 return 0;
             });
         } else if (find === 'allowed') {
+            // tech.tech.sort((a, b) => {
+            //     if (a.allowed() > !b.allowed()) return -1; //sort to the top
+            //     if (!a.allowed() < b.allowed()) return 1; //sort to the bottom
+            //     return 0;
+            // });
             tech.tech.sort((a, b) => {
-                if (a.allowed() > b.allowed()) return -1; //sort to the top
-                if (!a.allowed() < b.allowed()) return 1; //sort to the bottom
-                return 0;
+                return (a.allowed() === b.allowed()) ? 0 : a.allowed() ? -1 : 1;
             });
         } else if (find === 'have') {
             tech.tech.sort((a, b) => {
-                if (a.count > b.count) return -1; //sort to the top
-                if (!a.count < b.count) return 1; //sort to the bottom
+                return (a.allowed() === b.allowed()) ? 0 : a.allowed() ? -1 : 1;
                 return 0;
             });
         } else if (find === 'heal') {
             tech.tech.sort((a, b) => {
                 if (a.isHealTech && b.isHealTech) {
-                    if (a.allowed() > b.allowed()) return -1; //sort to the top
-                    if (!a.allowed() < b.allowed()) return 1; //sort to the bottom
+                    return (a.allowed() === b.allowed()) ? 0 : a.allowed() ? -1 : 1;
                 }
                 if (a.isHealTech && !b.isHealTech) return -1; //sort to the top
                 if (!a.isHealTech && b.isHealTech) return 1; //sort to the bottom
@@ -570,8 +565,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
         } else if (find === 'bot') {
             tech.tech.sort((a, b) => {
                 if (a.isBotTech && b.isBotTech) {
-                    if (a.allowed() > b.allowed()) return -1; //sort to the top
-                    if (!a.allowed() < b.allowed()) return 1; //sort to the bottom
+                    return (a.allowed() === b.allowed()) ? 0 : a.allowed() ? -1 : 1;
                 }
                 if (a.isBotTech && !b.isBotTech) return -1; //sort to the top
                 if (!a.isBotTech && b.isBotTech) return 1; //sort to the bottom
@@ -580,8 +574,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
         } else if (document.getElementById("sort-input").value === 'skin') {
             tech.tech.sort((a, b) => {
                 if (a.isSkin && b.isSkin) {
-                    if (a.allowed() > b.allowed()) return -1; //sort to the top
-                    if (!a.allowed() < b.allowed()) return 1; //sort to the bottom
+                    return (a.allowed() === b.allowed()) ? 0 : a.allowed() ? -1 : 1;
                 }
                 if (a.isSkin && !b.isSkin) return -1; //sort to the top
                 if (!a.isSkin && b.isSkin) return 1; //sort to the bottom
@@ -795,9 +788,9 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
 <div>
     <select name="difficulty-select" id="difficulty-select-experiment">
     <option value="1">easy</option>
-    <option value="2" selected>normal</option>
-    <option value="4">hard</option>
-    <option value="6">why</option>
+    <option value="2" selected>normal ⚆</option>
+    <option value="4">hard ⚆</option>
+    <option value="5">why ⚇</option>
     </select>
     &nbsp; &nbsp;
         <label for="hide-images-experiment" title="reload experiment with no images for fields, guns, and tech" style="font-size: 0.85em;">hide images</label>
@@ -1279,7 +1272,7 @@ window.addEventListener("keydown", function (event) {
                                 simulation.molecularMode++
                                 m.fieldUpgrades[4].description = m.fieldUpgrades[4].setDescription()
                             } else {
-                                m.setField((m.fieldMode === m.fieldUpgrades.length - 1) ? 0 : m.fieldMode + 1) //cycle to next field
+                                m.setField((m.fieldMode === m.fieldUpgrades.length - 1) ? 1 : m.fieldMode + 1) //cycle to next field, skip field emitter
                                 if (m.fieldMode === 4) {
                                     simulation.molecularMode = 0
                                     m.fieldUpgrades[4].description = m.fieldUpgrades[4].setDescription()

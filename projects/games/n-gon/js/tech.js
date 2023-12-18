@@ -218,7 +218,7 @@ const tech = {
         }
     },
     hasExplosiveDamageCheck() {
-        return tech.haveGunCheck("missiles") || (m.fieldMode === 4 && simulation.molecularMode === 1) || tech.missileBotCount > 0 || tech.isBoomBotUpgrade || tech.isIncendiary || tech.isPulseLaser || tech.isTokamak || (tech.haveGunCheck("grenades") && !tech.isNeutronBomb)
+        return tech.haveGunCheck("missiles") || (m.fieldMode === 4 && simulation.molecularMode === 1) || tech.missileBotCount > 0 || tech.isBoomBotUpgrade || tech.isIncendiary || tech.isPulseLaser || tech.isTokamak || (tech.haveGunCheck("grenades") && !tech.isNeutronBomb) || tech.isHookExplosion
     },
     damage: 1, //used for tech changes to player damage that don't have complex conditions
     damageFromTech() {
@@ -232,7 +232,7 @@ const tech = {
         //     }
         // }
         if (tech.isDivisor && b.activeGun && b.guns[b.activeGun].ammo % 3 === 0) dmg *= 1.77
-        if (tech.isNoGroundDamage) dmg *= m.onGround ? 0.78 : 1.88
+        if (tech.isNoGroundDamage) dmg *= m.onGround ? 0.85 : 2
         if (tech.isDilate) dmg *= 1.5 + 0.6 * Math.sin(m.cycle * 0.0075)
         if (tech.isGunChoice && tech.buffedGun === b.inventoryGun) dmg *= 1 + 0.31 * b.inventory.length
         if (powerUps.boost.endCycle > m.cycle) dmg *= 1 + powerUps.boost.damage
@@ -253,7 +253,7 @@ const tech = {
         if (tech.energyDamage) dmg *= 1 + m.energy * 0.22 * tech.energyDamage;
         if (tech.isDamageFromBulletCount) dmg *= 1 + bullet.length * 0.007
         if (tech.isNoFireDamage && m.cycle > m.fireCDcycle + 120) dmg *= 2
-        if (tech.isSpeedDamage) dmg *= 1 + Math.min(0.66, player.speed * 0.0165)
+        if (tech.isSpeedDamage) dmg *= 1 + Math.min(0.88, player.speed * 0.0193)
         if (tech.isDamageAfterKillNoRegen && m.lastKillCycle + 300 > m.cycle) dmg *= 1.83
         if (tech.isAxion && tech.isHarmMACHO) dmg *= 2 - m.defense()
         if (tech.isHarmDamage && m.lastHarmCycle + 480 > m.cycle) dmg *= 3;
@@ -751,7 +751,8 @@ const tech = {
             for (let i = 0; i < 7; i++) powerUps.spawn(m.pos.x + 10 * Math.random(), m.pos.y + 10 * Math.random(), "gun");
         },
         remove() {
-            if (!this.count) tech.isGunCycle = false; // only set to false if you don't have this tech
+            // if (!this.count)
+            tech.isGunCycle = false; // only set to false if you don't have this tech
             // if (tech.isGunCycle) {
             //     for (let i = 0; i < 8; i++) {
             //         if (b.inventory.length) b.removeGun(b.guns[b.inventory[b.inventory.length - 1]].name) //remove your last gun
@@ -954,9 +955,9 @@ const tech = {
         frequency: 1,
         frequencyDefault: 1,
         allowed() {
-            return !m.isShipMode && !tech.isAlwaysFire, !tech.isGrapple
+            return !m.isShipMode && !tech.isAlwaysFire
         },
-        requires: "not ship mode, automatic, grappling hook",
+        requires: "not ship mode, automatic",
         effect() {
             tech.isFireMoveLock = true;
             b.setFireCD();
@@ -1046,7 +1047,7 @@ const tech = {
     // },
     {
         name: "Newtons 1st law",
-        description: "<strong class='color-defense'>defense</strong> is proportional to your <strong>speed</strong><br>up to <strong>+66%</strong> <strong class='color-defense'>defense</strong> at <strong>40 speed</strong>",
+        description: "<strong class='color-defense'>defense</strong> is proportional to your <strong>speed</strong><br>up to <strong>+88%</strong> <strong class='color-defense'>defense</strong> at <strong>55 speed</strong>",
         maxCount: 1,
         count: 0,
         frequency: 1,
@@ -1064,7 +1065,7 @@ const tech = {
     },
     {
         name: "Newtons 2nd law",
-        description: "<strong class='color-d'>damage</strong> is proportional to your <strong>speed</strong><br>up to <strong>+66%</strong> <strong class='color-d'>damage</strong> at <strong>40 speed</strong>",
+        description: "<strong class='color-d'>damage</strong> is proportional to your <strong>speed</strong><br>up to <strong>+88%</strong> <strong class='color-d'>damage</strong> at <strong>55 speed</strong>",
         maxCount: 1,
         count: 0,
         frequency: 1,
@@ -1957,7 +1958,7 @@ const tech = {
         frequencyDefault: 1,
         isBotTech: true,
         allowed() {
-            return b.totalBots() > 1
+            return b.totalBots() > 1 && !tech.isDeterminism
         },
         requires: "at least 2 bots",
         effect() {
@@ -2046,9 +2047,9 @@ const tech = {
         frequency: 1,
         frequencyDefault: 1,
         allowed() {
-            return m.fieldMode !== 9 && !tech.isTokamak
+            return m.fieldMode !== 9 && !tech.isTokamak && !tech.isReel
         },
-        requires: "not wormhole, tokamak",
+        requires: "not wormhole, reel, tokamak",
         effect() {
             tech.blockDamage = 0.3
         },
@@ -3669,7 +3670,7 @@ const tech = {
         isBadRandomOption: true,
         isNonRefundable: true,
         allowed() {
-            return !tech.extraChoices && !tech.isExtraGunField && !tech.isFlipFlopChoices
+            return !tech.extraChoices && !tech.isExtraGunField && !tech.isFlipFlopChoices && !tech.isExtraBotOption
         },
         requires: "not emergence, cross-disciplinary, integrated circuit",
         effect() {
@@ -4051,7 +4052,7 @@ const tech = {
         name: "residual dipolar coupling",
         descriptionFunction() {
             // return `clicking <strong class='color-cancel'>cancel</strong> for a <strong class='color-f'>field</strong>, <strong class='color-m'>tech</strong>, or <strong class='color-g'>gun</strong><br>spawns ${powerUps.orb.coupling(5)}that each give <strong>+0.1</strong> <strong class='color-coupling'>coupling</strong>`//<br>${m.couplingDescription(1)} ${m.fieldMode === 0 ? "" : "per <strong class='color-coupling'>coupling</strong>"}
-            return `clicking <strong class='color-cancel'>cancel</strong> spawns ${powerUps.orb.coupling(5)}<br><em>${m.couplingDescription(1)} per ${powerUps.orb.coupling(1)}</em>`
+            return `clicking <strong class='color-cancel'>cancel</strong> spawns ${powerUps.orb.coupling(6)}<br><em>${m.couplingDescription(1)} per ${powerUps.orb.coupling(1)}</em>`
         },
         maxCount: 1,
         count: 0,
@@ -4071,7 +4072,7 @@ const tech = {
     {
         name: "commodities exchange",
         descriptionFunction() {
-            return `clicking <strong class='color-cancel'>cancel</strong> for a <strong class='color-f'>field</strong>, <strong class='color-m'>tech</strong>, or <strong class='color-g'>gun</strong><br>spawns <strong>5-10</strong> ${powerUps.orb.heal()}, ${powerUps.orb.ammo()}, or ${powerUps.orb.research(1)}`
+            return `clicking <strong class='color-cancel'>cancel</strong> for a <strong class='color-f'>field</strong>, <strong class='color-m'>tech</strong>, or <strong class='color-g'>gun</strong><br>spawns <strong>6-12</strong> ${powerUps.orb.heal()}, ${powerUps.orb.ammo()}, or ${powerUps.orb.research(1)}`
         },
         maxCount: 1,
         count: 0,
@@ -4544,7 +4545,7 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return (!tech.isLargeHarpoon && tech.haveGunCheck("harpoon")) || tech.isNeedles
+            return (!tech.isLargeHarpoon && tech.haveGunCheck("harpoon")) || tech.isNeedles || tech.isHookDefense
         },
         requires: "needle gun, harpoon, not Bessemer process",
         effect() {
@@ -4759,7 +4760,7 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return (tech.isNailShot || tech.isNeedles || tech.isNailBotUpgrade || tech.haveGunCheck("nail gun") || tech.isRivets || (tech.haveGunCheck("mine") && !(tech.isFoamMine || tech.isSuperMine))) && !tech.isIncendiary && !tech.isCritKill
+            return (tech.isNailShot || tech.isNeedles || tech.isNailBotUpgrade || tech.haveGunCheck("nail gun") || tech.isRivets || ((tech.isMineDrop || tech.haveGunCheck("mine")) && !(tech.isFoamMine || tech.isSuperMine))) && !tech.isIncendiary && !tech.isCritKill
         },
         requires: "nail gun, mine, needles, nails, rivets, not incendiary, stress concentration",
         effect() {
@@ -4779,7 +4780,7 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return tech.isMineDrop || tech.isNailBotUpgrade || tech.fragments || tech.nailsDeathMob || (tech.haveGunCheck("mine") && !(tech.isFoamMine || tech.isSuperMine)) || (tech.haveGunCheck("nail gun") && !tech.isShieldPierce) || (tech.haveGunCheck("shotgun") && (tech.isNeedles || tech.isNailShot))
+            return tech.isNailBotUpgrade || tech.fragments || tech.nailsDeathMob || ((tech.isMineDrop || tech.haveGunCheck("mine")) && !(tech.isFoamMine || tech.isSuperMine)) || (tech.haveGunCheck("nail gun") && !tech.isShieldPierce) || (tech.haveGunCheck("shotgun") && (tech.isNeedles || tech.isNailShot))
         },
         requires: "nail gun, nails, rivets, mine, not ceramic needles",
         effect() {
@@ -5148,7 +5149,7 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return ((tech.haveGunCheck("super balls") || tech.isSuperMine) && !tech.isSuperBounce) || (tech.haveGunCheck("harpoon") && !tech.fragments)
+            return ((tech.haveGunCheck("super balls") || tech.isSuperMine) && !tech.isSuperBounce) || (tech.haveGunCheck("harpoon") && !tech.fragments) || tech.isHookDefense
         },
         requires: "super balls, harpoon, not fragmentation",
         effect() {
@@ -5573,7 +5574,7 @@ const tech = {
         frequency: 1,
         frequencyDefault: 1,
         allowed() {
-            return !tech.isExplodeRadio && ((tech.haveGunCheck("harpoon") && !tech.isFoamBall) || (tech.haveGunCheck("grenades") && !tech.isNeutronBomb) || tech.haveGunCheck("missiles") || (m.fieldMode === 4 && simulation.molecularMode === 1) || tech.missileBotCount || tech.isRivets || tech.blockDamage > 0.075)
+            return !tech.isExplodeRadio && ((tech.haveGunCheck("harpoon") && !tech.isFoamBall) || (tech.haveGunCheck("grenades") && !tech.isNeutronBomb) || tech.haveGunCheck("missiles") || (m.fieldMode === 4 && simulation.molecularMode === 1) || tech.missileBotCount || tech.isRivets || tech.blockDamage > 0.075 || tech.isHookDefense)
         },
         requires: "grenades, missiles, rivets, harpoon, or mass driver, not iridium-192, not polyurethane foam",
         effect() {
@@ -5669,7 +5670,7 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return !tech.isImmuneExplosion && (build.isExperimentSelection || powerUps.research.count > 1) && (tech.haveGunCheck("missiles") || (m.fieldMode === 4 && simulation.molecularMode === 1) || tech.missileBotCount > 0 || tech.isIncendiary || tech.isPulseLaser || tech.isTokamak || (tech.haveGunCheck("grenades") && !tech.isNeutronBomb))
+            return !tech.isImmuneExplosion && (build.isExperimentSelection || powerUps.research.count > 1) && (tech.haveGunCheck("missiles") || (m.fieldMode === 4 && simulation.molecularMode === 1) || tech.missileBotCount > 0 || tech.isIncendiary || tech.isPulseLaser || tech.isTokamak || tech.isHookExplosion || (tech.haveGunCheck("grenades") && !tech.isNeutronBomb))
         },
         requires: "an explosive damage source, not rocket propelled grenade",
         effect() {
@@ -6681,10 +6682,10 @@ const tech = {
         },
         requires: "foam",
         effect() {
-            tech.foamDamage += 0.011 * 0.43
+            tech.foamDamage += 0.01 * 0.43
         },
         remove() {
-            tech.foamDamage = 0.011;
+            tech.foamDamage = 0.01;
         }
     },
     {
@@ -6779,7 +6780,7 @@ const tech = {
         name: "capacitor bank",
         // description: "<strong>charge</strong> effects build up almost <strong>instantly</strong><br><em style = 'font-size:97%;'>throwing <strong class='color-block'>blocks</strong>, foam, railgun, pulse, tokamak</em>",
         descriptionFunction() {
-            return `<strong>charge</strong> effects build up almost <strong>instantly</strong><br><em style = 'font-size:93%;'>throwing, ${tech.haveGunCheck("foam", false) ? "<strong>foam</strong>" : "foam"}, ${tech.isPlasmaBall ? "<strong>plasma ball</strong>" : "plasma ball"}, ${tech.isRailGun ? "<strong>railgun</strong>" : "railgun"}, ${tech.isPulseLaser ? "<strong>pulse</strong>" : "pulse"}, ${tech.isTokamak ? "<strong>tokamak</strong>" : "tokamak"}</em>`
+            return `<strong>charge</strong> effects build up almost <strong>instantly</strong><br><em style = 'font-size:93%;'><strong class='color-block'>blocks</strong>, ${tech.haveGunCheck("foam", false) ? "<strong>foam</strong>" : "foam"}, ${tech.isPlasmaBall ? "<strong>plasma ball</strong>" : "plasma ball"}, ${tech.isRailGun ? "<strong>railgun</strong>" : "railgun"}, ${tech.isPulseLaser ? "<strong>pulse</strong>" : "pulse"}, ${tech.isTokamak ? "<strong>tokamak</strong>" : "tokamak"}</em>`
         },
         isGunTech: true,
         maxCount: 1,
@@ -6830,9 +6831,9 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return tech.haveGunCheck("harpoon") && !tech.isFilament && !tech.isHarpoonPowerUp && !tech.isGrapple && !tech.isBoostReplaceAmmo
+            return tech.haveGunCheck("harpoon") && !tech.isFilament && !tech.isHarpoonPowerUp && !tech.isBoostReplaceAmmo
         },
-        requires: "harpoon, not UHMWPE, induction furnace, grappling hook, quasiparticles",
+        requires: "harpoon, not UHMWPE, induction furnace, quasiparticles",
         ammoBonus: 9,
         effect() {
             tech.isRailGun = true;
@@ -6851,52 +6852,52 @@ const tech = {
             }
         }
     },
-    {
-        name: "grappling hook",
-        description: `<strong>harpoons</strong> attach to the <strong>map</strong> and pull you<br>your <strong>rope</strong> extends while holding <strong>fire</strong>`,
-        isGunTech: true,
-        maxCount: 1,
-        count: 0,
-        frequency: 2,
-        frequencyDefault: 2,
-        allowed() {
-            return tech.haveGunCheck("harpoon") && !tech.isFilament && !tech.isHarpoonPowerUp && !tech.isRailGun && !tech.isFireMoveLock
-        },
-        requires: "harpoon, not railgun, UHMWPE, induction furnace, Higgs mechanism",
-        effect() {
-            tech.isGrapple = true;
-            for (i = 0, len = b.guns.length; i < len; i++) { //find which gun 
-                if (b.guns[i].name === "harpoon") b.guns[i].chooseFireMethod()
-            }
-        },
-        remove() {
-            if (tech.isGrapple) {
-                tech.isGrapple = false;
-                for (i = 0, len = b.guns.length; i < len; i++) { //find which gun 
-                    if (b.guns[i].name === "harpoon") b.guns[i].chooseFireMethod()
-                }
-            }
-        }
-    },
-    {
-        name: "bulk modulus",
-        description: `while <strong>grappling</strong> become <strong>invulnerable</strong><br>drain <strong class='color-f'>energy</strong>`,
-        isGunTech: true,
-        maxCount: 1,
-        count: 0,
-        frequency: 2,
-        frequencyDefault: 2,
-        allowed() {
-            return tech.haveGunCheck("harpoon") && tech.isGrapple && !tech.isRailEnergy
-        },
-        requires: "grappling hook, not alternator",
-        effect() {
-            tech.isImmuneGrapple = true;
-        },
-        remove() {
-            tech.isImmuneGrapple = false
-        }
-    },
+    // {
+    //     name: "grappling hook",
+    //     description: `<strong>harpoons</strong> attach to the <strong>map</strong> and pull you<br>your <strong>rope</strong> extends while holding <strong>fire</strong>`,
+    //     isGunTech: true,
+    //     maxCount: 1,
+    //     count: 0,
+    //     frequency: 2,
+    //     frequencyDefault: 2,
+    //     allowed() {
+    //         return tech.haveGunCheck("harpoon") && !tech.isFilament && !tech.isHarpoonPowerUp && !tech.isRailGun && !tech.isFireMoveLock
+    //     },
+    //     requires: "harpoon, not railgun, UHMWPE, induction furnace, Higgs mechanism",
+    //     effect() {
+    //         tech.isGrapple = true;
+    //         for (i = 0, len = b.guns.length; i < len; i++) { //find which gun 
+    //             if (b.guns[i].name === "harpoon") b.guns[i].chooseFireMethod()
+    //         }
+    //     },
+    //     remove() {
+    //         if (tech.isGrapple) {
+    //             tech.isGrapple = false;
+    //             for (i = 0, len = b.guns.length; i < len; i++) { //find which gun 
+    //                 if (b.guns[i].name === "harpoon") b.guns[i].chooseFireMethod()
+    //             }
+    //         }
+    //     }
+    // },
+    // {
+    //     name: "bulk modulus",
+    //     description: `while <strong>grappling</strong> become <strong>invulnerable</strong><br>drain <strong class='color-f'>energy</strong>`,
+    //     isGunTech: true,
+    //     maxCount: 1,
+    //     count: 0,
+    //     frequency: 2,
+    //     frequencyDefault: 2,
+    //     allowed() {
+    //         return tech.haveGunCheck("harpoon") && !tech.isRailEnergy
+    //     },
+    //     requires: "not alternator",
+    //     effect() {
+    //         tech.isImmuneGrapple = true;
+    //     },
+    //     remove() {
+    //         tech.isImmuneGrapple = false
+    //     }
+    // },
     {
         name: "alternator",
         description: "<strong>+90%</strong> <strong>harpoon</strong> <strong class='color-f'>energy</strong> efficiency",
@@ -6906,14 +6907,33 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return tech.haveGunCheck("harpoon") && !tech.isImmuneGrapple
+            return tech.haveGunCheck("harpoon")
         },
-        requires: "harpoon, not bulk modulus",
+        requires: "harpoon",
         effect() {
             tech.isRailEnergy = true;
         },
         remove() {
             tech.isRailEnergy = false;
+        }
+    },
+    {
+        name: "autonomous defense",
+        description: "if you <strong>collide</strong> with a <strong>mob</strong><br>fire <strong>harpoons</strong> at nearby <strong>mobs</strong>",
+        isGunTech: true,
+        maxCount: 1,
+        count: 0,
+        frequency: 2,
+        frequencyDefault: 2,
+        allowed() {
+            return tech.haveGunCheck("harpoon")
+        },
+        requires: "harpoon",
+        effect() {
+            tech.isHarpoonDefense = true
+        },
+        remove() {
+            tech.isHarpoonDefense = false
         }
     },
     {
@@ -6993,9 +7013,9 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return tech.haveGunCheck("harpoon") && !tech.isRailGun && !tech.isGrapple
+            return tech.haveGunCheck("harpoon") && !tech.isRailGun
         },
-        requires: "harpoon, not grappling hook, railgun",
+        requires: "harpoon, not railgun",
         effect() {
             tech.isFilament = true;
         },
@@ -7012,9 +7032,9 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return tech.haveGunCheck("harpoon") && !tech.isRailGun && !tech.isGrapple
+            return tech.haveGunCheck("harpoon") && !tech.isRailGun
         },
-        requires: "harpoon, not grappling hook, railgun",
+        requires: "harpoon, not railgun",
         effect() {
             tech.isHarpoonPowerUp = true
         },
@@ -7656,9 +7676,9 @@ const tech = {
         frequency: 3,
         frequencyDefault: 3,
         allowed() {
-            return (m.fieldMode === 8 || m.fieldMode === 2 || m.fieldMode === 3) && (build.isExperimentSelection || powerUps.research.count > 3)
+            return (m.fieldMode === 8 || m.fieldMode === 2 || m.fieldMode === 3 || m.fieldMode === 10) && (build.isExperimentSelection || powerUps.research.count > 3)
         },
-        requires: "perfect diamagnetism, negative mass, pilot wave",
+        requires: "perfect diamagnetism, negative mass, grappling hook, pilot wave",
         effect() {
             tech.isFieldHarmReduction = true
             for (let i = 0; i < 2; i++) {
@@ -7705,9 +7725,9 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return (m.fieldMode === 8 || m.fieldMode === 3) && !tech.isCloakHealLastHit
+            return m.fieldMode === 8 || m.fieldMode === 3
         },
-        requires: "negative mass, pilot wave, not patch",
+        requires: "negative mass, pilot wave",
         effect() {
             tech.lastHitDamage += 4;
         },
@@ -7717,7 +7737,7 @@ const tech = {
     },
     {
         name: "neutronium",
-        description: `<strong>move</strong> and <strong>jump</strong> <strong>20%</strong> <strong>slower</strong><br>if your <strong class='color-f'>field</strong> is active <strong>+90%</strong> <strong class='color-defense'>defense</strong>`,
+        description: `<strong>move</strong> and <strong>jump</strong> <strong>20%</strong> <strong>slower</strong><br>if your <strong class='color-f'>field</strong> is active <strong>+95%</strong> <strong class='color-defense'>defense</strong>`,
         isFieldTech: true,
         maxCount: 1,
         count: 0,
@@ -7745,16 +7765,16 @@ const tech = {
     },
     {
         name: "aerostat",
-        description: `<strong>+88%</strong> <strong class='color-d'>damage</strong> while <strong>off</strong> the <strong>ground</strong><br><strong>-22%</strong> <strong class='color-d'>damage</strong> while <strong>on</strong> the <strong>ground</strong>`,
+        description: `<strong>+100%</strong> <strong class='color-d'>damage</strong> while <strong>off</strong> the <strong>ground</strong><br><strong>-15%</strong> <strong class='color-d'>damage</strong> while <strong>on</strong> the <strong>ground</strong>`,
         isFieldTech: true,
         maxCount: 1,
         count: 0,
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return m.fieldMode === 3
+            return m.fieldMode === 3 || m.fieldMode === 10
         },
-        requires: "negative mass",
+        requires: "negative mass, grappling hook",
         effect() {
             tech.isNoGroundDamage = true
         },
@@ -7783,7 +7803,7 @@ const tech = {
     },
     {
         name: "inertial mass",
-        description: "<strong>negative mass</strong> is larger and <strong>faster</strong><br><strong class='color-block'>blocks</strong> also move <strong>horizontally</strong> with the field",
+        description: "<strong>negative mass</strong> is larger and <strong>faster</strong>",  //<br><strong class='color-block'>blocks</strong> also move <strong>horizontally</strong> with the field
         isFieldTech: true,
         maxCount: 1,
         count: 0,
@@ -7830,9 +7850,9 @@ const tech = {
         isBotTech: true,
         isNonRefundable: true,
         allowed() {
-            return powerUps.research.count > 1 && (m.fieldMode === 4 || m.fieldMode === 8)
+            return powerUps.research.count > 1 && (m.fieldMode === 4 || m.fieldMode === 10 || m.fieldMode === 8)
         },
-        requires: "molecular assembler, pilot wave",
+        requires: "molecular assembler, grappling hook, pilot wave",
         effect() {
             for (let i = 0; i < 2; i++) {
                 if (powerUps.research.count > 0) powerUps.research.changeRerolls(-1)
@@ -7855,9 +7875,9 @@ const tech = {
         isBotTech: true,
         isNonRefundable: true,
         allowed() {
-            return powerUps.research.count > 2 && (m.fieldMode === 4 || m.fieldMode === 8)
+            return powerUps.research.count > 2 && (m.fieldMode === 4 || m.fieldMode === 10 || m.fieldMode === 8)
         },
-        requires: "molecular assembler, pilot wave",
+        requires: "molecular assembler, grappling hook, pilot wave",
         effect() {
             for (let i = 0; i < 3; i++) {
                 if (powerUps.research.count > 0) powerUps.research.changeRerolls(-1)
@@ -8051,7 +8071,7 @@ const tech = {
     },
     {
         name: "electric generator",
-        description: "after <strong>deflecting</strong> mobs<br>molecular assembler generates <strong>+50</strong> <strong class='color-f'>energy</strong>",
+        description: "after <strong>deflecting</strong> mobs<br><strong>molecular assembler</strong> generates <strong>+50</strong> <strong class='color-f'>energy</strong>",
         isFieldTech: true,
         maxCount: 9,
         count: 0,
@@ -8101,9 +8121,9 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return (m.fieldMode === 5 || m.fieldMode === 4) && !tech.isPrinter
+            return (m.fieldMode === 5 || m.fieldMode === 4 || m.fieldMode === 10) && !tech.isPrinter && !tech.isReel && !tech.isHookExplosion
         },
-        requires: "plasma torch, molecular assembler, not printer",
+        requires: "plasma torch, molecular assembler, grappling hook, not printer, reel, rupture",
         effect() {
             tech.isTokamak = true;
         },
@@ -8113,16 +8133,16 @@ const tech = {
     },
     {
         name: "degenerate matter",
-        description: "if your <strong class='color-f'>field</strong> is active<br><strong>+75%</strong> <strong class='color-defense'>defense</strong>",
+        description: "if your <strong class='color-f'>field</strong> is active<br><strong>+85%</strong> <strong class='color-defense'>defense</strong>",
         isFieldTech: true,
         maxCount: 1,
         count: 0,
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return (m.fieldMode === 5 || m.fieldMode === 4 || m.fieldMode === 2 || m.fieldMode === 8)
+            return (m.fieldMode === 10 || m.fieldMode === 4 || m.fieldMode === 8)
         },
-        requires: "molecular assembler, plasma torch, perfect diamagnetism, pilot wave",
+        requires: "plasma torch, grappling hook, pilot wave",
         effect() {
             tech.isHarmReduce = true
         },
@@ -8478,9 +8498,9 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return m.fieldMode === 7 && !tech.lastHitDamage && !tech.isEnergyHealth
+            return m.fieldMode === 7 && !tech.isEnergyHealth
         },
-        requires: "metamaterial cloaking, not dynamic equilibrium, mass-energy",
+        requires: "metamaterial cloaking, not mass-energy",
         effect() {
             tech.isCloakHealLastHit = true;
         },
@@ -8585,9 +8605,9 @@ const tech = {
         frequency: 3,
         frequencyDefault: 3,
         allowed() {
-            return (m.fieldMode === 8 || m.fieldMode === 3 || m.fieldMode === 6 || m.fieldMode === 9) && (build.isExperimentSelection || powerUps.research.count > 2)
+            return (m.fieldMode === 8 || m.fieldMode === 6 || m.fieldMode === 9 || m.fieldMode === 10) && (build.isExperimentSelection || powerUps.research.count > 2)
         },
-        requires: "wormhole, time dilation, negative mass, pilot wave",
+        requires: "wormhole, time dilation, negative mass, pilot wave, grappling hook",
         effect() {
             tech.fieldDuplicate = 0.11
             powerUps.setPowerUpMode(); //needed after adjusting duplication chance
@@ -8753,6 +8773,103 @@ const tech = {
             tech.isWormholeMapIgnore = false
         }
     },
+    {
+        name: "CIWS",
+        description: "<strong>grappling hook</strong> uses <strong>18</strong> <strong class='color-f'>energy</strong><br> to fire <strong>harpoons</strong> at nearby mobs",
+        isFieldTech: true,
+        maxCount: 1,
+        count: 0,
+        frequency: 2,
+        frequencyDefault: 2,
+        allowed() {
+            return m.fieldMode === 10
+        },
+        requires: "grappling hook",
+        effect() {
+            tech.isHookDefense = true
+        },
+        remove() {
+            tech.isHookDefense = false
+        }
+    },
+    {
+        name: "rupture",
+        description: "after <strong>grappling hook</strong> impacts solid objects<br>generate an <strong class='color-e'>explosion</strong>",
+        isFieldTech: true,
+        maxCount: 1,
+        count: 0,
+        frequency: 2,
+        frequencyDefault: 2,
+        allowed() {
+            return m.fieldMode === 10 && !tech.isReel && !tech.isTokamak
+        },
+        requires: "grappling hook, not reel, tokamak",
+        effect() {
+            tech.isHookExplosion = true
+        },
+        remove() {
+            tech.isHookExplosion = false
+        }
+    },
+    {
+        name: "reel",
+        description: "<strong>+400%</strong> <strong class='color-block'>block</strong> collision <strong class='color-d'>damage</strong><br><strong>+30</strong> <strong class='color-f'>energy</strong> when reeling in far away <strong class='color-block'>blocks</strong>",
+        isFieldTech: true,
+        maxCount: 1,
+        count: 0,
+        frequency: 1,
+        frequencyDefault: 1,
+        allowed() {
+            return m.fieldMode === 10 && !tech.isTokamak && tech.blockDamage === 0.075 && !tech.isHookExplosion
+        },
+        requires: "grappling hook, not mass driver, rupture, tokamak",
+        effect() {
+            tech.blockDamage = 0.375
+            tech.isReel = true
+        },
+        remove() {
+            tech.blockDamage = 0.075
+            tech.isReel = false
+        }
+    },
+    // {
+    //     name: "CIWS",
+    //     description: "if you <strong>collide</strong> with a mob<br>fire <strong>harpoons</strong> at nearby mobs",
+    //     isFieldTech: true,
+    //     maxCount: 1,
+    //     count: 0,
+    //     frequency: 2,
+    //     frequencyDefault: 2,
+    //     allowed() {
+    //         return m.fieldMode === 10 && !tech.isHookDefense
+    //     },
+    //     requires: "grappling hook, not automatic offense",
+    //     effect() {
+    //         tech.isHookDefense = true
+    //     },
+    //     remove() {
+    //         tech.isHookDefense = false
+    //     }
+    // },
+    //     {
+    //     name: "wire",
+    //     description: "",
+    //     isFieldTech: true,
+    //     maxCount: 1,
+    //     count: 0,
+    //     frequency: 2,
+    //     frequencyDefault: 2,
+    //     allowed() {
+    //         return m.fieldMode === 10
+    //     },
+    //     requires: "grappling hook",
+    //     effect() {
+    //         tech.isHookWire = true
+    //     },
+    //     remove() {
+    //         tech.isHookWire = false
+    //     }
+    // },
     //************************************************** 
     //************************************************** experimental
     //************************************************** modes
@@ -10982,6 +11099,30 @@ const tech = {
         remove() { }
     },
     {
+        name: "mobs!",
+        descriptionFunction() {
+            if (this.mobType === "") this.mobType = spawn.fullPickList[Math.floor(Math.random() * spawn.fullPickList.length)]
+            return `spawn 20 <strong>${this.mobType}</strong> mobs`
+        },
+        maxCount: 1,
+        count: 0,
+        frequency: 0,
+        isNonRefundable: true,
+        isJunk: true,
+        allowed() { return true },
+        requires: "",
+        mobType: "",
+        effect() {
+            if (this.mobType === "") this.mobType = spawn.fullPickList[Math.floor(Math.random() * spawn.fullPickList.length)]
+            for (let i = 0; i < 20; i++) {
+                spawn[this.mobType](m.pos.x, m.pos.y - 700)
+            }
+            simulation.makeTextLog(`spawn<span class='color-symbol'>.</span>${this.mobType}<span class='color-symbol'>(</span>x<span class='color-symbol'>,</span>y<span class='color-symbol'>)</span>`)
+
+        },
+        remove() { }
+    },
+    {
         name: "black hole cluster",
         description: `spawn <strong>30</strong> nearby <strong>black holes</strong>`,
         maxCount: 1,
@@ -11717,8 +11858,8 @@ const tech = {
     isTimeCrystals: null,
     isGroundState: null,
     isRailGun: null,
-    isGrapple: null,
-    isImmuneGrapple: null,
+    // isGrapple: null,
+    // isImmuneGrapple: null,
     isDronesTravel: null,
     isTechDebt: null,
     isPlasmaBall: null,
@@ -11775,4 +11916,9 @@ const tech = {
     isHealBrake: null,
     isMassProduction: null,
     isPrinter: null,
+    // isHookWire: null,
+    isHookDefense: null,
+    isHookExplosion: null,
+    isHarpoonDefense: null,
+    isReel: null,
 }

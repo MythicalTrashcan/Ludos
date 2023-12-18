@@ -1,20 +1,60 @@
 ******************************************************** NEXT PATCH **************************************************
 
-after falling off most open maps you don't take damage
-  you fall down into the level again above the entrance
+why mode is now 20% easier, but still 25% harder than hard mode
+  easy:1, normal:2, hard:4, why:6->5
 
-disabled smooth camera tracking for
-  portals
-  falling off map
+new community map unchartedCave by 3xionDev!
 
-added a once every 7 seconds check to see if the player is suck inside the map
-  if stuck you teleport to the level entrance
-  catches about 90% of the ways to get stuck from falling too fast
-  this might causing problems after more testing, not sure
+Newtons 1st law 66->88% defense when moving fast
+Newtons 2nd law 66->88% damage when moving fast
+CIWS energy 20->18 per shot
+rupture disables reel and tokamak
 
-bug fixes
 
 *********************************************************** TODO *****************************************************
+
+
+scrap bots don't follow player
+  adjust spawn rates to balance
+
+
+make grappling hook of different shapes
+  indicate tech upgrades?
+    rupture, reel, tokamak
+  do this in draw or in verticies?
+    draw can have different colors 
+
+player got stuck inside block that wasn't pick up able
+
+grappling hook field
+  check for places that the player could get into but not out of
+  field tech ideas
+    Buoyancy - aerostat, but for defense: +70% defense while off the ground
+      too similar to degenerate matter
+    generate ___ after destroying blocks
+      energy, drones, iceIX, explosion, nails, junk bots?
+
+tech - killing a mob heals for the last damage you took
+  disable cloaking heal?  maybe you don't need to disable, just don't heal twice
+  heal for 50%?
+  heal from mob damage or from kills?
+
+on sucker mob death trigger radiation damage AoE and a graphic  (Hawking radiation)
+
+tech prismatic laser - cycles between different laser colors every 1-2 seconds
+
+make phonon the default wave gun type and make a tech to switch to the normal wave beam
+  nerf phonon, buff wave
+
+sword slash for plasma torch  (giving up on this for now,  had trouble making graphics look good)
+  activates when mouse is close to player
+    gradual activation
+    sharp cut off
+      use length of torch as cut off length
+  make it look like hollow knight slash
+  what about upgrades to extruder,plasma ball
+    give them their own version of a slash?
+    make a tech that buffs the slash, but it disables extruder,plasma ball
 
 more (all) bosses need to be made of parts
   good examples: spiderBoss, dragonFlyBoss, beetleBoss
@@ -1068,6 +1108,7 @@ add sounds
 ******************************************************** LORE ********************************************************
 
 possible names for tech
+  sidereal - with respect to the stars  (an extra rotation for time keeping)
   strange loop
   holonomy -  parallel transport of a vector leads to movement (applies to curved space)
   hypergolic - A hypergolic propellant combination used in a rocket engine is one whose components spontaneously ignite when they come into contact with each other.
