@@ -158,218 +158,6 @@ h3 {
     transform: scale(0.97);
 }
 
-
-/* Eaglercraft 1.5.2 */
-
-.eaglercraft:hover {
-    background-color: #3c18db;
-    box-shadow: 6px 4px 4px 2px #25067c;
-    border-color: #2b09a7;
-    transform: scale(0.95);
-}
-
-.eaglercraft:active {
-    transform: scale(0.97);
-}
-
-/* Eaglercraft Beta 1.3 */
-
-.eaglercraftb:hover {
-    background-color: #3c18db;
-    box-shadow: 6px 4px 4px 2px #25067c;
-    border-color: #2b09a7;
-    transform: scale(0.95);
-}
-
-.eaglercraftb:active {
-    transform: scale(0.97);
-}
-
-
-/* Retro Bowl */
-
-.retro-bowl:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.retro-bowl:active {
-    transform: scale(0.97);
-}
-
-
-/* N-Gon */
-
-.n-gon:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.n-gon:active {
-    transform: scale(0.97);
-}
-
-
-/* Planetesimals */
-
-.planet:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.planet:active {
-    transform: scale(0.97);
-}
-
-
-/* Cookie Clicker */
-
-.cookie-clicker:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.cookie-clicker:active {
-    transform: scale(0.97);
-}
-
-
-/* Baldi's Basics */
-
-.baldis-basics:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.baldis-basics:active {
-    transform: scale(0.97);
-}
-
-
-/* 1v1.lol */
-
-.vlol:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.vlol:active {
-    transform: scale(0.97);
-}
-
-
-/* A Dance Of Fire & Ice */
-
-.dance-fire-ice:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.dance-fire-ice:active {
-    transform: scale(0.97);
-}
-
-
-/* Ten Minutes Until Dawn */
-
-.ten-mins:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.ten-mins:active {
-    transform: scale(0.97);
-}
-
-
-/* 2048 */
-
-.number-game-lol:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game-lol:active {
-    transform: scale(0.97);
-}
-
-
-/* 2048 Multitask */
-
-.number-game-multi:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game-multi:active {
-    transform: scale(0.97);
-}
-
-
-/* 2048 Big */
-
-.number-game-big:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game-big:active {
-    transform: scale(0.97);
-}
-
-
-/* 1 */
-
-.number-game-small:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game-small:active {
-    transform: scale(0.97);
-}
-
-
-/* 1 */
-
-.sand-game:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.sand-game:active {
-    transform: scale(0.97);
-}
-
-
-/* Eaglercraft X 1.8.8 */
-
 .eaglercraftx {
     top: 290px;
     display: block;
@@ -396,6 +184,17 @@ h3 {
 
 /* Eaglercraft 1.5.2 */
 
+.eaglercraft:hover {
+    background-color: #3c18db;
+    box-shadow: 6px 4px 4px 2px #25067c;
+    border-color: #2b09a7;
+    transform: scale(0.95);
+}
+
+.eaglercraft:active {
+    transform: scale(0.97);
+}
+
 .eaglercraft {
     top: 290px;
     display: block;
@@ -419,7 +218,19 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
+
 /* Eaglercraft Beta 1.3 */
+
+.eaglercraftb:hover {
+    background-color: #3c18db;
+    box-shadow: 6px 4px 4px 2px #25067c;
+    border-color: #2b09a7;
+    transform: scale(0.95);
+}
+
+.eaglercraftb:active {
+    transform: scale(0.97);
+}
 
 .eaglercraftb {
     top: 290px;
@@ -446,6 +257,17 @@ h3 {
 
 
 /* Retro Bowl */
+
+.retro-bowl:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.retro-bowl:active {
+    transform: scale(0.97);
+}
 
 .retro-bowl {
     top: 490px;
@@ -474,6 +296,17 @@ h3 {
 
 /* N-Gon */
 
+.n-gon:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.n-gon:active {
+    transform: scale(0.97);
+}
+
 .n-gon {
     top: 490px;
     display: block;
@@ -500,6 +333,17 @@ h3 {
 
 
 /* Planetesimals */
+
+.planet:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.planet:active {
+    transform: scale(0.97);
+}
 
 .planet {
     top: 490px;
@@ -528,6 +372,17 @@ h3 {
 
 /* Cookie Clicker */
 
+.cookie-clicker:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.cookie-clicker:active {
+    transform: scale(0.97);
+}
+
 .cookie-clicker {
     top: 490px;
     display: block;
@@ -554,6 +409,17 @@ h3 {
 
 
 /* Baldi's Basics */
+
+.baldis-basics:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.baldis-basics:active {
+    transform: scale(0.97);
+}
 
 .baldis-basics {
     top: 660px;
@@ -582,6 +448,17 @@ h3 {
 
 /* 1v1.lol */
 
+.vlol:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.vlol:active {
+    transform: scale(0.97);
+}
+
 .vlol {
     top: 660px;
     display: block;
@@ -607,7 +484,18 @@ h3 {
 }
 
 
-/* A Dance Fire & Ice */
+/* A Dance Of Fire & Ice */
+
+.dance-fire-ice:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.dance-fire-ice:active {
+    transform: scale(0.97);
+}
 
 .dance-fire-ice {
     top: 660px;
@@ -636,6 +524,17 @@ h3 {
 
 /* Ten Minutes Until Dawn */
 
+.ten-mins:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.ten-mins:active {
+    transform: scale(0.97);
+}
+
 .ten-mins {
     top: 660px;
     display: block;
@@ -662,6 +561,17 @@ h3 {
 
 
 /* 2048 */
+
+.number-game-lol:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.number-game-lol:active {
+    transform: scale(0.97);
+}
 
 .number-game-lol {
     top: 830px;
@@ -690,6 +600,17 @@ h3 {
 
 /* 2048 Multitask */
 
+.number-game-multi:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.number-game-multi:active {
+    transform: scale(0.97);
+}
+
 .number-game-multi {
     top: 830px;
     display: block;
@@ -716,6 +637,17 @@ h3 {
 
 
 /* 2048 Big */
+
+.number-game-big:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.number-game-big:active {
+    transform: scale(0.97);
+}
 
 .number-game-big {
     top: 830px;
@@ -744,6 +676,17 @@ h3 {
 
 /* 1 */
 
+.number-game-small:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.number-game-small:active {
+    transform: scale(0.97);
+}
+
 .number-game-small {
     top: 830px;
     display: block;
@@ -768,7 +711,56 @@ h3 {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-/* 1 */
+/* 2048 Cupcake */
+
+.number-game-cupcake:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.number-game-cupcake:active {
+    transform: scale(0.97);
+}
+
+.number-game-cupcake {
+    top: 1000px;
+    display: block;
+    width: 175px;
+    height: 125px;
+    position: absolute;
+    margin-left: -50px;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* Sand Game */
+
+.sand-game:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.sand-game:active {
+    transform: scale(0.97);
+}
 
 .sand-game {
     top: 1000px;
@@ -776,7 +768,7 @@ h3 {
     width: 175px;
     height: 125px;
     position: absolute;
-    margin-left: -50px;
+    margin-left: 259.375px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;

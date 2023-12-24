@@ -3,13 +3,15 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| WORK ON THESE |==========----------
 
-1. Add 4 more games
+1. Add 2 more games
 2. Add a future update voting system
 3. Add contrasting colors
 4. Update links to fit more like the games list
 
  ----------==========| LAST CHANGES |==========----------
 
+Add 2048 Cupcake and change remove ads on Cookie Clicker
+Reformat CSS files and completely remove all traces of Ludos offline
 Update N-Gon and remove Ludos offline
 Update eagler beta 1.3 to latest version
 Added EaglerProxy and EaglerRelay

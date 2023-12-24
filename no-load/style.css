@@ -124,29 +124,6 @@ button:hover {
     transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-.ludos {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #3e3f3f;
-    border-style: solid;
-    border-color: #272727;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #161616;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ff7b00;
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
 .github {
     width: 1000px;
     display: block;
@@ -216,11 +193,6 @@ button:hover {
 
 .revolt:hover {
     background-color: #131313;
-    transform: scale(0.95);
-}
-
-.ludos:hover {
-    background-color: #575656;
     transform: scale(0.95);
 }
 
