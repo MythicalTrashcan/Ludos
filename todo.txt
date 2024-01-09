@@ -10,6 +10,7 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| LAST CHANGES |==========----------
 
+Update Navigation bar to 2022-2024 and fix 2048 Cupcake
 Add 2048 Cupcake and change remove ads on Cookie Clicker
 Reformat CSS files and completely remove all traces of Ludos offline
 Update N-Gon and remove Ludos offline
