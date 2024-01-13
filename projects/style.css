@@ -562,18 +562,18 @@ h3 {
 
 /* 2048 */
 
-.number-game-lol:hover {
+.number-game:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
     transform: scale(0.95);
 }
 
-.number-game-lol:active {
+.number-game:active {
     transform: scale(0.97);
 }
 
-.number-game-lol {
+.number-game {
     top: 830px;
     display: block;
     width: 175px;
@@ -781,6 +781,82 @@ h3 {
     color: #ffffff;
     text-decoration: none;
     font-size: 25px;
+    text-align: center;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* Core Ball */
+
+.core-ball:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.core-ball:active {
+    transform: scale(0.97);
+}
+
+.core-ball {
+    top: 1000px;
+    display: block;
+    width: 175px;
+    height: 125px;
+    position: absolute;
+    margin-left: 875px;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+
+/* Crossy Road */
+
+.crossy-road:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.crossy-road:active {
+    transform: scale(0.97);
+}
+
+.crossy-road {
+    top: 1000px;
+    display: block;
+    width: 175px;
+    height: 125px;
+    position: absolute;
+    margin-left: 565.625px;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
     text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
