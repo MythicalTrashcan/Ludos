@@ -13,7 +13,7 @@ You must somewhat know what to do. Directions will not be directly handed out.
 [![Deploy to Amplify Console](https://binbashbanana.github.io/deploy-buttons/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/MythicalTrashcan/Ludos)
 
 ## Hosting the site locally (somewhat advanced)
-### Requires a working computer, NodeJS installed, and an attention span of more than 8 seconds
+### Requires a working computer, NodeJS installed, Git installed, and an attention span of more than 8 seconds
 
 ### Clone to repo locally by running this command in a terminal or command prompt
 
@@ -27,12 +27,8 @@ gh repo clone MythicalTrashcan/Ludos
 ```
 ### Running the website
 
-Running (directly)
-```bash
-npx http-server
-```
+Creating local instance
 
-Running (installing to global node_modules)
 ```bash
 # Installing
 npm install -g http-server
