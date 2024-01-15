@@ -9,6 +9,7 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| LAST CHANGES |==========----------
 
+Update footer to use table tag instead of div
 Remove Ludos offline download javascript function
 Fix my name by adding a space on footer
 Move every game and game icon to the new assets repository
