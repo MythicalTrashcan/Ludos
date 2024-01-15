@@ -9,6 +9,7 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| LAST CHANGES |==========----------
 
+Update footer again to fix font size being larger than normal
 Update footer to use table tag instead of div
 Remove Ludos offline download javascript function
 Fix my name by adding a space on footer
