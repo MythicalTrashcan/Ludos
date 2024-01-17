@@ -7,8 +7,9 @@ The priority of the update is from top to bottom. (the top is the most important
 2. Add contrasting colors
 3. Update links to fit more like the games list
 
- ----------==========| LAST CHANGES |==========----------
+ ----------==========| LAST 25 CHANGES |==========----------
 
+Add Mario 64 to the games list
 Update footer again to fix font size being larger than normal
 Update footer to use table tag instead of div
 Remove Ludos offline download javascript function

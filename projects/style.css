@@ -4,7 +4,7 @@
     background-color: #4d4d4d;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
-    height: 1725px;
+    height: 1900px;
 }
 
 .ludosLogo {
@@ -787,6 +787,43 @@ h3 {
 }
 
 
+/* Crossy Road */
+
+.crossy-road:hover {
+    background-color: #dbd818;
+    box-shadow: 6px 4px 4px 2px #667c06;
+    border-color: #97a709;
+    transform: scale(0.95);
+}
+
+.crossy-road:active {
+    transform: scale(0.97);
+}
+
+.crossy-road {
+    top: 1000px;
+    display: block;
+    width: 175px;
+    height: 125px;
+    position: absolute;
+    margin-left: 565.625px;
+    background-color: #10c729;
+    border-style: solid;
+    border-color: #068a27;
+    box-shadow: inset;
+    box-shadow: 6px 4px 4px 2px #067c0c;
+    cursor: pointer;
+    transition: all;
+    padding: 15px 60px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
 /* Core Ball */
 
 .core-ball:hover {
@@ -825,26 +862,26 @@ h3 {
 }
 
 
-/* Crossy Road */
+/* Super Mario 64 */
 
-.crossy-road:hover {
+.mario-64:hover {
     background-color: #dbd818;
     box-shadow: 6px 4px 4px 2px #667c06;
     border-color: #97a709;
     transform: scale(0.95);
 }
 
-.crossy-road:active {
+.mario-64:active {
     transform: scale(0.97);
 }
 
-.crossy-road {
-    top: 1000px;
+.mario-64 {
+    top: 1170px;
     display: block;
     width: 175px;
     height: 125px;
     position: absolute;
-    margin-left: 565.625px;
+    margin-left: -50px;
     background-color: #10c729;
     border-style: solid;
     border-color: #068a27;
@@ -856,7 +893,7 @@ h3 {
     text-shadow: none;
     color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 23.25px;
     text-align: center;
     border-radius: 25px;
     transition: width .25s, height .25s, background-color .25s, transform .25s;
