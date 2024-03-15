@@ -47,6 +47,11 @@ function openAbout() {
     window.location.href = './about-me/';
 }
 
+function selectMirror() {
+    const About = document.querySelector('mirror');
+    window.location.href = './mirrorLinks.html';
+}
+
 /* Work on later
 
 /*

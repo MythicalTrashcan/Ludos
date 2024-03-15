@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>mirrorLinks.html</title>
+</head>
+<body>
+    <button onclick="selectLink()">Select a link</button>
+    <button onclick="returnHome()">Return to main site</button>
+    <br>
+
+    <p style="margin-bottom: -20px;">Selected link: </p>
+    <p id="selectLink"></p>
+    <br>
+
+    <p>
+        Official Mirror Links:
+    </p>
+
+    <p>0. https://assets.theludos.com/</p>
+
+    <p>1. https://ludos-assets-git-main-mythicaltrashcan.vercel.app/</p>
+
+    <p>2. https://ludos-assets-mythicaltrashcan.vercel.app/</p>
+    <br>
+
+    <p>
+        Unofficial Mirror Links:
+    </p>
+</body>
+<script>
+    function returnHome() {
+        const button = document.querySelector('button');
+        button.disabled = false;
+        window.location.href = '../';
+    }
+
+    const links = [
+        "https://assets.theludos.com/",
+        "https://ludos-assets-git-main-mythicaltrashcan.vercel.app/",
+        "https://ludos-assets-mythicaltrashcan.vercel.app/"
+    ];
+
+    var localStorageLink = localStorage.getItem("chosenLink");
+    document.getElementById("selectLink").innerHTML = localStorageLink;
+
+    function selectLink() {
+        var selectedLinkNumber = prompt("Please enter a link number to redirect to: ");
+        var currentSetLink = links[selectedLinkNumber];
+        localStorage.setItem("chosenLink", currentSetLink);
+        var localStorageLink = localStorage.getItem("chosenLink");
+        document.getElementById("selectLink").innerHTML = localStorageLink;
+        if (localStorage.getItem("chosenLink") === "undefined") {
+            alert("You have written a value that isn't a link. Resetting to default link...");
+            localStorage.setItem("chosenLink", "https://assets.theludos.com");
+            var localStorageLink = localStorage.getItem("chosenLink");
+            document.getElementById("selectLink").innerHTML = localStorageLink;
+        }
+    }
+</script>

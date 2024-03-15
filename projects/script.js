@@ -12,3 +12,7 @@ function openAbout() {
 window.addEventListener("load", () => {
 	new ServerEmbed(document.getElementById("embed"), "35%").ping("wss://mc.theludos.com", "Myth's EagMP" , "true" , "" , "hideCracked");
 });
+
+function openRetroBowl() {
+    window.location.href = localStorage.getItem("chosenLink") + "/games/bowl/";
+}
