@@ -1,7 +1,7 @@
 ---
 name: Request link to unofficial alternative link page.
 about: Request a custom link be added to the alternative link page for other users
-  to use that have a cloned piece of Ludos.
+  to use that includes a cloned piece of Ludos Assets or Villade only.
 title: Requesting custom alternative link.
 labels: enhancement
 assignees: MythicalTrashcan
