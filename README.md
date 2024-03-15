@@ -2,8 +2,8 @@
 Play HTML games in your browser easily!
 
 ## Cloning the repository and hosting
-**You can clone this repository to your own address if my site is blocked**
-You must somewhat know what to do. Directions will not be directly handed out.
+**You can clone this repository to your own address if my site is blocked or you would like to add your link to my alternative link page**
+If you are stuck, do not make an issue. Please just Google it or something.
 
 [![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/MythicalTrashcan/Ludos)
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/MythicalTrashcan/Ludos)
