@@ -25,3 +25,4 @@ Added EaglerProxy and EaglerRelay
 Added metadata to all webpages
 Possibly unblocked RetroBowl
 Updated eagler 1.5 to latest version
+Add a new alternative link system

@@ -39,21 +39,21 @@
                 <button class="button" onclick="returnHome()">Return to main site</button>
             </div>
             <div>
-                <a class="eaglercraftx" href="https://villade.theludos.com/1.8.8/">
+                <a class="eaglercraftx" onclick="openEaglercraftX()">
                     <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eaglerx.png" width="100" height="100">
                     <br>
                     EaglercraftX 1.8.8
                 </a>
             </div>
             <div>
-                <a class="eaglercraft" href="https://villade.theludos.com/1.5.2/">
+                <a class="eaglercraft" onclick="openEaglercraft()">
                     <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eagler.png" width="100" height="100">
                     <br>
                     Eaglercraft 1.5.2
                 </a>
             </div>
             <div>
-                <a class="eaglercraftb" href="https://villade.theludos.com/b1.3_01/">
+                <a class="eaglercraftb" onclick="openEaglercraftBeta()">
                     <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eaglerx.png" width="100" height="100">
                     <br>
                     EaglercraftB 1.3
@@ -189,75 +189,92 @@
         </table>
 
         <script>
-            if (localStorage.getItem("chosenLink") === null) {
-                localStorage.setItem("chosenLink", "https://assets.theludos.com");
+            if (localStorage.getItem("assetsLink") === null) {
+                localStorage.setItem("assetsLink", "https://assets.theludos.com");
             }
+
+            if (localStorage.getItem("villadeLink") === null) {
+                localStorage.setItem("villadeLink", "https://villade.theludos.com");
+            }
+
+            function openEaglercraftX() {
+                window.location.href = localStorage.getItem("villadeLink") + "/1.8.8/";
+            }
+
+            function openEaglercraft() {
+                window.location.href = localStorage.getItem("villadeLink") + "/1.5.2/";
+            }
+
+            function openEaglercraftBeta() {
+                window.location.href = localStorage.getItem("villadeLink") + "/b1.3_01/";
+            }
+
             function openRetroBowl() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/bowl/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/bowl/";
             }
 
             function openNGon() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/ngon/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/ngon/";
             }
 
             function openPlanetesimals() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/planetesimals/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/planetesimals/";
             }
 
             function openCookieClicker() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/choco-chip/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/choco-chip/";
             }
 
             function openBaldisBasics() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/baldis-basics/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/baldis-basics/";
             }
 
             function open1v1Lol() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/shootgame3d/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/shootgame3d/";
             }
 
             function openADanceOfFireAndIce() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/a-dance-of-fire-and-ice/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/a-dance-of-fire-and-ice/";
             }
 
             function openTenMinutesUntilDawn() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/10-minutes-till-dawn/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/10-minutes-till-dawn/";
             }
 
             function open2048() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/numbergame/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame/";
             }
 
             function open2048MultiTask() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/numbergame-multitask/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-multitask/";
             }
 
             function open9007199254740992() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/numbergame-big/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-big/";
             }
 
             function open1() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/numbergame-reverse/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-reverse/";
             }
 
             function open2048Cupcake() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/numbergame-cupcake/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-cupcake/";
             }
 
             function openSandGame() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/sand-game/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/sand-game/";
             }
 
             function openCrossyRoad() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/crossy-road/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/crossy-road/";
             }
 
             function openCoreBall() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/core-ball/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/core-ball/";
             }
 
             function openMario64() {
-                window.location.href = localStorage.getItem("chosenLink") + "/games/sm64/";
+                window.location.href = localStorage.getItem("assetsLink") + "/games/sm64/";
             }
         </script>
 </body>

@@ -3,28 +3,43 @@
     <title>mirrorLinks.html</title>
 </head>
 <body>
-    <button onclick="selectLink()">Select a link</button>
     <button onclick="returnHome()">Return to main site</button>
     <br>
-
-    <p style="margin-bottom: -20px;">Selected link: </p>
-    <p id="selectLink"></p>
     <br>
 
+    <strong>Assets Links</strong>
+    <p style="margin-bottom: -20px;">Selected Assets Link: </p>
+    <p id="selectedAssetsLink"></p>
+    <br>
+    <button onclick="selectAssetsLink()">Select an Assets link</button>
     <p>
         Official Mirror Links:
     </p>
-
-    <p>0. https://assets.theludos.com/</p>
-
-    <p>1. https://ludos-assets-git-main-mythicaltrashcan.vercel.app/</p>
-
-    <p>2. https://ludos-assets-mythicaltrashcan.vercel.app/</p>
-    <br>
-
+    <p style="margin-left: 25px; color: #a0a0a0">0. https://assets.theludos.com/</p>
+    <p style="margin-left: 25px; color: #a0a0a0">1. https://ludos-assets-git-main-mythicaltrashcan.vercel.app/</p>
+    <p style="margin-left: 25px; color: #a0a0a0">2. https://ludos-assets-mythicaltrashcan.vercel.app/</p>
     <p>
         Unofficial Mirror Links:
     </p>
+    <p><i>There is nothing here yet...</i></p>
+    <br>
+    <br>
+
+    <strong>Villade Links</strong>
+    <p style="margin-bottom: -20px;">Selected Villade Link: </p>
+    <p id="selectedVilladeLink"></p>
+    <br>
+    <button onclick="selectVilladeLink()">Select a Villade link</button>
+    <p>
+        Official Mirror Links:
+    </p>
+    <p style="margin-left: 25px; color: #a0a0a0">0. https://villade.theludos.com/</p>
+    <p style="margin-left: 25px; color: #a0a0a0">1. https://villade-git-main-mythicaltrashcan.vercel.app/</p>
+    <p style="margin-left: 25px; color: #a0a0a0">2. https://villade-mythicaltrashcan.vercel.app/</p>
+    <p>
+        Unofficial Mirror Links:
+    </p>
+    <p><i>There is nothing here yet...</i></p>
 </body>
 <script>
     function returnHome() {
@@ -33,26 +48,51 @@
         window.location.href = '../';
     }
 
-    const links = [
+    var localStorageAssetsLink = localStorage.getItem("assetsLink");
+    document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+    var localStorageVilladeLink = localStorage.getItem("villadeLink");
+    document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+
+    const assetsLinks = [
         "https://assets.theludos.com/",
         "https://ludos-assets-git-main-mythicaltrashcan.vercel.app/",
         "https://ludos-assets-mythicaltrashcan.vercel.app/"
     ];
 
-    var localStorageLink = localStorage.getItem("chosenLink");
+    const villadeLinks = [
+        "https://villade.theludos.com/",
+        "https://villade-git-main-mythicaltrashcan.vercel.app/",
+        "https://villade-mythicaltrashcan.vercel.app/"
+    ];
+
+    var localStorageLink = localStorage.getItem("assetsLink");
     document.getElementById("selectLink").innerHTML = localStorageLink;
 
-    function selectLink() {
-        var selectedLinkNumber = prompt("Please enter a link number to redirect to: ");
-        var currentSetLink = links[selectedLinkNumber];
-        localStorage.setItem("chosenLink", currentSetLink);
-        var localStorageLink = localStorage.getItem("chosenLink");
-        document.getElementById("selectLink").innerHTML = localStorageLink;
-        if (localStorage.getItem("chosenLink") === "undefined") {
-            alert("You have written a value that isn't a link. Resetting to default link...");
-            localStorage.setItem("chosenLink", "https://assets.theludos.com");
-            var localStorageLink = localStorage.getItem("chosenLink");
-            document.getElementById("selectLink").innerHTML = localStorageLink;
+    function selectAssetsLink() {
+        var selectedAssetsLinkNumber = prompt("Please enter a link number for assets to redirect to: ");
+        var currentSetAssetsLink = assetsLinks[selectedAssetsLinkNumber];
+        localStorage.setItem("assetsLink", currentSetAssetsLink);
+        var localStorageAssetsLink = localStorage.getItem("assetsLink");
+        document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+        if (localStorage.getItem("assetsLink") === "undefined") {
+            alert("That value isn't a link number. Resetting to default link...");
+            localStorage.setItem("assetsLink", "https://assets.theludos.com");
+            var localStorageAssetsLink = localStorage.getItem("assetsLink");
+            document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+        }
+    }
+
+    function selectVilladeLink() {
+        var selectedVilladeLinkNumber = prompt("Please enter a link number for villade to redirect to: ");
+        var currentSetVilladeLink = villadeLinks[selectedVilladeLinkNumber];
+        localStorage.setItem("villadeLink", currentSetVilladeLink);
+        var localStorageVilladeLink = localStorage.getItem("villadeLink");
+        document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+        if (localStorage.getItem("villadeLink") === "undefined") {
+            alert("That value isn't a link number. Resetting to default link...");
+            localStorage.setItem("villadeLink", "https://villade.theludos.com");
+            var localStorageVilladeLink = localStorage.getItem("villadeLink");
+            document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
         }
     }
 </script>
