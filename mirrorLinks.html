@@ -7,11 +7,19 @@
     <br>
     <br>
 
+    <p>Select one selection buttons below to choose an alterntive link as a default.</p>
+    <p>The selected link will save for the next visit. You can also input a custom link which is an advanced option.</p>
+    <p>If you want your link added here or to the custom use button, clone the Assets and/or Villade repositories and host them with Github Pages, Vercel, Netlify, etc.</p>
+    <p>Then just get the url of the main page of either Assets or Villade and input it into the custom link field. The games will automatically load from your mirror.</p>
+    <br>
+
     <strong>Assets Links</strong>
     <p style="margin-bottom: -20px;">Selected Assets Link: </p>
     <p id="selectedAssetsLink"></p>
     <br>
     <button onclick="selectAssetsLink()">Select an Assets link</button>
+    <button onclick="useCustomAssetsLink()">Add your own custom Assets link</button>
+    <button onclick="resetAssetsLink()">Reset Assets link value</button>
     <p>
         Official Mirror Links:
     </p>
@@ -30,6 +38,8 @@
     <p id="selectedVilladeLink"></p>
     <br>
     <button onclick="selectVilladeLink()">Select a Villade link</button>
+    <button onclick="useCustomVilladeLink()">Add your own custom Villade link</button>
+    <button onclick="resetVilladeLink()">Reset Villade link value</button>
     <p>
         Official Mirror Links:
     </p>
@@ -76,7 +86,7 @@
         document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
         if (localStorage.getItem("assetsLink") === "undefined") {
             alert("That value isn't a link number. Resetting to default link...");
-            localStorage.setItem("assetsLink", "https://assets.theludos.com");
+            localStorage.setItem("assetsLink", "https://assets.theludos.com/");
             var localStorageAssetsLink = localStorage.getItem("assetsLink");
             document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
         }
@@ -90,9 +100,37 @@
         document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
         if (localStorage.getItem("villadeLink") === "undefined") {
             alert("That value isn't a link number. Resetting to default link...");
-            localStorage.setItem("villadeLink", "https://villade.theludos.com");
+            localStorage.setItem("villadeLink", "https://villade.theludos.com/");
             var localStorageVilladeLink = localStorage.getItem("villadeLink");
             document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
         }
+    }
+
+    function useCustomAssetsLink() {
+        var customAssetsLink = prompt("Please enter a custom link for Assets to redirect to: ");
+        alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+        localStorage.setItem("assetsLink", customAssetsLink);
+        var localStorageAssetsLink = localStorage.getItem("assetsLink");
+        document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+    }
+
+    function useCustomVilladeLink() {
+        var customVilladeLink = prompt("Please enter a custom link for Villade to redirect to: ");
+        alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+        localStorage.setItem("villadeLink", customVilladeLink);
+        var localStorageVilladeLink = localStorage.getItem("villadeLink");
+        document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+    }
+
+    function resetAssetsLink() {
+        localStorage.setItem("assetsLink", "https://assets.theludos.com/");
+        var localStorageAssetsLink = localStorage.getItem("assetsLink");
+        document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+    }
+
+    function resetVilladeLink() {
+        localStorage.setItem("villadeLink", "https://villade.theludos.com/");
+        var localStorageVilladeLink = localStorage.getItem("villadeLink");
+        document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
     }
 </script>
