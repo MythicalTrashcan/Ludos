@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <head>
-    <title>mirrorLinks.html</title>
+    <title>Alternative Links | Ludos</title>
 </head>
 <body>
-    <button onclick="returnHome()">Return to main site</button>
+    <button onclick="returnHome()" style="padding: 15px;">Return to main site</button>
     <br>
     <br>
 
-    <p>Select one selection buttons below to choose an alterntive link as a default.</p>
-    <p>The selected link will save for the next visit. You can also input a custom link which is an advanced option.</p>
-    <p>If you want your link added here or to the custom use button, clone the Assets and/or Villade repositories and host them with Github Pages, Vercel, Netlify, etc.</p>
-    <p>Then just get the url of the main page of either Assets or Villade and input it into the custom link field. The games will automatically load from your mirror.</p>
+    <h2>Select one selection buttons below to choose an alterntive link as a default.</h2>
+    <h3>Input a number that is listed for the link you want. Any invalid link will not work.</h3>
+    <br>
+
+    <p><strong>The selected link will save for the next visit. You can also input a custom link which is an advanced option.</strong></p>
+    <p><strong>This is to bypass blocks from the official links with official and unoffical alternative links.</strong></p>
+    <p><strong>It is important to have a backup proxy around so you can get to the main page as if the main site is blocked, this won't work anymore.</strong></p>
+    <p><strong>Technically, you could use the proxy to get the alternative links but it's up to you.</strong></p>
+    <br>
+    <br>
+    <p>If you want your link added here or to the custom use button, clone the Assets/Villade/Movies repositories and host them with Github Pages, Vercel, Netlify, etc.</p>
+    <p>Then just get the url of the main page of either Assets, Villade, or Movies and input it into the custom link field. The links will automatically load from your mirror.</p>
     <br>
 
     <strong>Assets Links</strong>
@@ -31,8 +39,7 @@
         Unofficial Mirror Links:
     </p>
     <p><i>There is nothing here yet...</i></p>
-    <br>
-    <br>
+    <hr>
 
     <strong>Villade Links</strong>
     <p style="margin-bottom: -20px;">Selected Villade Link: </p>
@@ -52,6 +59,25 @@
         Unofficial Mirror Links:
     </p>
     <p><i>There is nothing here yet...</i></p>
+    <hr>
+
+    <strong>Movies Links</strong>
+    <p style="margin-bottom: -20px;">Selected Movies Link: </p>
+    <p id="selectedMoviesLink"></p>
+    <br>
+    <button onclick="selectMoviesLink()">Select a Movies link</button>
+    <button onclick="useCustomMoviesLink()">Add your own custom Movies link</button>
+    <button onclick="resetMoviesLink()">Reset Movies link value</button>
+    <p>
+        Official Mirror Links:
+    </p>
+    <p style="margin-left: 25px; color: #525252">0. https://movies.theludos.com/</p>
+    <p style="margin-left: 25px; color: #525252">1. https://movie-web-git-dev-mythicaltrashcan.vercel.app/</p>
+    <p style="margin-left: 25px; color: #525252">2. https://movie-web-mythicaltrashcan.vercel.app/</p>
+    <p>
+        Unofficial Mirror Links:
+    </p>
+    <p><i>There is nothing here yet...</i></p>
 </body>
 <script>
     function returnHome() {
@@ -64,6 +90,8 @@
     document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
     var localStorageVilladeLink = localStorage.getItem("villadeLink");
     document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+    var localStorageMoviesLink = localStorage.getItem("moviesLink");
+    document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
 
     const assetsLinks = [
         "https://assets.theludos.com/",
@@ -79,11 +107,14 @@
         "https://villade.netlify.app/"
     ];
 
-    var localStorageLink = localStorage.getItem("assetsLink");
-    document.getElementById("selectLink").innerHTML = localStorageLink;
+    const moviesLinks = [
+        "https://movies.theludos.com/",
+        "https://movie-web-git-dev-mythicaltrashcan.vercel.app/",
+        "https://movie-web-mythicaltrashcan.vercel.app/"
+    ];
 
     function selectAssetsLink() {
-        var selectedAssetsLinkNumber = prompt("Please enter a link number for assets to redirect to: ");
+        var selectedAssetsLinkNumber = prompt("Please enter a link number for Assets to redirect to: ");
         var currentSetAssetsLink = assetsLinks[selectedAssetsLinkNumber];
         localStorage.setItem("assetsLink", currentSetAssetsLink);
         var localStorageAssetsLink = localStorage.getItem("assetsLink");
@@ -97,7 +128,7 @@
     }
 
     function selectVilladeLink() {
-        var selectedVilladeLinkNumber = prompt("Please enter a link number for villade to redirect to: ");
+        var selectedVilladeLinkNumber = prompt("Please enter a link number for Villade to redirect to: ");
         var currentSetVilladeLink = villadeLinks[selectedVilladeLinkNumber];
         localStorage.setItem("villadeLink", currentSetVilladeLink);
         var localStorageVilladeLink = localStorage.getItem("villadeLink");
@@ -110,20 +141,42 @@
         }
     }
 
+    function selectMoviesLink() {
+        var selectedMoviesLinkNumber = prompt("Please enter a link number for Movies to redirect to: ");
+        var currentSetMoviesLink = moviesLinks[selectedMoviesLinkNumber];
+        localStorage.setItem("moviesLink", currentSetMoviesLink);
+        var localStorageMoviesLink = localStorage.getItem("moviesLink");
+        document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
+        if (localStorage.getItem("moviesLink") === "undefined") {
+            alert("That value isn't a link number. Resetting to default link...");
+            localStorage.setItem("moviesLink", "https://movies.theludos.com/");
+            var localStorageMoviesLink = localStorage.getItem("moviesLink");
+            document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
+        }
+    }
+
     function useCustomAssetsLink() {
-        var customAssetsLink = prompt("Please enter a custom link for Assets to redirect to: ");
         alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+        var customAssetsLink = prompt("Please enter a custom link for Assets to redirect to: ");
         localStorage.setItem("assetsLink", customAssetsLink);
         var localStorageAssetsLink = localStorage.getItem("assetsLink");
         document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
     }
 
     function useCustomVilladeLink() {
-        var customVilladeLink = prompt("Please enter a custom link for Villade to redirect to: ");
         alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+        var customVilladeLink = prompt("Please enter a custom link for Villade to redirect to: ");
         localStorage.setItem("villadeLink", customVilladeLink);
         var localStorageVilladeLink = localStorage.getItem("villadeLink");
         document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+    }
+
+    function useCustomMoviesLink() {
+        alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+        var customMoviesLink = prompt("Please enter a custom link for Movies to redirect to: ");
+        localStorage.setItem("moviesLink", customMoviesLink);
+        var localStorageMoviesLink = localStorage.getItem("moviesLink");
+        document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
     }
 
     function resetAssetsLink() {
@@ -136,5 +189,11 @@
         localStorage.setItem("villadeLink", "https://villade.theludos.com/");
         var localStorageVilladeLink = localStorage.getItem("villadeLink");
         document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+    }
+
+    function resetMoviesLink() {
+        localStorage.setItem("moviesLink", "https://movies.theludos.com/");
+        var localStorageMoviesLink = localStorage.getItem("moviesLink");
+        document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
     }
 </script>

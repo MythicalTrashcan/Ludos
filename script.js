@@ -27,11 +27,6 @@ function openRevolt() {
     window.open("https://app.revolt.chat/invite/YPnCttyS/");
 }
 
-function openMovies() {
-    const Revolt = document.querySelector('revolt');
-    window.open("https://movies.theludos.com/");
-}
-
 function openGithub() {
     const Github = document.querySelector('github');
     window.open("https://github.com/MythicalTrashcan/");

@@ -26,3 +26,5 @@ Added metadata to all webpages
 Possibly unblocked RetroBowl
 Updated eagler 1.5 to latest version
 Add a new alternative link system
+Add Villade links alternative option
+Add Movies links alternative option

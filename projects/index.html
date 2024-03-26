@@ -197,6 +197,10 @@
                 localStorage.setItem("villadeLink", "https://villade.theludos.com/");
             }
 
+            if (localStorage.getItem("moviesLink") === null) {
+                localStorage.setItem("moviesLink", "https://movies.theludos.com/");
+            }
+
             function openEaglercraftX() {
                 window.location.href = localStorage.getItem("villadeLink") + "/1.8.8/";
             }
