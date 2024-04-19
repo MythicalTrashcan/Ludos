@@ -31,10 +31,10 @@
     <p>
         Official Mirror Links:
     </p>
-    <p style="margin-left: 25px; color: #525252">0. https://assets.theludos.com/</p>
-    <p style="margin-left: 25px; color: #525252">1. https://ludos-assets-git-main-mythicaltrashcan.vercel.app/</p>
-    <p style="margin-left: 25px; color: #525252">2. https://ludos-assets-mythicaltrashcan.vercel.app/</p>
-    <p style="margin-left: 25px; color: #525252">3. https://ludos-assets.netlify.app/</p>
+    <p style="margin-left: 25px; color: #525252">0. https://assets.theludos.com</p>
+    <p style="margin-left: 25px; color: #525252">1. https://ludos-assets-git-main-mythicaltrashcan.vercel.app</p>
+    <p style="margin-left: 25px; color: #525252">2. https://ludos-assets-mythicaltrashcan.vercel.app</p>
+    <p style="margin-left: 25px; color: #525252">3. https://ludos-assets.netlify.app</p>
     <p>
         Unofficial Mirror Links:
     </p>
@@ -51,10 +51,10 @@
     <p>
         Official Mirror Links:
     </p>
-    <p style="margin-left: 25px; color: #525252">0. https://villade.theludos.com/</p>
-    <p style="margin-left: 25px; color: #525252">1. https://villade-git-main-mythicaltrashcan.vercel.app/</p>
-    <p style="margin-left: 25px; color: #525252">2. https://villade-mythicaltrashcan.vercel.app/</p>
-    <p style="margin-left: 25px; color: #525252">3. https://villade.netlify.app/</p>
+    <p style="margin-left: 25px; color: #525252">0. https://villade.theludos.com</p>
+    <p style="margin-left: 25px; color: #525252">1. https://villade-git-main-mythicaltrashcan.vercel.app</p>
+    <p style="margin-left: 25px; color: #525252">2. https://villade-mythicaltrashcan.vercel.app</p>
+    <p style="margin-left: 25px; color: #525252">3. https://villade.netlify.app</p>
     <p>
         Unofficial Mirror Links:
     </p>
@@ -71,9 +71,27 @@
     <p>
         Official Mirror Links:
     </p>
-    <p style="margin-left: 25px; color: #525252">0. https://movies.theludos.com/</p>
-    <p style="margin-left: 25px; color: #525252">1. https://movie-web-git-dev-mythicaltrashcan.vercel.app/</p>
-    <p style="margin-left: 25px; color: #525252">2. https://movie-web-mythicaltrashcan.vercel.app/</p>
+    <p style="margin-left: 25px; color: #525252">0. https://movies.theludos.com</p>
+    <p style="margin-left: 25px; color: #525252">1. https://movie-web-git-dev-mythicaltrashcan.vercel.app</p>
+    <p style="margin-left: 25px; color: #525252">2. https://movie-web-mythicaltrashcan.vercel.app</p>
+    <p>
+        Unofficial Mirror Links:
+    </p>
+    <p><i>There is nothing here yet...</i></p>
+    <hr>
+
+    <strong>Revolt Links</strong>
+    <p style="margin-bottom: -20px;">Selected Movies Link: </p>
+    <p id="selectedReviteLink"></p>
+    <br>
+    <button onclick="selectReviteLink()">Select a Revolt link</button>
+    <button onclick="useCustomReviteLink()">Add your own custom Revolt link</button>
+    <button onclick="resetReviteLink()">Reset Revolt link value</button>
+    <p>
+        Official Mirror Links:
+    </p>
+    <p style="margin-left: 25px; color: #525252">0. https://revolt.theludos.com</p>
+    <p style="margin-left: 25px; color: #525252">1. https://revite-ludos.vercel.app</p>
     <p>
         Unofficial Mirror Links:
     </p>
@@ -92,25 +110,32 @@
     document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
     var localStorageMoviesLink = localStorage.getItem("moviesLink");
     document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
+    var localStorageReviteLink = localStorage.getItem("reviteLink");
+    document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
 
     const assetsLinks = [
-        "https://assets.theludos.com/",
-        "https://ludos-assets-git-main-mythicaltrashcan.vercel.app/",
-        "https://ludos-assets-mythicaltrashcan.vercel.app/",
-        "https://ludos-assets.netlify.app/"
+        "https://assets.theludos.com",
+        "https://ludos-assets-git-main-mythicaltrashcan.vercel.app",
+        "https://ludos-assets-mythicaltrashcan.vercel.app",
+        "https://ludos-assets.netlify.app"
     ];
 
     const villadeLinks = [
-        "https://villade.theludos.com/",
-        "https://villade-git-main-mythicaltrashcan.vercel.app/",
-        "https://villade-mythicaltrashcan.vercel.app/",
-        "https://villade.netlify.app/"
+        "https://villade.theludos.com",
+        "https://villade-git-main-mythicaltrashcan.vercel.app",
+        "https://villade-mythicaltrashcan.vercel.app",
+        "https://villade.netlify.app"
     ];
 
     const moviesLinks = [
-        "https://movies.theludos.com/",
-        "https://movie-web-git-dev-mythicaltrashcan.vercel.app/",
-        "https://movie-web-mythicaltrashcan.vercel.app/"
+        "https://movies.theludos.com",
+        "https://movie-web-git-dev-mythicaltrashcan.vercel.app",
+        "https://movie-web-mythicaltrashcan.vercel.app"
+    ];
+
+    const reviteLinks = [
+        "https://revite.theludos.com",
+        "https://revite-ludos.vercel.app",
     ];
 
     function selectAssetsLink() {
@@ -121,7 +146,7 @@
         document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
         if (localStorage.getItem("assetsLink") === "undefined") {
             alert("That value isn't a link number. Resetting to default link...");
-            localStorage.setItem("assetsLink", "https://assets.theludos.com/");
+            localStorage.setItem("assetsLink", "https://assets.theludos.com");
             var localStorageAssetsLink = localStorage.getItem("assetsLink");
             document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
         }
@@ -135,7 +160,7 @@
         document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
         if (localStorage.getItem("villadeLink") === "undefined") {
             alert("That value isn't a link number. Resetting to default link...");
-            localStorage.setItem("villadeLink", "https://villade.theludos.com/");
+            localStorage.setItem("villadeLink", "https://villade.theludos.com");
             var localStorageVilladeLink = localStorage.getItem("villadeLink");
             document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
         }
@@ -149,9 +174,23 @@
         document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
         if (localStorage.getItem("moviesLink") === "undefined") {
             alert("That value isn't a link number. Resetting to default link...");
-            localStorage.setItem("moviesLink", "https://movies.theludos.com/");
+            localStorage.setItem("moviesLink", "https://movies.theludos.com");
             var localStorageMoviesLink = localStorage.getItem("moviesLink");
             document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
+        }
+    }
+
+    function selectReviteLink() {
+        var selectedReviteLinkNumber = prompt("Please enter a link number for Revite to redirect to: ");
+        var currentSetReviteLink = reviteLinks[selectedReviteLinkNumber];
+        localStorage.setItem("reviteLink", currentSetReviteLink);
+        var localStorageReviteLink = localStorage.getItem("reviteLink");
+        document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+        if (localStorage.getItem("reviteLink") === "undefined") {
+            alert("That value isn't a link number. Resetting to default link...");
+            localStorage.setItem("reviteLink", "https://revite.theludos.com");
+            var localStorageReviteLink = localStorage.getItem("reviteLink");
+            document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
         }
     }
 
@@ -179,21 +218,35 @@
         document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
     }
 
+    function useCustomReviteLink() {
+        alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+        var customReviteLink = prompt("Please enter a custom link for Revite to redirect to: ");
+        localStorage.setItem("reviteLink", customReviteLink);
+        var localStorageReviteLink = localStorage.getItem("reviteLink");
+        document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+    }
+
     function resetAssetsLink() {
-        localStorage.setItem("assetsLink", "https://assets.theludos.com/");
+        localStorage.setItem("assetsLink", "https://assets.theludos.com");
         var localStorageAssetsLink = localStorage.getItem("assetsLink");
         document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
     }
 
     function resetVilladeLink() {
-        localStorage.setItem("villadeLink", "https://villade.theludos.com/");
+        localStorage.setItem("villadeLink", "https://villade.theludos.com");
         var localStorageVilladeLink = localStorage.getItem("villadeLink");
         document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
     }
 
     function resetMoviesLink() {
-        localStorage.setItem("moviesLink", "https://movies.theludos.com/");
+        localStorage.setItem("moviesLink", "https://movies.theludos.com");
         var localStorageMoviesLink = localStorage.getItem("moviesLink");
         document.getElementById("selectedMoviesLink").innerHTML = localStorageMoviesLink;
+    }
+
+    function resetReviteLink() {
+        localStorage.setItem("reviteLink", "https://revite.theludos.com");
+        var localStorageReviteLink = localStorage.getItem("reviteLink");
+        document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
     }
 </script>
