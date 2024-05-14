@@ -30,3 +30,4 @@ Add Villade links alternative option
 Add Movies links alternative option
 Add Revite clone for blocked sites
 Implementing ads test #1
+Ads test #2
