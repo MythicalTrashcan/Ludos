@@ -1,35 +1,28 @@
 :root {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-shadow: 5px 5px 4px#252525;
-    background-color: #4d4d4d;
-    color: white;
-    background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
+    color: #afafaf;
+    background: radial-gradient(#131313 0%, #000000 100%);
 }
 
-div {
+h1, h2, div {
     text-align: center;
+    font-size: 80px;
+}
+
+#embed {
+    margin: auto;
+    margin-bottom: 50px;
 }
 
 .ludosLogo {
-    margin-top: -50px;
+    margin-top: -25px;
     margin-bottom: -100px;
-}
-
-.infoMain {
-    font-size: 40px;
-    margin-top: 100px;
 }
 
 .navLinks {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.notice {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 30px;
 }
 
 .footer {
@@ -39,235 +32,86 @@ div {
     right: 0px;
     width: 100%;
     height: 40px;
-    background-color: #141414;
+    background-color: #000000;
     color: white;
     text-align: center;
     font-size: 25px;
 }
 
-h1 {
-    text-align: center;
-    font-size: 80px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 50px;
-}
-
-h3 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
-}
-
-button {
-    background-color: #4CAF50;
-    border-style: solid;
-    border-color: #1c551e;
-    border-radius: 50px;
-    text-align: center;
-    color: #ffffff;
-    padding: 30px 64px;
-    text-decoration: none;
+.mirror, .movies, .revolt, .github, .youtube, .about {
+    width: 500px;
     display: inline-block;
+    padding: 16px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #242424;
+    cursor: pointer;
+    font-size: x-large;
+    transition: background-color .25s, border-color .25s;
+}
+
+.main {
+    background-color: transparent;
+    border-style: solid;
+    border-color: #242424;
+    border-width: 6px;
+    border-radius: 15px;
+    color: #318d34;
+    padding: 30px 64px;
     font-size: 75px;
     cursor: pointer;
-    box-shadow: 10px 5px 4px 2px #1c541e;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+    transition: background-color .25s, transform 1s, border-color .25s;
 }
 
-button[disabled] {
-    background: #808080;
-    border-color: #505050;
-    box-shadow: 12px 8px 4px 4px #444444;
-    color: #3f3f3f;
-    cursor: default;
-}
-
-button:hover[disabled] {
-    background-color: grey;
-}
-
-button:active[disabled] {
-    transform: scale(1.00);
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-button:hover {
-    background-color: #28722b;
-    transform: scaleX(.95) scaleY(.95) rotate(-5deg);
-}
-
-.revolt {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #222324;
-    border-style: solid;
-    border-color: #0c0c0c;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #000000;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ff002b;
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-.movies {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #222324;
-    border-style: solid;
-    border-color: #0c0c0c;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #000000;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #6300e6;
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-.github {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #222324;
-    border-style: solid;
-    border-color: #0c0c0c;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #000000;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-.youtube {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #ff0000;
-    border-style: solid;
-    border-color: #940000;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #660101;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-.about {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #ff9900;
-    border-style: solid;
-    border-color: #944f00;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #662901;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+.main:hover {
+    border-color: #318d34;
 }
 
 .mirror {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #ceba47;
-    border-style: solid;
-    border-color: #948500;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #646601;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+    color: #e4cd4f;
 }
 
-.revolt:hover {
-    background-color: #131313;
-    transform: scale(0.95);
+.movies {
+    color: #6300e6;
 }
 
-.movies:hover {
-    background-color: #131313;
-    transform: scale(0.95);
+.revolt {
+    color: #ff002b;
 }
 
-.github:hover {
-    background-color: #131313;
-    transform: scale(0.95);
+.github {
+    color: #afafaf;
 }
 
-.youtube:hover {
-    background-color: #c00000;
-    transform: scale(0.95);
+.youtube {
+    color: #df0000;
 }
 
-.about:hover {
-    background-color: #c07300;
-    transform: scale(0.95);
+.about {
+    color: #e68a00;
 }
 
 .mirror:hover {
-    background-color: #ceba47;
-    transform: scale(0.95);
+    border-color: #e4cd4f;
+}
+
+.movies:hover {
+    border-color: #6300e6;
+}
+
+.revolt:hover {
+    border-color: #ff002b;
+}
+
+.github:hover {
+    border-color: #afafaf;
+}
+
+.youtube:hover {
+    border-color: #df0000;
+}
+
+.about:hover {
+    border-color: #e68a00;
 }

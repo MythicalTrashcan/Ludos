@@ -1,24 +1,17 @@
 :root {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-shadow: 5px 5px 4px#252525;
-    background-color: #4d4d4d;
-    color: rgb(255, 255, 255);
-    background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
-    height: 1900px;
+    color: #afafaf;
+    background: radial-gradient(#131313 0%, #000000 100%);
+}
+
+h1, h2, div {
+    text-align: center;
+    font-size: 80px;
 }
 
 .ludosLogo {
     margin-top: -50px;
     margin-bottom: -100px;
-}
-
-.infoMain {
-    font-size: 40px;
-    margin-top: 100px;
-}
-
-.entry {
-    text-align: center;
 }
 
 .footer {
@@ -28,873 +21,81 @@
     right: 0px;
     width: 100%;
     height: 40px;
-    background-color: #141414;
+    background-color: #000000;
     color: white;
     text-align: center;
     font-size: 25px;
 }
 
-#embed {
-    margin: auto;
-}
-
-.mc-server {
-    font-size: 30px;
-    margin-top: 0px;
-    margin-bottom: 100px;
-    color: rgb(163, 255, 163);
-}
-
-h1 {
-    text-align: center;
-    font-size: 80px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 50px;
-}
-
-h3 {
-    text-align: center;
-    font-size: 80px;
-}
-
-.button {
-    top: 190px;
-    margin-left: 60px;
-    display: block;
-    width: 1000px;
-    position: absolute;
-    background-color: #e43a3a;
+.main, .about {
+    width: 1200px;
+    padding: 24px;
+    background-color: transparent;
     border-style: solid;
-    border-color: #a71d1d;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #941414;
+    border-color: #242424;
+    border-width: 4px;
+    border-radius: 10px;
+    color: #afafaf;
     cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: xx-large;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+    font-size: x-large;
+    transition: background-color .25s, border-color .25s;
 }
 
 .about {
-    top: 110px;
-    margin-left: 135px;
-    display: block;
-    width: 850px;
-    position: absolute;
-    background-color: #ff9900;
-    border-style: solid;
-    border-color: #944f00;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #662901;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: xx-large;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+    font-size: 30px;
+    color: #a75509;
 }
 
-.button:hover {
-    background-color: #dbb718;
-    box-shadow: 6px 4px 4px 2px #7c5706;
-    border-color: #a78209;
-    transform: scale(0.95);
-}
-
-.button:active {
-    transform: scale(0.97);
+.main {
+    font-size: 30px;
+    color: #a78209;
+    margin-bottom: 100px;
 }
 
 .about:hover {
-    background-color: #db7018;
-    box-shadow: 6px 4px 4px 2px #5f2b00;
     border-color: #a75509;
-    transform: scale(0.95);
 }
 
-.about:active {
-    transform: scale(0.97);
+.main:hover {
+    border-color: #a78209;
 }
 
-.size-warning {
-    font-size: 20px;
-    text-decoration: none;
-    margin-bottom: 50px;
+.games {
+    margin-bottom: 20px;
 }
 
 
-/* Games List */
-
-.games-list {
-    position: relative;
-    bottom: 100px;
-    display: flex;
-    justify-content: center;
-    right: 575px;
-    margin-bottom: 800px;
-}
-
-
-/* EaglercraftX 1.8.8 */
-
-.eaglercraftx:hover {
-    background-color: #3c18db;
-    box-shadow: 6px 4px 4px 2px #25067c;
-    border-color: #2b09a7;
-    transform: scale(0.95);
-}
-
-.eaglercraftx:active {
-    transform: scale(0.97);
-}
-
-.eaglercraftx {
-    top: 290px;
-    display: block;
-    width: 250px;
-    position: absolute;
-    margin-left: -25px;
-    background-color: #109cc7;
+.eaglercraftx, .eaglercraft, .eaglercraftb {
+    width: 400px;
+    display: inline-block;
+    padding: 16px;
+    background-color: transparent;
     border-style: solid;
-    border-color: #067b8a;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #06607c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
+    border-color: #242424;
+    border-radius: 10px;
     color: #ffffff;
-    text-decoration: none;
+    cursor: pointer;
+    font-size: x-large;
+    transition: background-color .25s, border-color .25s;
+    margin-bottom: 20px;
     font-size: 30px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
-
-/* Eaglercraft 1.5.2 */
-
-.eaglercraft:hover {
-    background-color: #3c18db;
-    box-shadow: 6px 4px 4px 2px #25067c;
-    border-color: #2b09a7;
-    transform: scale(0.95);
-}
-
-.eaglercraft:active {
-    transform: scale(0.97);
-}
-
-.eaglercraft {
-    top: 290px;
-    display: block;
-    width: 250px;
-    position: absolute;
-    margin-left: 375px;
-    background-color: #109cc7;
+.retro-bowl, .n-gon, .planet, .cookie-clicker, .baldis-basics, .vlol, .dance-fire-ice, .ten-mins, .number-game, .number-game-multi, .number-game-big, .number-game-small, .number-game-cupcake, .sand-game, .crossy-road, .core-ball, .mario-64 {
+    width: 300px;
+    display: inline-block;
+    padding: 16px;
+    background-color: transparent;
     border-style: solid;
-    border-color: #067b8a;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #06607c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
+    border-color: #242424;
+    border-radius: 8px;
     color: #ffffff;
-    text-decoration: none;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Eaglercraft Beta 1.3 */
-
-.eaglercraftb:hover {
-    background-color: #3c18db;
-    box-shadow: 6px 4px 4px 2px #25067c;
-    border-color: #2b09a7;
-    transform: scale(0.95);
-}
-
-.eaglercraftb:active {
-    transform: scale(0.97);
-}
-
-.eaglercraftb {
-    top: 290px;
-    display: block;
-    width: 250px;
-    position: absolute;
-    margin-left: 775px;
-    background-color: #109cc7;
-    border-style: solid;
-    border-color: #067b8a;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #06607c;
     cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+    font-size: x-large;
+    transition: background-color .25s, border-color .25s;
+    margin-bottom: 20px;
 }
 
-
-/* Retro Bowl */
-
-.retro-bowl:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.retro-bowl:active {
-    transform: scale(0.97);
-}
-
-.retro-bowl {
-    top: 490px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: -50px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* N-Gon */
-
-.n-gon:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.n-gon:active {
-    transform: scale(0.97);
-}
-
-.n-gon {
-    top: 490px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 259.375px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Planetesimals */
-
-.planet:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.planet:active {
-    transform: scale(0.97);
-}
-
-.planet {
-    top: 490px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 565.625px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Cookie Clicker */
-
-.cookie-clicker:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.cookie-clicker:active {
-    transform: scale(0.97);
-}
-
-.cookie-clicker {
-    top: 490px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 875px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Baldi's Basics */
-
-.baldis-basics:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.baldis-basics:active {
-    transform: scale(0.97);
-}
-
-.baldis-basics {
-    top: 660px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: -50px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* 1v1.lol */
-
-.vlol:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.vlol:active {
-    transform: scale(0.97);
-}
-
-.vlol {
-    top: 660px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 259.375px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* A Dance Of Fire & Ice */
-
-.dance-fire-ice:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.dance-fire-ice:active {
-    transform: scale(0.97);
-}
-
-.dance-fire-ice {
-    top: 660px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 565.625px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Ten Minutes Until Dawn */
-
-.ten-mins:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.ten-mins:active {
-    transform: scale(0.97);
-}
-
-.ten-mins {
-    top: 660px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 875px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* 2048 */
-
-.number-game:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game:active {
-    transform: scale(0.97);
-}
-
-.number-game {
-    top: 830px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: -50px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* 2048 Multitask */
-
-.number-game-multi:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game-multi:active {
-    transform: scale(0.97);
-}
-
-.number-game-multi {
-    top: 830px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 259.375px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* 2048 Big */
-
-.number-game-big:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game-big:active {
-    transform: scale(0.97);
-}
-
-.number-game-big {
-    top: 830px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 565.625px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* 1 */
-
-.number-game-small:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game-small:active {
-    transform: scale(0.97);
-}
-
-.number-game-small {
-    top: 830px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 875px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-/* 2048 Cupcake */
-
-.number-game-cupcake:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.number-game-cupcake:active {
-    transform: scale(0.97);
-}
-
-.number-game-cupcake {
-    top: 1000px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: -50px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Sand Game */
-
-.sand-game:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.sand-game:active {
-    transform: scale(0.97);
-}
-
-.sand-game {
-    top: 1000px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 259.375px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Crossy Road */
-
-.crossy-road:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.crossy-road:active {
-    transform: scale(0.97);
-}
-
-.crossy-road {
-    top: 1000px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 565.625px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-/* Core Ball */
-
-.core-ball:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.core-ball:active {
-    transform: scale(0.97);
-}
-
-.core-ball {
-    top: 1000px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: 875px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-}
-
-
-/* Super Mario 64 */
-
-.mario-64:hover {
-    background-color: #dbd818;
-    box-shadow: 6px 4px 4px 2px #667c06;
-    border-color: #97a709;
-    transform: scale(0.95);
-}
-
-.mario-64:active {
-    transform: scale(0.97);
-}
-
-.mario-64 {
-    top: 1170px;
-    display: block;
-    width: 175px;
-    height: 125px;
-    position: absolute;
-    margin-left: -50px;
-    background-color: #10c729;
-    border-style: solid;
-    border-color: #068a27;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #067c0c;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 23.25px;
-    text-align: center;
-    border-radius: 25px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+.eaglercraftx:hover, .eaglercraft:hover, .eaglercraftb:hover, .retro-bowl:hover, .n-gon:hover, .planet:hover, .cookie-clicker:hover:hover, .baldis-basics:hover, .vlol:hover, .dance-fire-ice:hover, .ten-mins:hover, .number-game:hover, .number-game-multi:hover, .number-game-big:hover, .number-game-small:hover, .number-game-cupcake:hover, .sand-game:hover, .crossy-road:hover, .core-ball:hover, .mario-64:hover {
+    border-color: #ffffff;
 }

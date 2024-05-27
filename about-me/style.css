@@ -1,26 +1,24 @@
 :root {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-shadow: 5px 5px 4px #522607;
-    background-color: #572902;
-    color: #612f17;
-    background-image: linear-gradient(to top, #572902, #723809, #8e490f, #ab5a16, #c96b1c);
+    color: #afafaf;
+    background: radial-gradient(#131313 0%, #000000 100%);
+}
+
+div {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: -20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
 }
 
 .mythLogo {
     margin-top: -50px;
     margin-bottom: -100px;
     margin-left: -25;
-}
-
-.aboutMe {
-    margin-bottom: 80px;
-}
-
-.navLinks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
 }
 
 .footer {
@@ -30,166 +28,64 @@
     right: 0px;
     width: 100%;
     height: 40px;
-    background-color: #4d2004;
+    background-color: #000000;
     color: white;
     text-align: center;
     font-size: 25px;
 }
 
-div {
-    text-align: center;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    margin-bottom: -20px;
-}
-
-h1 a {
-    color: red;
-}
-
-h1 {
-    text-align: center;
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-}
-
-h2 {
-    text-align: center;
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-}
-
-h3 {
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-p {
-    text-align: center;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    margin-bottom: -20px;
-}
-
-button {
-    background-color: #af814c;
+.main {
+    background-color: transparent;
     border-style: solid;
-    border-color: #553a1c;
-    border-radius: 50px;
-    text-align: center;
-    color: #ffffff;
+    border-color: #242424;
+    border-width: 6px;
+    border-radius: 15px;
+    color: #88653c;
     padding: 30px 64px;
-    text-decoration: none;
-    display: inline-block;
     font-size: 75px;
     cursor: pointer;
-    box-shadow: 10px 5px 4px 2px #543a1c;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
+    transition: background-color .25s, transform 1s, border-color .25s;
+    margin-bottom: 100px;
 }
 
-button[disabled] {
-    background: #808080;
-    border-color: #505050;
-    box-shadow: 12px 8px 4px 4px #444444;
-    color: #3f3f3f;
-    cursor: default;
+.main:hover {
+    border-color: #88653c;
 }
 
-button:hover[disabled] {
-    background-color: grey;
-}
-
-button:active[disabled] {
-    transform: scale(1.00);
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-button:hover {
-    background-color: #815e3d;
-    transform: scaleX(.95) scaleY(.95) rotate(-5deg);
+.revolt, .github, .youtube {
+    width: 500px;
+    display: inline-block;
+    padding: 16px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #242424;
+    cursor: pointer;
+    font-size: x-large;
+    transition: background-color .25s, border-color .25s;
+    margin-bottom: 150px;
 }
 
 .revolt {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #222324;
-    border-style: solid;
-    border-color: #0c0c0c;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #000000;
-    cursor: pointer;
-    transition: all;
-    padding: 15px 60px;
-    text-shadow: none;
     color: #ff002b;
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
 }
 
 .github {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #222324;
-    border-style: solid;
-    border-color: #0c0c0c;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #000000;
-    cursor: pointer;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
+    color: #afafaf;
 }
 
 .youtube {
-    width: 1000px;
-    display: block;
-    position: relative;
-    top: -35px;
-    margin-bottom: 35px;
-    padding: 16px;
-    background-color: #ff0000;
-    border-style: solid;
-    border-color: #940000;
-    box-shadow: inset;
-    box-shadow: 6px 4px 4px 2px #660101;
-    cursor: pointer;
-    transition: width .25s, height .25s, background-color .25s, transform .25s;
-    padding: 15px 60px;
-    text-shadow: none;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: x-large;
-    border-radius: 15px;
+    color: #df0000;
 }
 
 .revolt:hover {
-    background-color: #131313;
-    transform: scale(0.95);
+    border-color: #ff002b;
 }
 
 .github:hover {
-    background-color: #131313;
-    transform: scale(0.95);
+    border-color: #afafaf;
 }
 
 .youtube:hover {
-    background-color: #c00000;
-    transform: scale(0.95);
+    border-color: #df0000;
 }

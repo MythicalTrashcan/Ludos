@@ -32,3 +32,4 @@ Add Revite clone for blocked sites
 Implementing ads test #1
 Ads test #2
 Ads test #3, custom locations
+Entire site revamp, new theme, bug fixes, code optimization. Overall a massive update that took many hours.

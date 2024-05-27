@@ -1,23 +1,7 @@
-let timeout;
-
 function viewProjects() {
-    /*    alert("Projects will be added soon!") */
     const button = document.querySelector('button');
     button.disabled = true;
-    button.textContent = "Loading Tab...";
-    timeout = setTimeout(alertFunc, 1000);
-    timeout = setTimeout(error404, 5000);
-}
-
-function alertFunc() {
-    const button = document.querySelector('button');
-    button.textContent = "View Projects";
-    button.disabled = false;
     window.location.href = './projects/';
-}
-
-function error404() {
-    window.location = './no-load/';
 }
 
 // Social Links
@@ -47,7 +31,11 @@ function selectMirror() {
     window.location.href = './mirrorLinks.html';
 }
 
-/* Work on later
+window.addEventListener("load", () => {
+	new ServerEmbed(document.getElementById("embed"), "35%").ping("wss://mc.theludos.com", "Myth's EagMP" , "true" , "" , "hideCracked");
+});
+
+/* Work on later (eh, not really used in the new setup rn)
 
 /*
 var styles = [{ transform: 'scaleX(.95) scaleY(.95) rotate(3deg)' }, { transform: 'scaleX(.95) scaleY(.95) rotate(-3deg)' }];

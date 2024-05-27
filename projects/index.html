@@ -15,7 +15,6 @@
     <meta name="author" content="Mythical Trashcan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-1576606614118788">
-    <script type="text/javascript" src="./EaglerEmbed/embed.js"></script>
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link type="image/png" rel="shortcut icon" href="../favicons/ludos-favicon.png" />
@@ -25,269 +24,122 @@
 </head>
 
 <body>
-    <div id="embed"></div>
-    <h3 class="mc-server"> Join my Minecraft Server through one of the Eaglercraft links below (except beta)</h3>
-    <h1 class="entry">
+    <h1 style="margin-bottom: 100px;">
         Welcome to <img draggable="false" class="ludosLogo" src="../favicons/ludos.png" width="250" height="250"> Projects!
     </h1>
-    <h2 class="infoMain">
+    <h2 style="font-size: 40px;">
         This has a list of all the currently implemented games!
     </h2>
-    <h1 class="size-warning">
-        If you can't see the whole list of games, go to the 3 dots at the top right corner and change zoom to a more appropriate size or scroll down. Sorry :(
-        <div class="games-list">
-            <div>
-                <button class="about" onclick="openAbout()">About Me!</button>
-            </div>
-            <div>
-                <button class="button" onclick="returnHome()">Return to main site</button>
-            </div>
-            <div>
-                <a class="eaglercraftx" onclick="openEaglercraftX()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eaglerx.png" width="100" height="100">
-                    <br>
-                    EaglercraftX 1.8.8
-                </a>
-            </div>
-            <div>
-                <a class="eaglercraft" onclick="openEaglercraft()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eagler.png" width="100" height="100">
-                    <br>
-                    Eaglercraft 1.5.2
-                </a>
-            </div>
-            <div>
-                <a class="eaglercraftb" onclick="openEaglercraftBeta()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eaglerx.png" width="100" height="100">
-                    <br>
-                    EaglercraftB 1.3
-                </a>
-            </div>
-            <div>
-                <a class="retro-bowl" onclick="openRetroBowl()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/retro-bowl.png" width="80" height="80">
-                    <br>
-                    Retro Bowl
-                </a>
-            </div>
-            <div>
-                <a class="n-gon" onclick="openNGon()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/n-gon.png" width="80" height="80">
-                    <br>
-                    N-Gon
-                </a>
-            </div>
-            <div>
-                <a class="planet" onclick="openPlanetesimals()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/planet.png" width="80" height="80">
-                    <br>
-                    Planetesimals
-                </a>
-            </div>
-            <div>
-                <a class="cookie-clicker" onclick="openCookieClicker()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/cookie-clicker.png" width="80" height="80">
-                    <br>
-                    Cookie Clicker
-                </a>
-            </div>
-            <div>
-                <a class="baldis-basics" onclick="openBaldisBasics()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/baldis-basics.png" width="80" height="80">
-                    <br>
-                    Baldi's Basics
-                </a>
-            </div>
-            <div>
-                <a class="vlol" onclick="open1v1Lol()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/vlol.png" width="80" height="80">
-                    <br>
-                    1v1.lol
-                </a>
-            </div>
-            <div>
-                <a class="dance-fire-ice" onclick="openADanceOfFireAndIce()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/dance.png" width="80" height="80">
-                    <br>
-                    A Dance of Fire and Ice
-                </a>
-            </div>
-            <div>
-                <a class="ten-mins" onclick="openTenMinutesUntilDawn()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/10-mins.png" width="80" height="80">
-                    <br>
-                    10 Minutes Till Dawn
-                </a>
-            </div>
-            <div>
-                <a class="number-game" onclick="open2048()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/2048.png" width="80" height="80">
-                    <br>
-                    2048
-                </a>
-            </div>
-            <div>
-                <a class="number-game-multi" onclick="open2048MultiTask()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/2048-multitask.png" width="80" height="80">
-                    <br>
-                    2048 Multitask
-                </a>
-            </div>
-            <div>
-                <a class="number-game-big" onclick="open9007199254740992()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/2048-big.png" width="80" height="80">
-                    <br>
-                    2048 Big Numbers
-                </a>
-            </div>
-            <div>
-                <a class="number-game-small" onclick="open1()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/1.png" width="80" height="80">
-                    <br>
-                    2048 Reverse
-                </a>
-            </div>
-            <div>
-                <a class="number-game-cupcake" onclick="open2048Cupcake()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/2048-cupcake.png" width="80" height="80">
-                    <br>
-                    2048 Cupcake
-                </a>
-            </div>
-            <div>
-                <a class="sand-game" onclick="openSandGame()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/sand-game.png" width="80" height="80">
-                    <br>
-                    Sand Game
-                </a>
-            </div>
-            <div>
-                <a class="crossy-road" onclick="openCrossyRoad()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/crossy-road.png" width="80" height="80">
-                    <br>
-                    Crossy Road
-                </a>
-            </div>
-            <div>
-                <a class="core-ball" onclick="openCoreBall()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/core-ball.png" width="80" height="80">
-                    <br>
-                    Core Ball
-                </a>
-            </div>
-            <div>
-                <a class="mario-64" onclick="openMario64()">
-                    <img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/sm64.png" width="80" height="80">
-                    <br>
-                    Super Mario 64
-                </a>
-            </div>
-        </div>
-    </h1>
-        <table>
-            <td class="footer">
-                <a>Made by</a>
-                <a href="https://github.com/MythicalTrashcan"><strong>Mythical Trashcan</strong></a>
-                <a>2022-2024</a>
-            </td>
-        </table>
-
-        <script>
-            if (localStorage.getItem("assetsLink") === null) {
-                localStorage.setItem("assetsLink", "https://assets.theludos.com");
-            }
-
-            if (localStorage.getItem("villadeLink") === null) {
-                localStorage.setItem("villadeLink", "https://villade.theludos.com");
-            }
-
-            if (localStorage.getItem("moviesLink") === null) {
-                localStorage.setItem("moviesLink", "https://movies.theludos.com");
-            }
-
-            if (localStorage.getItem("reviteLink") === null) {
-                localStorage.setItem("reviteLink", "https://revite.theludos.com");
-            }
-
-            function openEaglercraftX() {
-                window.location.href = localStorage.getItem("villadeLink") + "/1.8.8/";
-            }
-
-            function openEaglercraft() {
-                window.location.href = localStorage.getItem("villadeLink") + "/1.5.2/";
-            }
-
-            function openEaglercraftBeta() {
-                window.location.href = localStorage.getItem("villadeLink") + "/b1.3_01/";
-            }
-
-            function openRetroBowl() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/bowl/";
-            }
-
-            function openNGon() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/ngon/";
-            }
-
-            function openPlanetesimals() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/planetesimals/";
-            }
-
-            function openCookieClicker() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/choco-chip/";
-            }
-
-            function openBaldisBasics() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/baldis-basics/";
-            }
-
-            function open1v1Lol() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/shootgame3d/";
-            }
-
-            function openADanceOfFireAndIce() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/a-dance-of-fire-and-ice/";
-            }
-
-            function openTenMinutesUntilDawn() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/10-minutes-till-dawn/";
-            }
-
-            function open2048() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame/";
-            }
-
-            function open2048MultiTask() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-multitask/";
-            }
-
-            function open9007199254740992() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-big/";
-            }
-
-            function open1() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-reverse/";
-            }
-
-            function open2048Cupcake() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-cupcake/";
-            }
-
-            function openSandGame() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/sand-game/";
-            }
-
-            function openCrossyRoad() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/crossy-road/";
-            }
-
-            function openCoreBall() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/core-ball/";
-            }
-
-            function openMario64() {
-                window.location.href = localStorage.getItem("assetsLink") + "/games/sm64/";
-            }
+    <div>
+        <button class="about" onclick="openAbout()">About Me!</button>
+    </div>
+    <div>
+        <button class="main" onclick="returnHome()">Return to main site</button>
+    </div>
+    <div class="eagler">
+        <a class="eaglercraftx" onclick="openEaglercraftX()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eaglerx.png" width="100" height="100"><br>EaglercraftX 1.8.8</a>
+        <a class="eaglercraft" onclick="openEaglercraft()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eagler.png" width="100" height="100"><br>Eaglercraft 1.5.2 </a>
+        <a class="eaglercraftb" onclick="openEaglercraftBeta()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eaglerx.png" width="100" height="100"><br>EaglercraftB 1.3 </a>
+    </div>
+    <div class="games">
+        <a class="retro-bowl" onclick="openRetroBowl()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/retro-bowl.png" width="80" height="80"><br>Retro Bowl </a>
+        <a class="n-gon" onclick="openNGon()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/n-gon.png" width="80" height="80"><br>N-Gon </a>
+        <a class="planet" onclick="openPlanetesimals()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/planet.png" width="80" height="80"><br>Planetesimals </a>
+        <a class="cookie-clicker" onclick="openCookieClicker()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/cookie-clicker.png" width="80" height="80"><br>Cookie Clicker </a>
+        <a class="baldis-basics" onclick="openBaldisBasics()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/baldis-basics.png" width="80" height="80"><br>Baldi's Basics </a>
+        <a class="vlol" onclick="open1v1Lol()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/vlol.png" width="80" height="80"><br>1v1.lol </a>
+        <a class="dance-fire-ice" onclick="openADanceOfFireAndIce()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/dance.png" width="80" height="80"><br>A Dance of Fire and Ice </a>
+        <a class="ten-mins" onclick="openTenMinutesUntilDawn()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/10-mins.png" width="80" height="80"><br>10 Minutes Till Dawn </a>
+        <a class="number-game" onclick="open2048()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/2048.png" width="80" height="80"><br>2048 </a>
+        <a class="number-game-multi" onclick="open2048MultiTask()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/2048-multitask.png" width="80" height="80"><br>2048 Multitask </a>
+        <a class="number-game-big" onclick="open9007199254740992()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/2048-big.png" width="80" height="80"><br>2048 Big Numbers </a>
+        <a class="number-game-small" onclick="open1()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/1.png" width="80" height="80"><br>2048 Reverse </a>
+        <a class="number-game-cupcake" onclick="open2048Cupcake()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/2048-cupcake.png" width="80" height="80"><br>2048 Cupcake </a>
+        <a class="sand-game" onclick="openSandGame()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/sand-game.png" width="80" height="80"><br>Sand Game </a>
+        <a class="crossy-road" onclick="openCrossyRoad()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/crossy-road.png" width="80" height="80"><br>Crossy Road </a>
+        <a class="core-ball" onclick="openCoreBall()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/core-ball.png" width="80" height="80"><br>Core Ball </a>
+        <a class="mario-64" onclick="openMario64()"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/sm64.png" width="80" height="80"><br>Super Mario 64 </a>
+    </div>
+    <table>
+        <td class="footer">
+            <a>Made by</a>
+            <a href="https://github.com/MythicalTrashcan"><strong>Mythical Trashcan</strong></a>
+            <a>2022-2024</a>
+        </td>
+    </table>
+    <script>
+        if (localStorage.getItem("assetsLink") === null) {
+            localStorage.setItem("assetsLink", "https://assets.theludos.com");
+        }
+        if (localStorage.getItem("villadeLink") === null) {
+            localStorage.setItem("villadeLink", "https://villade.theludos.com");
+        }
+        if (localStorage.getItem("moviesLink") === null) {
+            localStorage.setItem("moviesLink", "https://movies.theludos.com");
+        }
+        if (localStorage.getItem("reviteLink") === null) {
+            localStorage.setItem("reviteLink", "https://revite.theludos.com");
+        }
+        function openEaglercraftX() {
+            window.location.href = localStorage.getItem("villadeLink") + "/1.8.8/";
+        }
+        function openEaglercraft() {
+               window.location.href = localStorage.getItem("villadeLink") + "/1.5.2/";
+        }
+        function openEaglercraftBeta() {
+            window.location.href = localStorage.getItem("villadeLink") + "/b1.3_01/";
+        }
+        function openRetroBowl() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/bowl/";
+        }
+        function openNGon() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/ngon/";
+        }
+        function openPlanetesimals() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/planetesimals/";
+        }
+        function openCookieClicker() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/choco-chip/";
+        }
+        function openBaldisBasics() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/baldis-basics/";
+        }
+        function open1v1Lol() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/shootgame3d/";
+        }
+        function openADanceOfFireAndIce() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/a-dance-of-fire-and-ice/";
+        }
+        function openTenMinutesUntilDawn() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/10-minutes-till-dawn/";
+        }
+        function open2048() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame/";
+        }
+        function open2048MultiTask() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-multitask/";
+        }
+        function open9007199254740992() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-big/";
+        }
+        function open1() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-reverse/";
+        }
+        function open2048Cupcake() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/numbergame-cupcake/";
+        }
+        function openSandGame() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/sand-game/";
+        }
+        function openCrossyRoad() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/crossy-road/";
+        }
+        function openCoreBall() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/core-ball/";
+        }
+        function openMario64() {
+            window.location.href = localStorage.getItem("assetsLink") + "/games/sm64/";
+        }
         </script>
 </body>
 
