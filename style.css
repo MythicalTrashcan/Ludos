@@ -38,7 +38,7 @@ h1, h2, div {
     font-size: 25px;
 }
 
-.mirror, .movies, .revolt, .github, .youtube, .about {
+.mirror, .revolt, .github, .youtube, .about {
     width: 500px;
     display: inline-block;
     padding: 16px;
