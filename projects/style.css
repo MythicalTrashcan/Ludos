@@ -10,8 +10,13 @@ h1, h2, div {
 }
 
 .ludosLogo {
-    margin-top: -50px;
     margin-bottom: -100px;
+    border-radius: 50%;
+    transition: box-shadow 1s;
+}
+
+.ludosLogo:hover {
+    box-shadow: 0 0 50px rgb(165, 106, 29);
 }
 
 .footer {
@@ -28,8 +33,9 @@ h1, h2, div {
 }
 
 .main, .about {
-    width: 65vw;
+    width: 90vw;
     height: 100px;
+    max-width: 1200px;
     margin: 24px;
     background-color: transparent;
     border-style: solid;
@@ -38,17 +44,15 @@ h1, h2, div {
     border-radius: 10px;
     color: #afafaf;
     cursor: pointer;
-    font-size: x-large;
+    font-size: min(2vw, 70px);
     transition: background-color .25s, border-color .25s;
 }
 
 .about {
-    font-size: 30px;
     color: #a75509;
 }
 
 .main {
-    font-size: 30px;
     color: #a78209;
     margin-bottom: 100px;
 }
@@ -65,7 +69,6 @@ h1, h2, div {
     margin-bottom: 20px;
 }
 
-
 .eaglercraftx, .eaglercraft, .eaglercraftb {
     width: 25vw;
     min-width: 350px;
@@ -79,10 +82,9 @@ h1, h2, div {
     border-radius: 10px;
     color: #ffffff;
     cursor: pointer;
-    font-size: x-large;
+    font-size: min(2vw, 60px);
     transition: background-color .25s, border-color .25s;
     margin-bottom: 20px;
-    font-size: 30px;
 }
 
 .retro-bowl, .n-gon, .planet, .cookie-clicker, .baldis-basics, .vlol, .dance-fire-ice, .ten-mins, .number-game, .number-game-multi, .number-game-big, .number-game-small, .number-game-cupcake, .sand-game, .crossy-road, .core-ball, .mario-64 {
@@ -97,7 +99,7 @@ h1, h2, div {
     border-radius: 8px;
     color: #ffffff;
     cursor: pointer;
-    font-size: x-large;
+    font-size: min(1.38vw, 50px);
     transition: background-color .25s, border-color .25s;
     margin-bottom: 20px;
 }

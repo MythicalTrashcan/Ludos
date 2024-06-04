@@ -42,7 +42,7 @@ h1 {
     border-radius: 15px;
     color: #88653c;
     padding: 30px 64px;
-    font-size: 75px;
+    font-size: min(4vw, 150px);
     cursor: pointer;
     transition: background-color .25s, transform 1s, border-color .25s;
     margin-bottom: 100px;
@@ -53,7 +53,9 @@ h1 {
 }
 
 .revolt, .github, .youtube {
-    width: 500px;
+    width: 25vw;
+    min-width: 250px;
+    max-width: 700px;
     display: inline-block;
     padding: 16px;
     background-color: transparent;
@@ -61,7 +63,7 @@ h1 {
     border-radius: 8px;
     border-color: #242424;
     cursor: pointer;
-    font-size: x-large;
+    font-size: min(1.25vw, 70px);
     transition: background-color .25s, border-color .25s;
     margin-bottom: 150px;
 }

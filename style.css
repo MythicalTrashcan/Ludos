@@ -15,8 +15,14 @@ h1, h2, div {
 }
 
 .ludosLogo {
-    margin-top: -25px;
     margin-bottom: -100px;
+    height: auto;
+    border-radius: 50%;
+    transition: box-shadow 1s;
+}
+
+.ludosLogo:hover {
+    box-shadow: 0 0 50px rgb(165, 106, 29);
 }
 
 .navLinks {
@@ -38,28 +44,19 @@ h1, h2, div {
     font-size: 25px;
 }
 
-.mirror, .revolt, .github, .youtube, .about {
-    width: 500px;
-    display: inline-block;
-    padding: 16px;
-    background-color: transparent;
-    border-style: solid;
-    border-radius: 8px;
-    border-color: #242424;
-    cursor: pointer;
-    font-size: x-large;
-    transition: background-color .25s, border-color .25s;
-}
-
 .main {
+    width: 32vw;
+    height: auto;
+    max-width: 800px;
+    min-width: 300px;
     background-color: transparent;
     border-style: solid;
     border-color: #242424;
     border-width: 6px;
     border-radius: 15px;
     color: #318d34;
+    font-size: min(4vw, 150px);
     padding: 30px 64px;
-    font-size: 75px;
     cursor: pointer;
     transition: background-color .25s, transform 1s, border-color .25s;
 }
@@ -68,12 +65,23 @@ h1, h2, div {
     border-color: #318d34;
 }
 
-.mirror {
-    color: #e4cd4f;
+.mirror, .revolt, .github, .youtube, .about {
+    width: 25vw;
+    min-width: 250px;
+    max-width: 700px;
+    display: inline-block;
+    padding: 16px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #242424;
+    cursor: pointer;
+    font-size: min(1.25vw, 70px);
+    transition: background-color .25s, border-color .25s;
 }
 
-.movies {
-    color: #6300e6;
+.mirror {
+    color: #e4cd4f;
 }
 
 .revolt {
@@ -94,10 +102,6 @@ h1, h2, div {
 
 .mirror:hover {
     border-color: #e4cd4f;
-}
-
-.movies:hover {
-    border-color: #6300e6;
 }
 
 .revolt:hover {

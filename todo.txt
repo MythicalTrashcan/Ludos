@@ -35,3 +35,4 @@ Ads test #3, custom locations
 Entire site revamp, new theme, bug fixes, code optimization. Overall a massive update that took many hours.
 Remove movie-web for safety. Original site was DMCA'd/Taken down.
 Experimental change to the games list.
+Another experimental change to the entire site for fitting a variety of screen sizes.
