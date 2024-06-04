@@ -28,8 +28,9 @@ h1, h2, div {
 }
 
 .main, .about {
-    width: 1200px;
-    padding: 24px;
+    width: 65vw;
+    height: 100px;
+    margin: 24px;
     background-color: transparent;
     border-style: solid;
     border-color: #242424;
@@ -66,9 +67,12 @@ h1, h2, div {
 
 
 .eaglercraftx, .eaglercraft, .eaglercraftb {
-    width: 400px;
+    width: 25vw;
+    min-width: 350px;
+    max-width: 650px;
     display: inline-block;
-    padding: 16px;
+    padding: 24px;
+    white-space: none;
     background-color: transparent;
     border-style: solid;
     border-color: #242424;
@@ -82,7 +86,9 @@ h1, h2, div {
 }
 
 .retro-bowl, .n-gon, .planet, .cookie-clicker, .baldis-basics, .vlol, .dance-fire-ice, .ten-mins, .number-game, .number-game-multi, .number-game-big, .number-game-small, .number-game-cupcake, .sand-game, .crossy-road, .core-ball, .mario-64 {
-    width: 300px;
+    width: 15vw;
+    min-width: 300px;
+    max-width: 600px;
     display: inline-block;
     padding: 16px;
     background-color: transparent;
