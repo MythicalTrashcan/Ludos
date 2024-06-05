@@ -44,7 +44,7 @@ h1, h2, div {
     border-radius: 10px;
     color: #afafaf;
     cursor: pointer;
-    font-size: min(2vw, 70px);
+    font-size: 40px;
     transition: background-color .25s, border-color .25s;
 }
 
@@ -82,7 +82,7 @@ h1, h2, div {
     border-radius: 10px;
     color: #ffffff;
     cursor: pointer;
-    font-size: min(2vw, 60px);
+    font-size: 35px;
     transition: background-color .25s, border-color .25s;
     margin-bottom: 20px;
 }
@@ -99,7 +99,7 @@ h1, h2, div {
     border-radius: 8px;
     color: #ffffff;
     cursor: pointer;
-    font-size: min(1.38vw, 50px);
+    font-size: 25px;
     transition: background-color .25s, border-color .25s;
     margin-bottom: 20px;
 }

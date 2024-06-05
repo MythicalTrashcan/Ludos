@@ -55,7 +55,7 @@ h1, h2, div {
     border-width: 6px;
     border-radius: 15px;
     color: #318d34;
-    font-size: min(4vw, 150px);
+    font-size: 75px;
     padding: 30px 64px;
     cursor: pointer;
     transition: background-color .25s, transform 1s, border-color .25s;
@@ -76,7 +76,7 @@ h1, h2, div {
     border-radius: 8px;
     border-color: #242424;
     cursor: pointer;
-    font-size: min(1.25vw, 70px);
+    font-size: 25px;
     transition: background-color .25s, border-color .25s;
 }
 
