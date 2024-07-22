@@ -33,6 +33,9 @@
     <div>
         <button class="main" onmouseover="randomTilt()" onclick="viewProjects()">View Projects</button>
     </div>
+    <div>
+        <button class="legacy" onclick="openLegacyDesign()">Legacy Design</button>
+    </div>
     <div class="navLinks">
         <h2>
             <a class="mirror" style="color: #e4cd4f;" onclick="selectMirror()">Mirror Sites</a>
@@ -55,14 +58,13 @@
 </body>
 
 <script>
-    function openMovies() {
-        const Movies = document.querySelector('movies');
-        window.open(localStorage.getItem("moviesLink"));
-    }
-
     function openRevite() {
         const Revite = document.querySelector('revite');
         window.open(localStorage.getItem("reviteLink"));
+    }
+
+    function openLegacyDesign() {
+        window.location.href = localStorage.getItem("legacyLink");
     }
 
     if (localStorage.getItem("assetsLink") === null) {
@@ -73,12 +75,12 @@
         localStorage.setItem("villadeLink", "https://villade.theludos.com");
     }
 
-    if (localStorage.getItem("moviesLink") === null) {
-        localStorage.setItem("moviesLink", "https://movies.theludos.com");
-    }
-
     if (localStorage.getItem("reviteLink") === null) {
         localStorage.setItem("reviteLink", "https://revite.theludos.com");
+    }
+
+    if (localStorage.getItem("legacyLink") === null) {
+        localStorage.setItem("legacyLink", "https://legacy.theludos.com");
     }
 </script>
 

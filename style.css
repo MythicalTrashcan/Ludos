@@ -65,6 +65,27 @@ h1, h2, div {
     border-color: #318d34;
 }
 
+.legacy {
+    width: 25vw;
+    height: auto;
+    max-width: 700px;
+    min-width: 250px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #242424;
+    border-width: 3px;
+    border-radius: 15px;
+    color: #6d6d6d;
+    font-size: 50px;
+    padding: 15px 32px;
+    cursor: pointer;
+    transition: background-color .25s, transform 1s, border-color .25s;
+}
+
+.legacy:hover {
+    border-color: #6d6d6d;
+}
+
 .mirror, .revolt, .github, .youtube, .about {
     width: 25vw;
     min-width: 250px;

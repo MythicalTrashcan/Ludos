@@ -7,7 +7,7 @@
     <br>
     <br>
 
-    <h2>Select one selection buttons below to choose an alterntive link as a default.</h2>
+    <h2>Select one of the selection in each section's buttons below to choose an alterntive link as a default.</h2>
     <h3>Input a number that is listed for the link you want. Any invalid link will not work.</h3>
     <br>
 
@@ -18,7 +18,7 @@
     <br>
     <br>
     <p>If you want your link added here or to the custom use button, clone the Assets/Villade/Movies repositories and host them with Github Pages, Vercel, Netlify, etc.</p>
-    <p>Then just get the url of the main page of either Assets, Villade, or Movies and input it into the custom link field. The links will automatically load from your mirror.</p>
+    <p>Then just get the url of the main page of either Assets, Villade, or Legacy and input it into the custom link field. The links will automatically load from your mirror.</p>
     <br>
 
     <strong>Assets Links</strong>
@@ -38,7 +38,7 @@
     <p>
         Unofficial Mirror Links:
     </p>
-    <p><i>There is nothing here yet...</i></p>
+    <p style="margin-left: 25px;"><i>There is nothing here yet...</i></p>
     <hr>
 
     <strong>Villade Links</strong>
@@ -58,11 +58,11 @@
     <p>
         Unofficial Mirror Links:
     </p>
-    <p><i>There is nothing here yet...</i></p>
+    <p style="margin-left: 25px;"><i>There is nothing here yet...</i></p>
     <hr>
 
     <strong>Revolt Links</strong>
-    <p style="margin-bottom: -20px;">Selected Movies Link: </p>
+    <p style="margin-bottom: -20px;">Selected Revolt Link: </p>
     <p id="selectedReviteLink"></p>
     <br>
     <button onclick="selectReviteLink()">Select a Revolt link</button>
@@ -73,10 +73,25 @@
     </p>
     <p style="margin-left: 25px; color: #525252">0. https://revite.theludos.com</p>
     <p style="margin-left: 25px; color: #525252">1. https://revite-ludos.vercel.app</p>
+    <hr>
+
+    <strong>Legacy Links</strong>
+    <p style="margin-bottom: -20px;">Selected Legacy Link: </p>
+    <p id="selectedLegacyLink"></p>
+    <br>
+    <button onclick="selectLegacyLink()">Select a Legacy link</button>
+    <button onclick="useCustomLegacyLink()">Add your own custom Legacy link</button>
+    <button onclick="resetLegacyLink()">Reset Legacy link value</button>
+    <p>
+        Official Mirror Links:
+    </p>
+    <p style="margin-left: 25px; color: #525252">0. https://legacy.theludos.com</p>
+    <p style="margin-left: 25px; color: #525252">1. https://legacy-ludos-the-ludos.vercel.app</p>
+    <p style="margin-left: 25px; color: #525252">2. https://legacy-ludos-git-main-the-ludos.vercel.app</p>
     <p>
         Unofficial Mirror Links:
     </p>
-    <p><i>There is nothing here yet...</i></p>
+    <p style="margin-left: 25px;"><i>There is nothing here yet...</i></p>
 </body>
 <script>
     function returnHome() {
@@ -91,6 +106,8 @@
     document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
     var localStorageReviteLink = localStorage.getItem("reviteLink");
     document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+    var localStorageLegacyLink = localStorage.getItem("legacyLink");
+    document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
 
     const assetsLinks = [
         "https://assets.theludos.com",
@@ -109,6 +126,12 @@
     const reviteLinks = [
         "https://revite.theludos.com",
         "https://revite-ludos.vercel.app",
+    ];
+
+    const legacyLinks = [
+        "https://legacy.theludos.com",
+        "https://legacy-ludos-the-ludos.vercel.app",
+        "https://legacy-ludos-git-main-the-ludos.vercel.app",
     ];
 
     function selectAssetsLink() {
@@ -153,6 +176,20 @@
         }
     }
 
+    function selectLegacyLink() {
+        var selectedLegacyLinkNumber = prompt("Please enter a link number for Legacy Ludos to redirect to: ");
+        var currentSetLegacyLink = legacyLinks[selectedLegacyLinkNumber];
+        localStorage.setItem("legacyLink", currentSetLegacyLink);
+        var localStorageLegacyLink = localStorage.getItem("legacyLink");
+        document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
+        if (localStorage.getItem("legacyLink") === "undefined") {
+            alert("That value isn't a link number. Resetting to default link...");
+            localStorage.setItem("legacyLink", "https://legacy.theludos.com");
+            var localStorageLegacyLink = localStorage.getItem("legacyLink");
+            document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
+        }
+    }
+
     function useCustomAssetsLink() {
         alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
         var customAssetsLink = prompt("Please enter a custom link for Assets to redirect to: ");
@@ -170,11 +207,19 @@
     }
 
     function useCustomReviteLink() {
-        alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+        alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the site will not load.");
         var customReviteLink = prompt("Please enter a custom link for Revite to redirect to: ");
         localStorage.setItem("reviteLink", customReviteLink);
         var localStorageReviteLink = localStorage.getItem("reviteLink");
         document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+    }
+
+    function useCustomLegacyLink() {
+        alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the site will not load.");
+        var customLegacyLink = prompt("Please enter a custom link for Legacy Ludos to redirect to: ");
+        localStorage.setItem("legacyLink", customLegacyLink);
+        var localStorageLegacyLink = localStorage.getItem("legacyLink");
+        document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
     }
 
     function resetAssetsLink() {
@@ -193,5 +238,11 @@
         localStorage.setItem("reviteLink", "https://revite.theludos.com");
         var localStorageReviteLink = localStorage.getItem("reviteLink");
         document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+    }
+
+    function resetLegacyLink() {
+        localStorage.setItem("legacyLink", "https://legacy.theludos.com");
+        var localStorageLegacyLink = localStorage.getItem("legacyLink");
+        document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
     }
 </script>

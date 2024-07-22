@@ -4,15 +4,9 @@ The priority of the update is from top to bottom. (the top is the most important
  ----------==========| WORK ON THESE |==========----------
 
 1. Add a future update voting system
-2. Add contrasting colors
-3. Update links to fit more like the games list
 
  ----------==========| LAST 25 CHANGES |==========----------
 
-Add Mario 64 to the games list
-Update footer again to fix font size being larger than normal
-Update footer to use table tag instead of div
-Remove Ludos offline download javascript function
 Fix my name by adding a space on footer
 Move every game and game icon to the new assets repository
 Add 2 new games, rename some games to bypass blocklists, and move eagler files to Villade
@@ -37,3 +31,4 @@ Remove movie-web for safety. Original site was DMCA'd/Taken down.
 Experimental change to the games list.
 Another experimental change to the entire site for fitting a variety of screen sizes.
 Remove text change on screen zoom
+Add Legacy design and button
