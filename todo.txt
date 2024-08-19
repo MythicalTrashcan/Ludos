@@ -32,3 +32,4 @@ Experimental change to the games list.
 Another experimental change to the entire site for fitting a variety of screen sizes.
 Remove text change on screen zoom
 Add Legacy design and button
+New Revite alt
