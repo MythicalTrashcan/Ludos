@@ -87,7 +87,7 @@ h1, h2, div {
     margin-bottom: 20px;
 }
 
-.retro-bowl, .n-gon, .planet, .cookie-clicker, .baldis-basics, .vlol, .dance-fire-ice, .ten-mins, .number-game, .number-game-multi, .number-game-big, .number-game-small, .number-game-cupcake, .sand-game, .crossy-road, .core-ball, .mario-64 {
+.retro-bowl, .n-gon, .planet, .cookie-clicker, .baldis-basics, .vlol, .dance-fire-ice, .ten-mins, .number-game, .number-game-multi, .number-game-big, .number-game-small, .number-game-cupcake, .sand-game, .crossy-road, .core-ball, .mario-64, .fnaw {
     width: 15vw;
     min-width: 300px;
     max-width: 600px;
@@ -104,6 +104,6 @@ h1, h2, div {
     margin-bottom: 20px;
 }
 
-.eaglercraftx:hover, .eaglercraft:hover, .eaglercraftb:hover, .retro-bowl:hover, .n-gon:hover, .planet:hover, .cookie-clicker:hover:hover, .baldis-basics:hover, .vlol:hover, .dance-fire-ice:hover, .ten-mins:hover, .number-game:hover, .number-game-multi:hover, .number-game-big:hover, .number-game-small:hover, .number-game-cupcake:hover, .sand-game:hover, .crossy-road:hover, .core-ball:hover, .mario-64:hover {
+.eaglercraftx:hover, .eaglercraft:hover, .eaglercraftb:hover, .retro-bowl:hover, .n-gon:hover, .planet:hover, .cookie-clicker:hover:hover, .baldis-basics:hover, .vlol:hover, .dance-fire-ice:hover, .ten-mins:hover, .number-game:hover, .number-game-multi:hover, .number-game-big:hover, .number-game-small:hover, .number-game-cupcake:hover, .sand-game:hover, .crossy-road:hover, .core-ball:hover, .mario-64:hover, .fnaw:hover {
     border-color: #ffffff;
 }
