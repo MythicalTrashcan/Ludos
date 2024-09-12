@@ -5,7 +5,7 @@ The priority of the update is from top to bottom. (the top is the most important
 
 1. Add a future update voting system
 
- ----------==========| LAST 25 CHANGES |==========----------
+ ----------==========| OLDER CHANGES |==========----------
 
 Fix my name by adding a space on footer
 Move every game and game icon to the new assets repository
@@ -37,3 +37,4 @@ Just slightly change about me
 Add FNAW
 Add new alternative links (2 new ones that don't work as of now but will later)
 Fix
+Another 
