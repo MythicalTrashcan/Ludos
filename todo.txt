@@ -35,3 +35,4 @@ Add Legacy design and button
 New Revite alt
 Just slightly change about me
 Add FNAW
+Add new alternative links (2 new ones that don't work as of now but will later)
