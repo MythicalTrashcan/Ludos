@@ -293,4 +293,20 @@
         var localStorageLegacyLink = localStorage.getItem("legacyLink");
         document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
     }
+
+    if (localStorage.getItem("assetsLink") === null) {
+        localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www.','assets.'));
+    }
+
+    if (localStorage.getItem("villadeLink") === null) {
+        localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www.','villade.'));
+    }
+
+    if (localStorage.getItem("reviteLink") === null) {
+        localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www.','revite.'));
+    }
+
+    if (localStorage.getItem("legacyLink") === null) {
+        localStorage.setItem("legacyLink", location.protocol + '//' + location.host.replace('www.','legacy.'));
+    }
 </script>
