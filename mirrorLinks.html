@@ -271,42 +271,42 @@
     }
 
     function resetAssetsLink() {
-        localStorage.setItem("assetsLink", "https://assets.theludos.com");
+        localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
         var localStorageAssetsLink = localStorage.getItem("assetsLink");
         document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
     }
 
     function resetVilladeLink() {
-        localStorage.setItem("villadeLink", "https://villade.theludos.com");
+        localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
         var localStorageVilladeLink = localStorage.getItem("villadeLink");
         document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
     }
 
     function resetReviteLink() {
-        localStorage.setItem("reviteLink", "https://revite.theludos.com");
+        localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
         var localStorageReviteLink = localStorage.getItem("reviteLink");
         document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
     }
 
     function resetLegacyLink() {
-        localStorage.setItem("legacyLink", "https://legacy.theludos.com");
+        localStorage.setItem("legacyLink", location.protocol + '//' + location.host.replace('www','legacy'));
         var localStorageLegacyLink = localStorage.getItem("legacyLink");
         document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
     }
 
     if (localStorage.getItem("assetsLink") === null) {
-        localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www.','assets.'));
+        localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
     }
 
     if (localStorage.getItem("villadeLink") === null) {
-        localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www.','villade.'));
+        localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
     }
 
     if (localStorage.getItem("reviteLink") === null) {
-        localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www.','revite.'));
+        localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
     }
 
     if (localStorage.getItem("legacyLink") === null) {
-        localStorage.setItem("legacyLink", location.protocol + '//' + location.host.replace('www.','legacy.'));
+        localStorage.setItem("legacyLink", location.protocol + '//' + location.host.replace('www','legacy'));
     }
 </script>
