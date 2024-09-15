@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<head>
+    <title>Alternative Links | Ludos</title>
+    <meta name="description" content="Ludos is a site designed for playing online HTML games in your browser!">
+    <meta name="keywords" content="ludos, html, browser, games, online, fun, 3kh0, mythicaltrashcan">
+    <meta name="author" content="Mythical Trashcan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-1576606614118788">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link type="image/png" rel="shortcut icon" href="./favicons/ludos-favicon.png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1576606614118788" crossorigin="anonymous"></script>
+</head>
+
+<head>
+    <title>
+        Ludos
+    </title>
+</head>
+<body>
+    <div>
+        <button class="main" onclick="returnHome()" style="padding: 15px;">Return to main site</button>
+    </div>
+    <br>
+    <br>
+
+    <h2>Select one of the selection in each section's buttons below to choose an alterntive link as a default.</h2>
+    <h3>Input a number that is listed for the link you want. Any invalid link will not work.</h3>
+    <br>
+
+    <p><strong>The selected link will save for the next visit. You can also input a custom link which is an advanced option.</strong></p>
+    <p><strong>This is to bypass blocks from the official links with official and unoffical alternative links.</strong></p>
+    <p><strong>It is important to have a backup proxy around so you can get to the main page as if the main site is blocked, this won't work anymore.</strong></p>
+    <p><strong>Technically, you could use the proxy to get the alternative links but it's up to you.</strong></p>
+    <br>
+    <br>
+    <p>If you want your link added here or to the custom use button, clone the Assets/Villade/Legacy repositories and host them with Github Pages, Vercel, Netlify, etc.</p>
+    <p>Then just get the url of the main page of either Assets, Villade, or Legacy and input it into the custom link field. The links will automatically load from your mirror.</p>
+    <br>
+
+    <h2>Ludos</h2>
+    <p>
+        Official:
+    </p>
+    <div>
+        <ul>
+            <a class="ludos" href="https://www.theludos.com">1. https://www.theludos.com</a><br><br>
+            <a class="ludos" href="https://www.anythingthat.works">3. https://www.anythingthat.works</a><br><br>
+            <a class="ludos" href="https://ludos-git-main-the-ludos.vercel.app">4. https://ludos-git-main-the-ludos.vercel.app</a><br><br>
+            <a class="ludos" href="https://ludos-the-ludos.vercel.app">5. https://ludos-the-ludos.vercel.app</a><br><br>
+            <a class="ludos" href="https://theludos.netlify.app">6. https://theludos.netlify.app</a><br><br>
+        </ul>
+    </div>
+    <p>
+        Unofficial:
+    </p>
+    <p><i>There is nothing here yet...</i></p>
+    <hr>
+
+    <h2>Assets</h2>
+    <p style="margin-bottom: -15px;">Selected Assets Link: </p>
+    <p id="selectedAssetsLink"></p>
+    <br>
+    <div>
+        <button onclick="selectAssetsLink()">Select an Assets link</button>
+        <button onclick="useCustomAssetsLink()">Add your own custom Assets link</button>
+        <button onclick="resetAssetsLink()">Reset Assets link value</button>
+    </div>
+    <p>
+        Official:
+    </p>
+    <div>
+        <ul>
+            <a class="everythingelse">0. https://assets.theludos.com</a><br><br>
+            <a class="everythingelse">1. https://assets.anythingthat.works</a><br><br>
+            <a class="everythingelse">2. https://ludos-assets-git-main-the-ludos.vercel.app</a><br><br>
+            <a class="everythingelse">3. https://ludos-assets-the-ludos.vercel.app</a><br><br>
+            <a class="everythingelse">4. https://ludos-assets.netlify.app</a><br><br>
+        </ul>
+    </div>
+    <p>
+        Unofficial:
+    </p>
+    <p><i>There is nothing here yet...</i></p>
+    <hr>
+
+    <h2>Villade</h2>
+    <p style="margin-bottom: -15px;">Selected Villade Link: </p>
+    <p id="selectedVilladeLink"></p>
+    <br>
+    <div>
+        <button onclick="selectVilladeLink()">Select a Villade link</button>
+        <button onclick="useCustomVilladeLink()">Add your own custom Villade link</button>
+        <button onclick="resetVilladeLink()">Reset Villade link value</button>
+    </div>
+    <p>
+        Official:
+    </p>
+    <div>
+        <ul>
+            <a class="everythingelse">0. https://villade.theludos.com</a><br><br>
+            <a class="everythingelse">1. https://villade.anythingthat.works</a><br><br>
+            <a class="everythingelse">2. https://villade-git-main-the-ludos.vercel.app</a><br><br>
+            <a class="everythingelse">3. https://villade-the-ludos.vercel.app</a><br><br>
+            <a class="everythingelse">4. https://villade.netlify.app</a><br><br>
+        </ul>
+    </div>
+    <p>
+        Unofficial:
+    </p>
+    <p><i>There is nothing here yet...</i></p>
+    <hr>
+
+    <h2>Revolt</h2>
+    <p style="margin-bottom: -15px;">Selected Revolt Mirror: </p>
+    <p id="selectedReviteLink"></p>
+    <br>
+    <div>
+        <button onclick="selectReviteLink()">Select a Revolt link</button>
+        <button onclick="useCustomReviteLink()">Add your own custom Revolt link</button>
+        <button onclick="resetReviteLink()">Reset Revolt link value</button>
+    </div>
+    <p>
+        Mirrors:
+    </p>
+    <div>
+        <ul>
+            <a class="everythingelse">0. https://revite.theludos.com</a><br><br>
+            <a class="everythingelse">1. https://revite.anythingthat.works</a><br><br>
+            <a class="everythingelse">2. https://revite-ludos.vercel.app</a><br><br>
+            <a class="everythingelse">3. https://revite.netlify.app</a><br><br>
+        </ul>
+    </div>
+    <hr>
+
+    <h2>Legacy</h2>
+    <p style="margin-bottom: -15px;">Selected Legacy Mirror: </p>
+    <p id="selectedLegacyLink"></p>
+    <br>
+    <div>
+        <button onclick="selectLegacyLink()">Select a Legacy link</button>
+        <button onclick="useCustomLegacyLink()">Add your own custom Legacy link</button>
+        <button onclick="resetLegacyLink()">Reset Legacy link value</button>
+    </div>
+    <p>
+        Official:
+    </p>
+    <div>
+        <ul>
+            <a class="everythingelse">0. https://legacy.theludos.com</a><br><br>
+            <a class="everythingelse">1. https://legacy.anythingthat.works</a><br><br>
+            <a class="everythingelse">2. https://legacy-ludos-the-ludos.vercel.app</a><br><br>
+            <a class="everythingelse">3. https://legacy-ludos-git-main-the-ludos.vercel.app</a><br><br>
+        </ul>
+    </div>
+    <p>
+        Unofficial:
+    </p>
+    <p><i>There is nothing here yet...</i></p>
+    <table style="margin-top: 50px;">
+        <td class="footer">
+            <a>Made by</a>
+            <a href="https://github.com/MythicalTrashcan"><strong>Mythical Trashcan</strong></a>
+            <a>2022-2024</a>
+        </td>
+    </table>
+</body>
+<script>
+    function returnHome() {
+    const button = document.querySelector('button');
+    button.disabled = false;
+    window.location.href = '../';
+}
+
+var localStorageAssetsLink = localStorage.getItem("assetsLink");
+document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+var localStorageVilladeLink = localStorage.getItem("villadeLink");
+document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+var localStorageReviteLink = localStorage.getItem("reviteLink");
+document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+var localStorageLegacyLink = localStorage.getItem("legacyLink");
+document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
+
+const assetsLinks = [
+    "https://assets.theludos.com",
+    "https://assets.anythingthat.works",
+    "https://ludos-assets-git-main-the-ludos.vercel.app",
+    "https://ludos-assets-the-ludos.vercel.app",
+    "https://ludos-assets.netlify.app"
+];
+
+const villadeLinks = [
+    "https://villade.theludos.com",
+    "https://villade.anythingthat.works",
+    "https://villade-git-main-the-ludos.vercel.app",
+    "https://villade-the-ludos.vercel.app",
+    "https://villade.netlify.app"
+];
+
+const reviteLinks = [
+    "https://revite.theludos.com",
+    "https://revite.anythingthat.works",
+    "https://revite-ludos.vercel.app",
+];
+
+const legacyLinks = [
+    "https://legacy.theludos.com",
+    "https://legacy.anythingthat.works",
+    "https://legacy-ludos-the-ludos.vercel.app",
+    "https://legacy-ludos-git-main-the-ludos.vercel.app",
+];
+
+function selectAssetsLink() {
+    var selectedAssetsLinkNumber = prompt("Please enter a link number for Assets to redirect to: ");
+    var currentSetAssetsLink = assetsLinks[selectedAssetsLinkNumber];
+    localStorage.setItem("assetsLink", currentSetAssetsLink);
+    var localStorageAssetsLink = localStorage.getItem("assetsLink");
+    document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+    if (localStorage.getItem("assetsLink") === "undefined") {
+        alert("That value isn't a link number. Resetting to default link...");
+        localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
+        var localStorageAssetsLink = localStorage.getItem("assetsLink");
+        document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+    }
+}
+
+function selectVilladeLink() {
+    var selectedVilladeLinkNumber = prompt("Please enter a link number for Villade to redirect to: ");
+    var currentSetVilladeLink = villadeLinks[selectedVilladeLinkNumber];
+    localStorage.setItem("villadeLink", currentSetVilladeLink);
+    var localStorageVilladeLink = localStorage.getItem("villadeLink");
+    document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+    if (localStorage.getItem("villadeLink") === "undefined") {
+        alert("That value isn't a link number. Resetting to default link...");
+        localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
+        var localStorageVilladeLink = localStorage.getItem("villadeLink");
+        document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+    }
+}
+
+function selectReviteLink() {
+    var selectedReviteLinkNumber = prompt("Please enter a link number for Revite to redirect to: ");
+    var currentSetReviteLink = reviteLinks[selectedReviteLinkNumber];
+    localStorage.setItem("reviteLink", currentSetReviteLink);
+    var localStorageReviteLink = localStorage.getItem("reviteLink");
+    document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+    if (localStorage.getItem("reviteLink") === "undefined") {
+        alert("That value isn't a link number. Resetting to default link...");
+        localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
+        var localStorageReviteLink = localStorage.getItem("reviteLink");
+        document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+    }
+}
+
+function selectLegacyLink() {
+    var selectedLegacyLinkNumber = prompt("Please enter a link number for Legacy Ludos to redirect to: ");
+    var currentSetLegacyLink = legacyLinks[selectedLegacyLinkNumber];
+    localStorage.setItem("legacyLink", currentSetLegacyLink);
+    var localStorageLegacyLink = localStorage.getItem("legacyLink");
+    document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
+    if (localStorage.getItem("legacyLink") === "undefined") {
+        alert("That value isn't a link number. Resetting to default link...");
+        localStorage.setItem("legacyLink", location.protocol + '//' + location.host.replace('www','legacy'));
+        var localStorageLegacyLink = localStorage.getItem("legacyLink");
+        document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
+    }
+}
+
+function useCustomAssetsLink() {
+    alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+    var customAssetsLink = prompt("Please enter a custom link for Assets to redirect to: ");
+    localStorage.setItem("assetsLink", customAssetsLink);
+    var localStorageAssetsLink = localStorage.getItem("assetsLink");
+    document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+}
+
+function useCustomVilladeLink() {
+    alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+    var customVilladeLink = prompt("Please enter a custom link for Villade to redirect to: ");
+    localStorage.setItem("villadeLink", customVilladeLink);
+    var localStorageVilladeLink = localStorage.getItem("villadeLink");
+    document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+}
+
+function useCustomReviteLink() {
+    alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the site will not load.");
+    var customReviteLink = prompt("Please enter a custom link for Revite to redirect to: ");
+    localStorage.setItem("reviteLink", customReviteLink);
+    var localStorageReviteLink = localStorage.getItem("reviteLink");
+    document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+}
+
+function useCustomLegacyLink() {
+    alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the site will not load.");
+    var customLegacyLink = prompt("Please enter a custom link for Legacy Ludos to redirect to: ");
+    localStorage.setItem("legacyLink", customLegacyLink);
+    var localStorageLegacyLink = localStorage.getItem("legacyLink");
+    document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
+}
+
+function resetAssetsLink() {
+    localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
+    var localStorageAssetsLink = localStorage.getItem("assetsLink");
+    document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
+}
+
+function resetVilladeLink() {
+    localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
+    var localStorageVilladeLink = localStorage.getItem("villadeLink");
+    document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
+}
+
+function resetReviteLink() {
+    localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
+    var localStorageReviteLink = localStorage.getItem("reviteLink");
+    document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
+}
+
+function resetLegacyLink() {
+    localStorage.setItem("legacyLink", location.protocol + '//' + location.host.replace('www','legacy'));
+    var localStorageLegacyLink = localStorage.getItem("legacyLink");
+    document.getElementById("selectedLegacyLink").innerHTML = localStorageLegacyLink;
+}
+
+if (localStorage.getItem("assetsLink") === null) {
+    localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
+}
+
+if (localStorage.getItem("villadeLink") === null) {
+    localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
+}
+
+if (localStorage.getItem("reviteLink") === null) {
+    localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
+}
+
+if (localStorage.getItem("legacyLink") === null) {
+    localStorage.setItem("legacyLink", location.protocol + '//' + location.host.replace('www','legacy'));
+}
+</script>
