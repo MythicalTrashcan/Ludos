@@ -64,7 +64,7 @@
     }
 
     function openLegacyDesign() {
-        window.location.href = localStorage.getItem("legacyLink");
+        window.location.href = location.protocol + '//' + location.host.replace('www','legacy');
     }
 
     if (localStorage.getItem("assetsLink") === null) {
