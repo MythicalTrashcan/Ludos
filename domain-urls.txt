@@ -1,0 +1,4 @@
+theludos.com                             - Main
+anythingthat.works                       - Alternative
+ludos-the-ludos.vercel.app               - Alternative
+theludos.netlify.app                     - Alternative
