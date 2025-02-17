@@ -32,17 +32,13 @@
     <div>
         <button class="main" onmouseover="randomTilt()" onclick="viewProjects()">View Projects</button>
     </div>
-    <div>
-        <button class="legacy" onclick="openLegacyDesign()">Legacy Design</button>
-    </div>
     <div class="navLinks">
         <h2>
             <a class="mirror" style="color: #e4cd4f;" onclick="selectMirror()">Mirror Sites</a>
-            <a class="revolt" style="color: #ff002b;" onclick="openRevolt()">Community Revolt</a>
+            <a class="travesty" style="color: #ffffff;" onclick="openTravesty()">Community Travesty</a>
             <a class="revolt" style="color: #ff002b;" onclick="openRevite()">Revolt Copy</a>
             <a class="github" style="color: #afafaf;" onclick="openGithub()">GitHub</a>
             <a class="youtube" style="color: #df0000;" onclick="openYoutube()">YouTube</a>
-            <a class="about" style="color: #e68a00;" onclick="openAbout()">About Me!</a>
         </h2>
     </div>
     <div id="embed"></div>
@@ -60,10 +56,6 @@
     function openRevite() {
         const Revite = document.querySelector('revite');
         window.open(localStorage.getItem("reviteLink"));
-    }
-
-    function openLegacyDesign() {
-        window.location.href = location.protocol + '//' + location.host.replace('www','legacy');
     }
 
     if (localStorage.getItem("assetsLink") === null) {

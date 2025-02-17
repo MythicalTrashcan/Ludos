@@ -2,3 +2,5 @@ Create an issue if you would like to request an upcoming change (may be changed 
 The priority of the update is from top to bottom. (the top is the most important and the bottom is the least)
 
  ----------==========| WORK ON THESE |==========----------
+
+ Add an entire page/dropdown dedicated to eaglercraft links
