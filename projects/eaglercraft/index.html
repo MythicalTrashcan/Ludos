@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<noscript>
+    <h1 a>
+        PLEASE TURN ON JAVASCRIPT! IT IS REQUIRED TO WORK ON THIS SITE
+    </h1 a>
+</noscript>
+
+<head>
+    <title>
+        Eaglercraft | Ludos
+    </title>
+    <meta name="description" content="Ludos is a site designed for playing online HTML games in your browser!">
+    <meta name="keywords" content="ludos, html, browser, games, online, fun, 3kh0, mythicaltrashcan">
+    <meta name="author" content="Mythical Trashcan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-1576606614118788">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link type="image/png" rel="shortcut icon" href="../favicons/ludos-favicon.png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1576606614118788" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <button class="main" onclick="returnToProjects()">Return to projects</button>
+    </div>
+    <div class="games">
+        <a class="eaglercraftx" onclick="openGame('eaglercraftx')"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eaglerx.png" width="100" height="100"><br>EaglercraftX 1.8.8</a>
+        <a class="eaglercraftx_shadow" onclick="openGame('eaglercraftx_shadow')"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/optifine.png" width="100" height="100"><br>EaglercraftX Shadow 1.8.8</a>
+        <a class="eaglercraft" onclick="openGame('eaglercraft')"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/eagler.png" width="100" height="100"><br>Eaglercraft 1.5.2</a>
+        <a class="eaglercraftb1_3" onclick="openGame('eaglercraftb1_3')"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/beta-grass.png" width="100" height="100"><br>Eaglercraft Beta 1.3</a>
+        <a class="eaglercraftb1_7_3" onclick="openGame('eaglercraftb1_7_3')"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/beta-grass.png" width="100" height="100"><br>Eaglercraft Beta 1.7.3</a>
+        <a class="eaglercrafta1_2_6" onclick="openGame('eaglercrafta1_2_6')"><img draggable="false" src="https://raw.githubusercontent.com/MythicalTrashcan/Ludos-Assets/main/game_icons/beta-grass.png" width="100" height="100"><br>Eaglercraft Alpha 1.2.6</a>
+    </div>
+    <table style="margin-top: 50px;">
+        <td class="footer">
+            <a>Made by</a>
+            <a href="https://github.com/MythicalTrashcan"><strong>Mythical Trashcan</strong></a>
+            <a>2022-2025</a>
+        </td>
+        </td>
+    </table>
+    <script>
+        if (localStorage.getItem("villadeLink") === null) {
+            localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
+        }
+
+        const games = {
+            eaglercraftx: "1.8.8",
+            eaglercraftx_shadow: "s1.8.8",
+            eaglercraft: "1.5.2",
+            eaglercraftb1_3: "b1.3_01",
+            eaglercraftb1_7_3: "b1.7.3",
+            eaglercrafta1_2_6: "a1.2.6"
+        };
+
+        function openGame(gameName) {
+            const gamePath = games[gameName];
+            if (gamePath) {
+                window.location.href = localStorage.getItem("villadeLink") + "/" + gamePath + "/";
+            }
+            else {
+                alert('There was an issue attempting to open the game. (Game not found)');
+            }
+        }
+        </script>
+</body>
+
+</html>

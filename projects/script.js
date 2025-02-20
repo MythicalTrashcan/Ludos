@@ -2,6 +2,6 @@ function returnHome() {
     window.location.href = '../';
 }
 
-function openAbout() {
-    window.location.href = '../about-me/';
+function openEaglercraft() {
+    window.location.href = './eaglercraft/';
 }

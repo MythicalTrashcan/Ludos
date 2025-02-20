@@ -3,4 +3,3 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| WORK ON THESE |==========----------
 
- Add an entire page/dropdown dedicated to eaglercraft links
