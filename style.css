@@ -65,7 +65,13 @@ h1, h2, div {
     border-color: #318d34;
 }
 
-.mirror, .travesty, .revolt, .github, .youtube, .about {
+.mirror,
+.travesty,
+.revolt,
+.github,
+.youtube,
+.about
+{
     width: 25vw;
     min-width: 250px;
     max-width: 700px;
@@ -100,26 +106,12 @@ h1, h2, div {
     color: #e68a00;
 }
 
-.mirror:hover {
-    border-color: #e4cd4f;
-}
-
-.travesty:hover {
-    border-color: #e7e7e7;
-}
-
-.revolt:hover {
-    border-color: #ff002b;
-}
-
-.github:hover {
-    border-color: #afafaf;
-}
-
-.youtube:hover {
-    border-color: #df0000;
-}
-
-.about:hover {
-    border-color: #e68a00;
+.mirror:hover,
+.travesty:hover,
+.revolt:hover,
+.github:hover,
+.youtube:hover,
+.about:hover
+{
+    border-color: inherit;
 }

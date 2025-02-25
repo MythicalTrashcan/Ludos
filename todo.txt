@@ -3,3 +3,5 @@ The priority of the update is from top to bottom. (the top is the most important
 
  ----------==========| WORK ON THESE |==========----------
 
+Add an option for loading the older url while still on the main page. (localstorage key of course)
+Greatly optimize the mirror links code

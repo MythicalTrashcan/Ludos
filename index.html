@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<noscript>
-    <h1 a>
-        PLEASE TURN ON JAVASCRIPT! IT IS REQUIRED TO WORK ON THIS SITE
-    </h1 a>
-</noscript>
 
 <head>
     <title>
@@ -54,25 +49,15 @@
 
 <script>
     function openRevite() {
-        const Revite = document.querySelector('revite');
         window.open(localStorage.getItem("reviteLink"));
     }
 
-    if (localStorage.getItem("assetsLink") === null) {
-        localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
-    }
-
-    if (localStorage.getItem("villadeLink") === null) {
-        localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
-    }
-
-    if (localStorage.getItem("reviteLink") === null) {
-        localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
-    }
-
-    if (localStorage.getItem("legacyLink") === null) {
-        localStorage.setItem("legacyLink", location.protocol + '//' + location.host.replace('www','legacy'));
-    }
+    const links = ["assetsLink", "villadeLink", "reviteLink"];
+    links.forEach(link => {
+        if (localStorage.getItem(link) === null) {
+           localStorage.setItem(link, location.protocol + '//' + location.host.replace('www', link));
+        }
+    });
 </script>
 
 </html>

@@ -11,12 +11,6 @@
     <link type="image/png" rel="shortcut icon" href="./favicons/ludos-favicon.png" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1576606614118788" crossorigin="anonymous"></script>
 </head>
-
-<head>
-    <title>
-        Ludos
-    </title>
-</head>
 <body>
     <div>
         <button class="main" onclick="returnHome()" style="padding: 15px;">Return to main site</button>
@@ -175,34 +169,34 @@ const reviteLinks = [
 
 // Assets
 
-var localStorageAssetsLink = localStorage.getItem("assetsLink");
+let localStorageAssetsLink = localStorage.getItem("assetsLink");
 document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
 
 function selectAssetsLink() {
-    var selectedAssetsLinkNumber = prompt("Please enter a link number for Assets to redirect to: ");
-    var currentSetAssetsLink = assetsLinks[selectedAssetsLinkNumber];
+    let selectedAssetsLinkNumber = prompt("Please enter a link number for Assets to redirect to: ");
+    let currentSetAssetsLink = assetsLinks[selectedAssetsLinkNumber];
     localStorage.setItem("assetsLink", currentSetAssetsLink);
-    var localStorageAssetsLink = localStorage.getItem("assetsLink");
+    let localStorageAssetsLink = localStorage.getItem("assetsLink");
     document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
     if (localStorage.getItem("assetsLink") === "undefined") {
         alert("That value isn't a link number. Resetting to default link...");
         localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
-        var localStorageAssetsLink = localStorage.getItem("assetsLink");
+        let localStorageAssetsLink = localStorage.getItem("assetsLink");
         document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
     }
 }
 
 function useCustomAssetsLink() {
     alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
-    var customAssetsLink = prompt("Please enter a custom link for Assets to redirect to: ");
+    let customAssetsLink = prompt("Please enter a custom link for Assets to redirect to: ");
     localStorage.setItem("assetsLink", customAssetsLink);
-    var localStorageAssetsLink = localStorage.getItem("assetsLink");
+    let localStorageAssetsLink = localStorage.getItem("assetsLink");
     document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
 }
 
 function resetAssetsLink() {
     localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
-    var localStorageAssetsLink = localStorage.getItem("assetsLink");
+    let localStorageAssetsLink = localStorage.getItem("assetsLink");
     document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
 }
 
@@ -213,34 +207,34 @@ if (localStorage.getItem("assetsLink") === null) {
 
 // Villade
 
-var localStorageVilladeLink = localStorage.getItem("villadeLink");
+let localStorageVilladeLink = localStorage.getItem("villadeLink");
 document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
 
 function selectVilladeLink() {
-    var selectedVilladeLinkNumber = prompt("Please enter a link number for Villade to redirect to: ");
-    var currentSetVilladeLink = villadeLinks[selectedVilladeLinkNumber];
+    let selectedVilladeLinkNumber = prompt("Please enter a link number for Villade to redirect to: ");
+    let currentSetVilladeLink = villadeLinks[selectedVilladeLinkNumber];
     localStorage.setItem("villadeLink", currentSetVilladeLink);
-    var localStorageVilladeLink = localStorage.getItem("villadeLink");
+    let localStorageVilladeLink = localStorage.getItem("villadeLink");
     document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
     if (localStorage.getItem("villadeLink") === "undefined") {
         alert("That value isn't a link number. Resetting to default link...");
         localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
-        var localStorageVilladeLink = localStorage.getItem("villadeLink");
+        let localStorageVilladeLink = localStorage.getItem("villadeLink");
         document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
     }
 }
 
 function useCustomVilladeLink() {
     alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
-    var customVilladeLink = prompt("Please enter a custom link for Villade to redirect to: ");
+    let customVilladeLink = prompt("Please enter a custom link for Villade to redirect to: ");
     localStorage.setItem("villadeLink", customVilladeLink);
-    var localStorageVilladeLink = localStorage.getItem("villadeLink");
+    let localStorageVilladeLink = localStorage.getItem("villadeLink");
     document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
 }
 
 function resetVilladeLink() {
     localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
-    var localStorageVilladeLink = localStorage.getItem("villadeLink");
+    let localStorageVilladeLink = localStorage.getItem("villadeLink");
     document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
 }
 
@@ -251,34 +245,34 @@ if (localStorage.getItem("villadeLink") === null) {
 
 // Revite
 
-var localStorageReviteLink = localStorage.getItem("reviteLink");
+let localStorageReviteLink = localStorage.getItem("reviteLink");
 document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
 
 function selectReviteLink() {
-    var selectedReviteLinkNumber = prompt("Please enter a link number for Revite to redirect to: ");
-    var currentSetReviteLink = reviteLinks[selectedReviteLinkNumber];
+    let selectedReviteLinkNumber = prompt("Please enter a link number for Revite to redirect to: ");
+    let currentSetReviteLink = reviteLinks[selectedReviteLinkNumber];
     localStorage.setItem("reviteLink", currentSetReviteLink);
-    var localStorageReviteLink = localStorage.getItem("reviteLink");
+    let localStorageReviteLink = localStorage.getItem("reviteLink");
     document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
     if (localStorage.getItem("reviteLink") === "undefined") {
         alert("That value isn't a link number. Resetting to default link...");
         localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
-        var localStorageReviteLink = localStorage.getItem("reviteLink");
+        let localStorageReviteLink = localStorage.getItem("reviteLink");
         document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
     }
 }
 
 function useCustomReviteLink() {
     alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the site will not load.");
-    var customReviteLink = prompt("Please enter a custom link for Revite to redirect to: ");
+    let customReviteLink = prompt("Please enter a custom link for Revite to redirect to: ");
     localStorage.setItem("reviteLink", customReviteLink);
-    var localStorageReviteLink = localStorage.getItem("reviteLink");
+    let localStorageReviteLink = localStorage.getItem("reviteLink");
     document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
 }
 
 function resetReviteLink() {
     localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
-    var localStorageReviteLink = localStorage.getItem("reviteLink");
+    let localStorageReviteLink = localStorage.getItem("reviteLink");
     document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
 }
 
