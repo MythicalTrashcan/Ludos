@@ -55,7 +55,7 @@
     const links = ["assetsLink", "villadeLink", "reviteLink"];
     links.forEach(link => {
         if (localStorage.getItem(link) === null) {
-           localStorage.setItem(link, location.protocol + '//' + location.host.replace('www', link));
+           localStorage.setItem(link, location.protocol + '//' + location.host.replace('www', link.slice(0, -4)));
         }
     });
 </script>

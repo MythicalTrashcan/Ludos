@@ -43,9 +43,12 @@
         </td>
     </table>
     <script>
-        if (localStorage.getItem("villadeLink") === null) {
-            localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
+    const links = ["assetsLink", "villadeLink", "reviteLink"];
+    links.forEach(link => {
+        if (localStorage.getItem(link) === null) {
+           localStorage.setItem(link, location.protocol + '//' + location.host.replace('www', link.slice(0, -4)));
         }
+    });
 
         const games = {
             eaglercraftx: "1.8.8",

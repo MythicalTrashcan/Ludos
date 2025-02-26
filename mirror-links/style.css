@@ -19,20 +19,10 @@ ul {
     text-decoration: none;
 }
 
-.ludos:visited {
-    color: #252525;
-    background-color: transparent;
-    text-decoration: none;
-}
-
 .ludos:hover {
     background-color: transparent;
     text-decoration: underline;
     cursor: pointer;
-}
-
-.everythingelse {
-    color: #525252
 }
 
 .footer {

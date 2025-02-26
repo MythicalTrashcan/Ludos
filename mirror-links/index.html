@@ -28,8 +28,8 @@
     <p><strong>Technically, you could use the proxy to get the alternative links but it's up to you.</strong></p>
     <br>
     <br>
-    <p>If you want your link added here or to the custom use button, clone the Assets/Villade/Legacy repositories and host them with Github Pages, Vercel, Netlify, etc.</p>
-    <p>Then just get the url of the main page of either Assets, Villade, or Legacy and input it into the custom link field. The links will automatically load from your mirror.</p>
+    <p>If you want your link added here or to the custom use button, clone the Assets/Villade/Revite repositories and host them with Github Pages, Vercel, Netlify, etc.</p>
+    <p>Then just get the url of the main page of either Assets, Villade, or Revite and input it into the custom link field. The links will automatically load from your mirror.</p>
     <br>
 
     <h2>Ludos</h2>
@@ -65,11 +65,11 @@
     </p>
     <div>
         <ul>
-            <a class="everythingelse">0. https://assets.theludos.com</a><br><br>
-            <a class="everythingelse">1. https://assets.anythingthat.works</a><br><br>
-            <a class="everythingelse">2. https://ludos-assets-git-main-the-ludos.vercel.app</a><br><br>
-            <a class="everythingelse">3. https://ludos-assets-the-ludos.vercel.app</a><br><br>
-            <a class="everythingelse">4. https://ludos-assets.netlify.app</a><br><br>
+            <a>0. https://assets.theludos.com</a><br><br>
+            <a>1. https://assets.anythingthat.works</a><br><br>
+            <a>2. https://ludos-assets-git-main-the-ludos.vercel.app</a><br><br>
+            <a>3. https://ludos-assets-the-ludos.vercel.app</a><br><br>
+            <a>4. https://ludos-assets.netlify.app</a><br><br>
         </ul>
     </div>
     <p>
@@ -92,11 +92,11 @@
     </p>
     <div>
         <ul>
-            <a class="everythingelse">0. https://villade.theludos.com</a><br><br>
-            <a class="everythingelse">1. https://villade.anythingthat.works</a><br><br>
-            <a class="everythingelse">2. https://villade-git-main-the-ludos.vercel.app</a><br><br>
-            <a class="everythingelse">3. https://villade-the-ludos.vercel.app</a><br><br>
-            <a class="everythingelse">4. https://villade.netlify.app</a><br><br>
+            <a>0. https://villade.theludos.com</a><br><br>
+            <a>1. https://villade.anythingthat.works</a><br><br>
+            <a>2. https://villade-git-main-the-ludos.vercel.app</a><br><br>
+            <a>3. https://villade-the-ludos.vercel.app</a><br><br>
+            <a>4. https://villade.netlify.app</a><br><br>
         </ul>
     </div>
     <p>
@@ -119,10 +119,10 @@
     </p>
     <div>
         <ul>
-            <a class="everythingelse">0. https://revite.theludos.com</a><br><br>
-            <a class="everythingelse">1. https://revite.anythingthat.works</a><br><br>
-            <a class="everythingelse">2. https://revite-ludos.vercel.app</a><br><br>
-            <a class="everythingelse">3. https://revite.netlify.app</a><br><br>
+            <a>0. https://revite.theludos.com</a><br><br>
+            <a>1. https://revite.anythingthat.works</a><br><br>
+            <a>2. https://revite-ludos.vercel.app</a><br><br>
+            <a>3. https://revite.netlify.app</a><br><br>
         </ul>
     </div>
     <table style="margin-top: 50px;">
@@ -139,6 +139,13 @@
     button.disabled = false;
     window.location.href = '../';
 }
+
+const links = ["assetsLink", "villadeLink", "reviteLink"];
+links.forEach(link => {
+    if (localStorage.getItem(link) === null) {
+       localStorage.setItem(link, location.protocol + '//' + location.host.replace('www', link.slice(0, -4)));
+    }
+});
 
 
 // Link Array
@@ -187,7 +194,7 @@ function selectAssetsLink() {
 }
 
 function useCustomAssetsLink() {
-    alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+    alert("WARNING: This will overwrite the current link with anything. There are no checks so if the link is invalid, the games will not load.");
     let customAssetsLink = prompt("Please enter a custom link for Assets to redirect to: ");
     localStorage.setItem("assetsLink", customAssetsLink);
     let localStorageAssetsLink = localStorage.getItem("assetsLink");
@@ -198,10 +205,6 @@ function resetAssetsLink() {
     localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
     let localStorageAssetsLink = localStorage.getItem("assetsLink");
     document.getElementById("selectedAssetsLink").innerHTML = localStorageAssetsLink;
-}
-
-if (localStorage.getItem("assetsLink") === null) {
-    localStorage.setItem("assetsLink", location.protocol + '//' + location.host.replace('www','assets'));
 }
 
 
@@ -225,7 +228,7 @@ function selectVilladeLink() {
 }
 
 function useCustomVilladeLink() {
-    alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the games will not load.");
+    alert("WARNING: This will overwrite the current link with anything. There are no checks so if the link is invalid, the games will not load.");
     let customVilladeLink = prompt("Please enter a custom link for Villade to redirect to: ");
     localStorage.setItem("villadeLink", customVilladeLink);
     let localStorageVilladeLink = localStorage.getItem("villadeLink");
@@ -236,10 +239,6 @@ function resetVilladeLink() {
     localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
     let localStorageVilladeLink = localStorage.getItem("villadeLink");
     document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
-}
-
-if (localStorage.getItem("villadeLink") === null) {
-    localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
 }
 
 
@@ -263,7 +262,7 @@ function selectReviteLink() {
 }
 
 function useCustomReviteLink() {
-    alert("WARNING: This will overwrite the current link with anything. There is no checks so if the link is invalid, the site will not load.");
+    alert("WARNING: This will overwrite the current link with anything. There are no checks so if the link is invalid, the site will not load.");
     let customReviteLink = prompt("Please enter a custom link for Revite to redirect to: ");
     localStorage.setItem("reviteLink", customReviteLink);
     let localStorageReviteLink = localStorage.getItem("reviteLink");
@@ -276,7 +275,4 @@ function resetReviteLink() {
     document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
 }
 
-if (localStorage.getItem("reviteLink") === null) {
-    localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
-}
 </script>
