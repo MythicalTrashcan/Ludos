@@ -10,7 +10,7 @@ function selectMirror() {
 
 function openTravesty() {
     alert("If you have not made an account yet, please register and wait for your email. (Emails are not automatically sent; be patient.)");
-    alert("If you do have an account, you can use the code 'NtVBb7Pk' to join the server. (Press the + button on the main page when signed into Travesty.)");
+    alert("If you do have an account, you can use the code 'HihZIYHe' to join the server. (Press the + button on the main page when signed into Travesty.)");
     
     var travestyLink = "https://travesty.chat/";
     var travestyPopup = window.open(travestyLink);
