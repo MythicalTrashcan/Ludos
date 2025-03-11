@@ -51,7 +51,7 @@ h1, h2, div {
     margin-bottom: 20px;
 }
 
-.eaglercraftx, .eaglercraftx_wasm, .eaglercraftx_shadow, .eaglercraft, .eaglercraftb1_3, .eaglercraftb1_7_3, .eaglercrafta1_2_6 {
+.eaglercraft1_12_2, .eaglercraft1_12_2_wasm, .eaglercraftx, .eaglercraftx_wasm, .eaglercraftx_shadow, .eaglercraft, .eaglercraftb1_3, .eaglercraftb1_7_3, .eaglercrafta1_2_6 {
     width: 25vw;
     min-width: 350px;
     max-width: 650px;
@@ -69,6 +69,6 @@ h1, h2, div {
     margin-bottom: 20px;
 }
 
-.eaglercraftx:hover, .eaglercraftx_wasm:hover, .eaglercraftx_shadow:hover, .eaglercraft:hover, .eaglercraftb1_3:hover, .eaglercraftb1_7_3:hover, .eaglercrafta1_2_6:hover {
+.eaglercraft1_12_2:hover, .eaglercraft1_12_2_wasm:hover, .eaglercraftx:hover, .eaglercraftx_wasm:hover, .eaglercraftx_shadow:hover, .eaglercraft:hover, .eaglercraftb1_3:hover, .eaglercraftb1_7_3:hover, .eaglercrafta1_2_6:hover {
     border-color: #ffffff;
 }
