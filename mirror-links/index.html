@@ -103,28 +103,7 @@
         Unofficial:
     </p>
     <p><i>There is nothing here yet...</i></p>
-    <hr>
 
-    <h2>Revolt</h2>
-    <p style="margin-bottom: -15px;">Selected Revolt Mirror: </p>
-    <p id="selectedReviteLink"></p>
-    <br>
-    <div>
-        <button onclick="selectReviteLink()">Select a Revolt link</button>
-        <button onclick="useCustomReviteLink()">Add your own custom Revolt link</button>
-        <button onclick="resetReviteLink()">Reset Revolt link value</button>
-    </div>
-    <p>
-        Mirrors:
-    </p>
-    <div>
-        <ul>
-            <a>0. https://revite.theludos.com</a><br><br>
-            <a>1. https://revite.anythingthat.works</a><br><br>
-            <a>2. https://revite-ludos.vercel.app</a><br><br>
-            <a>3. https://revite.netlify.app</a><br><br>
-        </ul>
-    </div>
     <table style="margin-top: 50px;">
         <td class="footer">
             <a>Made by</a>
@@ -140,7 +119,7 @@
     window.location.href = '../';
 }
 
-const links = ["assetsLink", "villadeLink", "reviteLink"];
+const links = ["assetsLink", "villadeLink"];
 links.forEach(link => {
     if (localStorage.getItem(link) === null) {
        localStorage.setItem(link, location.protocol + '//' + location.host.replace('www', link.slice(0, -4)));
@@ -164,13 +143,6 @@ const villadeLinks = [
     "https://villade-git-main-the-ludos.vercel.app",
     "https://villade-the-ludos.vercel.app",
     "https://villade.netlify.app"
-];
-
-const reviteLinks = [
-    "https://revite.theludos.com",
-    "https://revite.anythingthat.works",
-    "https://revite-ludos.vercel.app",
-    "https://revite.netlify.app"
 ];
 
 
@@ -239,40 +211,6 @@ function resetVilladeLink() {
     localStorage.setItem("villadeLink", location.protocol + '//' + location.host.replace('www','villade'));
     let localStorageVilladeLink = localStorage.getItem("villadeLink");
     document.getElementById("selectedVilladeLink").innerHTML = localStorageVilladeLink;
-}
-
-
-// Revite
-
-let localStorageReviteLink = localStorage.getItem("reviteLink");
-document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
-
-function selectReviteLink() {
-    let selectedReviteLinkNumber = prompt("Please enter a link number for Revite to redirect to: ");
-    let currentSetReviteLink = reviteLinks[selectedReviteLinkNumber];
-    localStorage.setItem("reviteLink", currentSetReviteLink);
-    let localStorageReviteLink = localStorage.getItem("reviteLink");
-    document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
-    if (localStorage.getItem("reviteLink") === "undefined") {
-        alert("That value isn't a link number. Resetting to default link...");
-        localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
-        let localStorageReviteLink = localStorage.getItem("reviteLink");
-        document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
-    }
-}
-
-function useCustomReviteLink() {
-    alert("WARNING: This will overwrite the current link with anything. There are no checks so if the link is invalid, the site will not load.");
-    let customReviteLink = prompt("Please enter a custom link for Revite to redirect to: ");
-    localStorage.setItem("reviteLink", customReviteLink);
-    let localStorageReviteLink = localStorage.getItem("reviteLink");
-    document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
-}
-
-function resetReviteLink() {
-    localStorage.setItem("reviteLink", location.protocol + '//' + location.host.replace('www','revite'));
-    let localStorageReviteLink = localStorage.getItem("reviteLink");
-    document.getElementById("selectedReviteLink").innerHTML = localStorageReviteLink;
 }
 
 </script>

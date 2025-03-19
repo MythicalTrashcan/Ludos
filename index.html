@@ -31,7 +31,6 @@
         <h2>
             <a class="mirror" style="color: #e4cd4f;" onclick="selectMirror()">Mirror Sites</a>
             <a class="travesty" style="color: #ffffff;" onclick="openTravesty()">Community Travesty</a>
-            <a class="revolt" style="color: #ff002b;" onclick="openRevite()">Revolt Copy</a>
             <a class="github" style="color: #afafaf;" onclick="openGithub()">GitHub</a>
             <a class="youtube" style="color: #df0000;" onclick="openYoutube()">YouTube</a>
         </h2>
@@ -48,11 +47,7 @@
 </body>
 
 <script>
-    function openRevite() {
-        window.open(localStorage.getItem("reviteLink"));
-    }
-
-    const links = ["assetsLink", "villadeLink", "reviteLink"];
+    const links = ["assetsLink", "villadeLink"];
     links.forEach(link => {
         if (localStorage.getItem(link) === null) {
            localStorage.setItem(link, location.protocol + '//' + location.host.replace('www', link.slice(0, -4)));

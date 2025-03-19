@@ -67,7 +67,6 @@ h1, h2, div {
 
 .mirror,
 .travesty,
-.revolt,
 .github,
 .youtube,
 .about
@@ -90,10 +89,6 @@ h1, h2, div {
     color: #e4cd4f;
 }
 
-.revolt {
-    color: #ff002b;
-}
-
 .github {
     color: #afafaf;
 }
@@ -108,7 +103,6 @@ h1, h2, div {
 
 .mirror:hover,
 .travesty:hover,
-.revolt:hover,
 .github:hover,
 .youtube:hover,
 .about:hover

@@ -46,7 +46,7 @@
         </td>
     </table>
     <script>
-    const links = ["assetsLink", "villadeLink", "reviteLink"];
+    const links = ["assetsLink", "villadeLink"];
     links.forEach(link => {
         if (localStorage.getItem(link) === null) {
            localStorage.setItem(link, location.protocol + '//' + location.host.replace('www', link.slice(0, -4)));
