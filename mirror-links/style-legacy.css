@@ -1,0 +1,72 @@
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 5px 5px 4px#252525;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
+}
+
+h1, h2, h3, div, p, a, button, strong {
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+}
+
+.ludos {
+    color: #ffc062;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.ludos:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ludosLogo {
+    margin-bottom: -100px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: #2D2928;
+}
+
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #141414;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+}
+
+.main {
+    width: 32vw;
+    height: auto;
+    max-width: 800px;
+    min-width: 300px;
+    background-color: #ceba47;
+    border-style: solid;
+    border-color: #948500;
+    border-radius: 50px;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 75px;
+    padding: 30px 64px;
+    cursor: pointer;
+    box-shadow: 6px 4px 4px 2px #816a05;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.main:hover {
+    background-color: #beac42;
+    transform: scaleX(.95) scaleY(.95) rotate(-5deg);
+}

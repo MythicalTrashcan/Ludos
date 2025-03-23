@@ -2,6 +2,22 @@ function viewProjects() {
     window.location.href = './projects/';
 }
 
+function switchDesign() {
+    localStorage.setItem('theme', parseInt(localStorage.getItem('theme')) + 1);
+    if (localStorage.getItem('theme') > 1) {
+        localStorage.setItem('theme', 0);
+    }
+
+    window.location.reload();
+}
+
+if (localStorage.getItem('theme') == 1) {
+    document.querySelector('link[rel="stylesheet"]').href = 'style-legacy.css';
+}
+else {
+    document.querySelector('link[rel="stylesheet"]').href = 'style.css';
+}
+
 function selectMirror() {
     window.location.href = './mirror-links/';
 }

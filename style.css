@@ -22,13 +22,7 @@ h1, h2, div {
 }
 
 .ludosLogo:hover {
-    box-shadow: 0 0 50px rgb(165, 106, 29);
-}
-
-.navLinks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 0 50px #a56a1d;
 }
 
 .footer {
@@ -65,6 +59,27 @@ h1, h2, div {
     border-color: #318d34;
 }
 
+.design {
+    width: 25vw;
+    height: auto;
+    max-width: 700px;
+    min-width: 250px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #242424;
+    border-width: 3px;
+    border-radius: 15px;
+    color: #6d6d6d;
+    font-size: 50px;
+    padding: 15px 32px;
+    cursor: pointer;
+    transition: background-color .25s, transform 1s, border-color .25s;
+}
+
+.design:hover {
+    border-color: #6d6d6d;
+}
+
 .mirror,
 .travesty,
 .github,
@@ -89,16 +104,16 @@ h1, h2, div {
     color: #e4cd4f;
 }
 
+.travesty {
+    color: #ffffff;
+}
+
 .github {
     color: #afafaf;
 }
 
 .youtube {
     color: #df0000;
-}
-
-.about {
-    color: #e68a00;
 }
 
 .mirror:hover,

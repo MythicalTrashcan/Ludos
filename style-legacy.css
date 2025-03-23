@@ -1,0 +1,154 @@
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 5px 5px 4px#252525;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    background-image: linear-gradient(to top, #1f1f1f, #3b3b3c, #595a5c, #787b7d, #989ea0);
+}
+
+h1, h2, div {
+    text-align: center;
+    font-size: 80px;
+}
+
+#embed {
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.ludosLogo {
+    margin-bottom: -100px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: #2D2928;
+}
+
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #141414;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+}
+
+.main {
+    width: 32vw;
+    height: auto;
+    max-width: 800px;
+    min-width: 300px;
+    background-color: #4CAF50;
+    border-style: solid;
+    border-color: #1c551e;
+    border-radius: 50px;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 75px;
+    padding: 30px 64px;
+    cursor: pointer;
+    box-shadow: 10px 5px 4px 2px #1c541e;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.main:hover {
+    background-color: #28722b;
+    transform: scaleX(.95) scaleY(.95) rotate(-5deg);
+}
+
+.design {
+    width: 25vw;
+    height: auto;
+    max-width: 700px;
+    min-width: 250px;
+    background-color: #777777;
+    border-style: solid;
+    border-color: #3f3f3f;
+    box-shadow: 6px 4px 4px 2px #292929;
+    border-width: 3px;
+    border-radius: 25px;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 50px;
+    padding: 15px 32px;
+    cursor: pointer;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.design:hover {
+    background-color: #5c5c5c;
+    transform: scale(0.95);
+}
+
+.mirror, .travesty, .github, .youtube {
+    width: 25vw;
+    min-width: 250px;
+    max-width: 700px;
+    display: inline-block;
+    padding: 16px;
+    border-style: solid;
+    border-radius: 15px;
+    cursor: pointer;
+    text-shadow: none;
+    font-size: 25px;
+    box-shadow: inset;
+    transition: width .25s, height .25s, background-color .25s, transform .25s;
+}
+
+.mirror {
+    background-color: #ceba47;
+    border-color: #948500;
+    box-shadow: 6px 4px 4px 2px #816a05;
+}
+
+.travesty {
+    background-color: #222324;
+    border-color: #0c0c0c;
+    box-shadow: 6px 4px 4px 2px #000000;
+}
+
+.github {
+    background-color: #222324;
+    border-color: #0c0c0c;
+    box-shadow: 6px 4px 4px 2px #000000;
+}
+
+.youtube {
+    background-color: #ff0000;
+    border-color: #940000;
+    box-shadow: 6px 4px 4px 2px #660101;
+}
+
+.mirror,
+.travesty,
+.github,
+.youtube {
+    color: #ffffff;
+}
+
+.mirror:hover {
+    background-color: #aa9939;
+}
+
+.travesty:hover {
+    background-color: #131313;
+}
+
+.github:hover {
+    background-color: #131313;
+}
+
+.youtube:hover {
+    background-color: #c00000;
+}
+
+.mirror:hover,
+.travesty:hover,
+.github:hover,
+.youtube:hover {
+    transform: scale(0.95);
+}

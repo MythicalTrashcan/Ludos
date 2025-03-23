@@ -1,7 +1,3 @@
-function returnToProjects() {
-    window.location.href = '../';
-}
-
 if (localStorage.getItem('theme') == 1) {
     document.querySelector('link[rel="stylesheet"]').href = 'style-legacy.css';
 }
