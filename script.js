@@ -11,6 +11,10 @@ function switchDesign() {
     window.location.reload();
 }
 
+if (localStorage.getItem('theme') === null || localStorage.getItem('theme') == "NaN") {
+    localStorage.setItem('theme', 0);
+}
+
 if (localStorage.getItem('theme') == 1) {
     document.querySelector('link[rel="stylesheet"]').href = 'style-legacy.css';
 }
