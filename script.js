@@ -42,7 +42,7 @@ function openTravesty() {
 }
 
 function openGithub() {
-    var githubLink = "https://github.com/MythicalTrashcan/";
+    var githubLink = "https://github.com/1-Mythical/";
     var githubPopup = window.open(githubLink);
 
     if (!githubPopup) {
