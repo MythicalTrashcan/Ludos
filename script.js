@@ -41,6 +41,17 @@ function openTravesty() {
     }
 }
 
+function openDiscord() {
+    var discordLink = "https://discord.gg/Em8a3A4AYS";
+    var discordPopup = window.open(discordLink);
+
+    if (!discordPopup) {
+        alert("Popup was blocked. Redirecting this page to the Discord server.");
+        window.location.href = discordLink;
+    }
+}
+
+
 function openGithub() {
     var githubLink = "https://github.com/1-Mythical/";
     var githubPopup = window.open(githubLink);
