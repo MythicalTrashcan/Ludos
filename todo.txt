@@ -4,3 +4,4 @@ The priority of the update is from top to bottom. (the top is the most important
  ----------==========| WORK ON THESE |==========----------
 
 Greatly optimize the mirror links code
+Add some more games (it really needs it)
