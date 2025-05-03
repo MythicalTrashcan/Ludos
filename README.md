@@ -36,6 +36,3 @@ npm install -g http-server
 # Running
 npx http-server
 ```
-
-**Project ownership given to vengefulpernach.**
-Goodbye all. - 1_Mythical
